@@ -4,7 +4,7 @@
 <?php 
 	if(!isset($_SESSION['login_id']))
 	    header('location:login.php');
-    include 'db_connect.php';
+    include 'db_connect.php';   
     ob_start();
   if(!isset($_SESSION['system'])){
 
@@ -13,7 +13,7 @@
       $_SESSION['system'][$k] = $v;
     }
   }
-  ob_end_flush();
+  ob_end_flush();   
 
 	include 'header.php' 
 ?>
@@ -122,7 +122,7 @@
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2020 <a href="https://www.sourcecodester.com/">sourcecodester.com</a>.</strong>
+    <strong>Copyright &copy; 2020 <a href="https://www.uda.gov.lk/">Urban Developement Authority</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b><?php echo $_SESSION['system']['name'] ?></b>
