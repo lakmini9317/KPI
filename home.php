@@ -15,7 +15,7 @@ if($_SESSION['login_type'] != 1)
                 <p>Total Divisions</p>
               </div>
               <div class="icon">
-                <i class="fa fa-th-list"></i>
+                <i class="fa fa-th-list" style="color:#FFAB45;"></i>
               </div>
             </div>
           </div>
@@ -27,7 +27,7 @@ if($_SESSION['login_type'] != 1)
                 <p>Total Designations</p>
               </div>
               <div class="icon">
-                <i class="fa fa-list-alt"></i>
+                <i class="fa fa-list-alt" style="color:#FFAB45;"></i>
               </div>
             </div>
           </div>
@@ -39,7 +39,7 @@ if($_SESSION['login_type'] != 1)
                 <p>Total Users</p>
               </div>
               <div class="icon">
-                <i class="fa fa-users"></i>
+                <i class="fa fa-users" style="color:#FFAB45;"></i>
               </div>
             </div>
           </div>
@@ -51,7 +51,7 @@ if($_SESSION['login_type'] != 1)
                 <p>Total Employees</p>
               </div>
               <div class="icon">
-                <i class="fa fa-user-friends"></i>
+                <i class="fa fa-user-friends" style="color:#FFAB45;"></i>
               </div>
             </div>
           </div>
@@ -63,7 +63,7 @@ if($_SESSION['login_type'] != 1)
                 <p>Total Evaluators</p>
               </div>
               <div class="icon">
-                <i class="fa fa-user-secret"></i>
+                <i class="fa fa-user-secret" style="color:#FFAB45;"></i>
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@ if($_SESSION['login_type'] != 1)
                 <p>Total Tasks</p>
               </div>
               <div class="icon">
-                <i class="fa fa-tasks"></i>
+                <i class="fa fa-tasks" style="color:#FFAB45;"></i>
               </div>
             </div>
           </div>
