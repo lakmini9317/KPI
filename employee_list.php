@@ -31,15 +31,15 @@
 					while($row=$departments->fetch_assoc()){
 						$dept_arr[$row['id']] =$row['department'];
 					}
-					$qry = $conn->query("SELECT *,concat(lastname,', ',firstname,' ',middlename) as name FROM employee_list order by concat(lastname,', ',firstname,' ',middlename) asc");
+					$qry = $conn->query("SELECT *,concat(lastname,', ',firstname ) as name FROM employee_list order by concat(lastname,', ',firstname ) asc");
 					while($row= $qry->fetch_assoc()):
 					?>
 					<tr>
 						<th class="text-center"><?php echo $i++ ?></th>
 						<td><b><?php echo ucwords($row['name']) ?></b></td>
 						<td><b><?php echo $row['email'] ?></b></td>
-						<td><b><?php echo isset($dept_arr[$row['department_id']]) ? $dept_arr[$row['department_id']] : 'Unknow Divisions' ?></b></td>
-						<td><b><?php echo isset($design_arr[$row['designation_id']]) ? $design_arr[$row['designation_id']] : 'Unknow Designation' ?></b></td>
+						<td><b><?php echo isset($dept_arr[$row['department_id']]) ? $dept_arr[$row['department_id']] : 'Unknown Divisions' ?></b></td>
+						<td><b><?php echo isset($design_arr[$row['designation_id']]) ? $design_arr[$row['designation_id']] : 'Unknown Designation' ?></b></td>
 						<td class="text-center">
 							<button type="button" class="btn btn-default btn-sm btn-flat border-info wave-effect text-info dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 		                      Action
