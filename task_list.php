@@ -13,14 +13,14 @@
 			
 				<thead>
 					<tr>
-						<th class="text-center">#</th>
+						<th width="5%" class="text-center">#</th>
 						<th width="30%">Task</th>
 						<th>Due Date</th>
 						<?php if($_SESSION['login_type'] != 0): ?>
 						<th>Assigned To</th>
 						<?php endif; ?>
-						<th>Status</th>
-						<th>Action</th>
+						<th width="10%">Status</th>
+						<th width="15%">Action</th>
 					</tr>
 				</thead>
 				<tbody>

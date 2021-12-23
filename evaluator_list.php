@@ -10,10 +10,10 @@
 			<table class="table tabe-hover table-bordered" id="list">
 				<thead>
 					<tr>
-						<th class="text-center">#</th>
+						<th width="5%" class="text-center">#</th>
 						<th>Name</th>
 						<th>Email</th>
-						<th>Action</th>
+						<th width="15%">Action</th>
 					</tr>
 				</thead>
 				<tbody>

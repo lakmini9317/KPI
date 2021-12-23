@@ -10,14 +10,14 @@
 			<table class="table tabe-hover table-bordered" id="list">
 				<thead>
 					<tr>
-						<th class="text-center">#</th>
-						<th>Task</th>
+						<th width="5%" class="text-center">#</th>
+						<th >Task</th>
 						<th>Name</th>
 						<?php if($_SESSION['login_type'] != 1): ?>
 						<th>Evaluator</th>
 						<?php endif; ?>
 						<th width="15%">Performance Average</th>
-						<th>Action</th>
+						<th width="15%">Action</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -37,7 +37,7 @@
 						<td><b><?php echo ucwords($row['ename']) ?></b></td>
 						<?php endif; ?>
 						<td><b><?php echo number_format($row['pa'],2)."%" ?></b></td>
-						<td class="text-center">
+						<td width="15%" class="text-center">
 							<button type="button" class="btn btn-default btn-sm btn-flat border-info wave-effect text-info dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 		                      Action
 		                    </button>
