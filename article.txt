@@ -13,7 +13,7 @@
 <ul>
 	<li><b>Login Page</b></li>
 	<li><b>Home Page</b></li>
-	<li><b>Department List</b></li>
+	<li><b>Divisions List</b></li>
 	<li><b>Designation List</b></li>
 	<li><b>Employees List</b></li>
 	<li><b>Evaluators List</b></li>

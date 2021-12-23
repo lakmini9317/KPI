@@ -13,7 +13,7 @@
 						<th class="text-center">#</th>
 						<th>Name</th>
 						<th>Email</th>
-						<th>Department</th>
+						<th>Divisions</th>
 						<th>Designation</th>
 						<th>Action</th>
 					</tr>
@@ -38,7 +38,7 @@
 						<th class="text-center"><?php echo $i++ ?></th>
 						<td><b><?php echo ucwords($row['name']) ?></b></td>
 						<td><b><?php echo $row['email'] ?></b></td>
-						<td><b><?php echo isset($dept_arr[$row['department_id']]) ? $dept_arr[$row['department_id']] : 'Unknow Department' ?></b></td>
+						<td><b><?php echo isset($dept_arr[$row['department_id']]) ? $dept_arr[$row['department_id']] : 'Unknow Divisions' ?></b></td>
 						<td><b><?php echo isset($design_arr[$row['designation_id']]) ? $design_arr[$row['designation_id']] : 'Unknow Designation' ?></b></td>
 						<td class="text-center">
 							<button type="button" class="btn btn-default btn-sm btn-flat border-info wave-effect text-info dropdown-toggle" data-toggle="dropdown" aria-expanded="true">

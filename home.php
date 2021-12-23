@@ -12,7 +12,7 @@ if($_SESSION['login_type'] != 1)
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT * FROM department_list ")->num_rows; ?></h3>
 
-                <p>Total Departments</p>
+                <p>Total Divisions</p>
               </div>
               <div class="icon">
                 <i class="fa fa-th-list"></i>

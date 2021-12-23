@@ -12,7 +12,7 @@ if(isset($_GET['id'])){
 		<input type="hidden" name="id" value="<?php echo isset($id) ? $id : '' ?>">
 		<div id="msg" class="form-group"></div>
 		<div class="form-group">
-			<label for="department" class="control-label">Department</label>
+			<label for="department" class="control-label">Divisions</label>
 			<input type="text" class="form-control form-control-sm" name="department" id="department" value="<?php echo isset($department) ? $department : '' ?>">
 		</div>
 		<div class="form-group">
@@ -38,7 +38,7 @@ if(isset($_GET['id'])){
 							location.reload()	
 						},1750)
 					}else if(resp == 2){
-						$('#msg').html('<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> Department already exist.</div>')
+						$('#msg').html('<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> Divisions already exist.</div>')
 						end_load()
 					}
 				}

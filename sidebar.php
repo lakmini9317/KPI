@@ -46,7 +46,7 @@
             <a href="./index.php?page=department" class="nav-link nav-department">
               <i class="nav-icon fas fa-th-list"></i>
               <p>
-                Departments
+                Divisions
               </p>
             </a>
           </li> 

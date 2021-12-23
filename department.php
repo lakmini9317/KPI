@@ -17,7 +17,7 @@
 				<thead>
 					<tr>
 						<th class="text-center">#</th>
-						<th>Department</th>
+						<th>Divisions</th>
 						<th>Description</th>
 						<th>Action</th>
 					</tr>
@@ -53,13 +53,13 @@
 	$(document).ready(function(){
 		$('#list').dataTable()
 		$('.new_department').click(function(){
-			uni_modal("New Department","manage_department.php")
+			uni_modal("New Divisions","manage_department.php")
 		})
 		$('.manage_department').click(function(){
-			uni_modal("Manage Department","manage_department.php?id="+$(this).attr('data-id'))
+			uni_modal("Manage Divisions","manage_department.php?id="+$(this).attr('data-id'))
 		})
 	$('.delete_department').click(function(){
-	_conf("Are you sure to delete this Department?","delete_department",[$(this).attr('data-id')])
+	_conf("Are you sure to delete this Divisions?","delete_department",[$(this).attr('data-id')])
 	})
 	})
 	function delete_department($id){

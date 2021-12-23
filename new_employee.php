@@ -20,7 +20,7 @@
 							<input type="text" name="lastname" class="form-control form-control-sm" required value="<?php echo isset($lastname) ? $lastname : '' ?>">
 						</div>
 						<div class="form-group">
-							<label for="" class="control-label">Department</label>
+							<label for="" class="control-label">Divisions</label>
 							<select name="department_id" id="department_id" class="form-control form-control-sm select2">
 								<option value=""></option>
 								<?php 
