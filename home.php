@@ -19,6 +19,7 @@ if($_SESSION['login_type'] != 1)
               </div>
             </div>
           </div>
+
            <div class="col-12 col-sm-6 col-md-4">
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
@@ -31,6 +32,7 @@ if($_SESSION['login_type'] != 1)
               </div>
             </div>
           </div>
+
            <div class="col-12 col-sm-6 col-md-4">
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
@@ -43,6 +45,7 @@ if($_SESSION['login_type'] != 1)
               </div>
             </div>
           </div>
+
           <div class="col-12 col-sm-6 col-md-4">
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
@@ -55,6 +58,7 @@ if($_SESSION['login_type'] != 1)
               </div>
             </div>
           </div>
+
           <div class="col-12 col-sm-6 col-md-4">
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
@@ -67,13 +71,14 @@ if($_SESSION['login_type'] != 1)
               </div>
             </div>
           </div>
-          <div class="col-12 col-sm-6 col-md-4">
+
+          <div class="col-12 col-sm-6 col-md-4" a href="./task_list"> 
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT * FROM task_list")->num_rows; ?></h3>
 
                 <p>Total Tasks</p>
-              </div>
+              </div></a>
               <div class="icon">
                 <i class="fa fa-tasks" style="color:#FFAB45;"></i>
               </div>
