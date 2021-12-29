@@ -61,7 +61,7 @@
                         	}elseif($row['status'] == 2){
 						  		echo "<span class='badge badge-success'>Complete</span>";
                         	}
-                        	if(strtotime($row['due_date']) < strtotime(date('Y-m-d'))){
+                        	elseif(strtotime($row['due_date']) < strtotime(date('Y-m-d'))){
 						  		echo "<span class='badge badge-danger mx-1'>Over Due</span>";
                         	}
                         	?>
