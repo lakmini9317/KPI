@@ -36,7 +36,7 @@ if(isset($_GET['id'])){
 			        	}elseif($status == 2){
 					  		echo "<span class='badge badge-success'>Complete</span>";
 			        	}
-			        	if(strtotime($due_date) < strtotime(date('Y-m-d'))){
+			        	elseif(strtotime($due_date) < strtotime(date('completed'))){
 					  		echo "<span class='badge badge-danger mx-1'>Over Due</span>";
 			        	}
 			        	?>
