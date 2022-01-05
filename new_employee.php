@@ -8,6 +8,10 @@
 				<div class="row">
 					<div class="col-md-6 border-right">
 						<div class="form-group">
+							<label for="" class="control-label">EMP Code</label>
+							<input type="text" name="firstname" class="form-control form-control-sm" required value="<?php echo isset($firstname) ? $firstname : '' ?>">
+						</div>
+						<div class="form-group">
 							<label for="" class="control-label">First Name</label>
 							<input type="text" name="firstname" class="form-control form-control-sm" required value="<?php echo isset($firstname) ? $firstname : '' ?>">
 						</div>
