@@ -74,6 +74,7 @@ header("location:index.php?page=home");
   </div>
 </div>
 <!-- /.login-box -->
+
 <script>
   $(document).ready(function(){
     $('#login-form').submit(function(e){

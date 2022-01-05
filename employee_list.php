@@ -11,6 +11,7 @@
 				<thead>
 					<tr>
 						<th class="text-center">#</th>
+						<th>EMP</th>
 						<th>Name</th>
 						<th>Email</th>
 						<th>Divisions</th>
@@ -31,11 +32,13 @@
 					while($row=$departments->fetch_assoc()){
 						$dept_arr[$row['id']] =$row['department'];
 					}
+					
 					$qry = $conn->query("SELECT *,concat(lastname,', ',firstname ) as name FROM employee_list order by concat(lastname,', ',firstname ) asc");
 					while($row= $qry->fetch_assoc()):
 					?>
 					<tr>
 						<th class="text-center"><?php echo $i++ ?></th>
+						<td><b><?php echo $row['empcode'] ?></b></td>
 						<td><b><?php echo ucwords($row['name']) ?></b></td>
 						<td><b><?php echo $row['email'] ?></b></td>
 						<td><b><?php echo isset($dept_arr[$row['department_id']]) ? $dept_arr[$row['department_id']] : 'Unknown Divisions' ?></b></td>

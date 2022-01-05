@@ -9,7 +9,7 @@
 					<div class="col-md-6 border-right">
 						<div class="form-group">
 							<label for="" class="control-label">EMP Code</label>
-							<input type="text" name="firstname" class="form-control form-control-sm" required value="<?php echo isset($firstname) ? $firstname : '' ?>">
+							<input type="text" name="firstname" class="form-control form-control-sm"  value="<?php echo isset($empcode) ? $empcode : '' ?>">
 						</div>
 						<div class="form-group">
 							<label for="" class="control-label">First Name</label>
