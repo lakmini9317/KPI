@@ -43,20 +43,20 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.php?page=new_employee" class="nav-link nav-new_employee tree-item">
+                <a href="./index.php" class="nav-link nav-new_employee tree-item">
                   <i class="fas fa-angle-right nav-icon"></i>
                   <p>Add New</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index.php?page=employee_list" class="nav-link nav-employee_list tree-item">
+                <a href="./index.php" class="nav-link nav-employee_list tree-item">
                   <i class="fas fa-angle-right nav-icon"></i>
                   <p>List</p>
                 </a>
               </li>
             </ul>
           </li>
-          
+
           <li class="nav-item dropdown">
             <a href="./index.php?page=evaluation" class="nav-link nav-evaluation">
               <i class="nav-icon far fa-edit"></i>

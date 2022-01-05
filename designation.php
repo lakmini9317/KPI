@@ -25,7 +25,7 @@
 				<tbody>
 					<?php
 					$i = 1;
-					$qry = $conn->query("SELECT * FROM designation_list order by designation asc ");
+					$qry = $conn->query("SELECT * FROM designation_list order by designation desc ");
 					while($row= $qry->fetch_assoc()):
 					?>
 					<tr>

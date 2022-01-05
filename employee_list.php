@@ -11,7 +11,7 @@
 				<thead>
 					<tr>
 						<th class="text-center">#</th>
-						<th>EMP</th>
+						<th>EMP Code</th>
 						<th>Name</th>
 						<th>Email</th>
 						<th>Divisions</th>
@@ -33,7 +33,7 @@
 						$dept_arr[$row['id']] =$row['department'];
 					}
 					
-					$qry = $conn->query("SELECT *,concat(lastname,', ',firstname ) as name FROM employee_list order by concat(lastname,', ',firstname ) asc");
+					$qry = $conn->query("SELECT *,concat(lastname,', ',firstname ) as name FROM employee_list order by concat(lastname,', ',firstname ) desc");
 					while($row= $qry->fetch_assoc()):
 					?>
 					<tr>
