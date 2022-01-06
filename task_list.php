@@ -58,17 +58,39 @@
 						<?php endif; ?>
 						<td>
                         	<?php 
-                        	if($row['status'] == 0){
-						  		echo "<span class='badge badge-info'>Pending</span>";
-                        	}elseif($row['status'] == 1){
-						  		echo "<span class='badge badge-primary'>On-Progress</span>";
-                        	}elseif($row['status'] == 2){
-						  		echo "<span class='badge badge-success'>Complete</span>";
-                        	}
-                        	elseif(strtotime($row['due_date']) < strtotime(date('completed'))){
-						  		echo "<span class='badge badge-danger mx-1'>Over Due</span>";
-                        	}
+                        	// if($row['status'] == 0){
+						  	// 	echo "<span class='badge badge-info'>Pending</span>";
+                        	// }elseif($row['status'] == 1){
+						  	// 	echo "<span class='badge badge-primary'>On-Progress</span>";
+                        	// }elseif($row['status'] == 2){
+						  	// 	echo "<span class='badge badge-success'>Complete</span>";
+                        	// }
+                        	// if(strtotime($row['due_date']) < strtotime(date('completed'))){
+						  	// 	echo "<span class='badge badge-danger mx-1'>Over Due</span>";
+								 
+							  if(strtotime($row['due_date']) > strtotime(date('completed'))){
+                                if($row['status'] == 0){
+                                        echo "<span class='badge badge-info'>Pending - Overdue</span>";
+                                }elseif($row['status'] == 1){
+                                        echo "<span class='badge badge-primary'>On-Progress - Overdue</span>";
+                                }elseif($row['status'] == 2){
+                                        echo "<span class='badge badge-success'>Complete - Overdue</span>";
+                              }
+                            }else{
+                                if($row['status'] == 0){
+                                        echo "<span class='badge badge-info'>Pending</span>";
+                                }elseif($row['status'] == 1){
+                                        echo "<span class='badge badge-primary'>On-Progress</span>";
+                                }elseif($row['status'] == 2){
+                                        echo "<span class='badge badge-success'>Complete</span>";
+                                }
+                            }
+								
+                        	
                         	?>
+
+							
+
                         </td>
 						<td class="text-center">
 							<button type="button" class="btn btn-default btn-sm btn-flat border-info wave-effect text-info dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
