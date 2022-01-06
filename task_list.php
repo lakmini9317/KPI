@@ -16,6 +16,7 @@
 						<th width="5%" class="text-center">#</th>
 						<th width="30%">Task</th>
 						<th>Due Date</th>
+						<th>Assign Date</th>
 						<?php if($_SESSION['login_type'] != 0): ?>
 						<th>Assigned To</th>
 						<?php endif; ?>
@@ -49,6 +50,7 @@
 							<p class="truncate"><?php echo strip_tags($desc) ?></p>
 						</td>
 						<td><b><?php echo date("M d, Y",strtotime($row['due_date'])) ?></b></td>
+						<td><b><?php echo date("M d, Y",strtotime($row['date_created'])) ?></b></td>
 						<?php if($_SESSION['login_type'] != 0): ?>
 						<td><p><b><?php echo ucwords($row['name']) ?></b></p></td>
 						<?php endif; ?>
