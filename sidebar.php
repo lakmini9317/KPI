@@ -34,7 +34,7 @@
           <?php if($_SESSION['login_type'] != 0): ?>
 
         <li class="nav-item">
-            <a href="#" class="nav-link nav-edit_employee">
+            <a href="#" class="nav-link nav-joblist">
               <i class="nav-icon fas fa-user-friends"></i>
               <p>
                 Job List
@@ -43,13 +43,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.php" class="nav-link nav-new_employee tree-item">
+                <a href="./index.php?page=new_joblist.php" class="nav-link nav-new_joblist tree-item">
                   <i class="fas fa-angle-right nav-icon"></i>
                   <p>Add New</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index.php" class="nav-link nav-employee_list tree-item">
+                <a href="./index.php?page=view_joblist.php" class="nav-link nav-job_list tree-item">
                   <i class="fas fa-angle-right nav-icon"></i>
                   <p>List</p>
                 </a>
