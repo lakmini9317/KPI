@@ -135,6 +135,7 @@ if($action == 'save_dutylist'){
 	$save = $crud->save_dutylist();
 	if($save)
 		echo $save;
+		
 ob_end_flush();
 
 }
