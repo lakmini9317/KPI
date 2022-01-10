@@ -34,22 +34,22 @@
           <?php if($_SESSION['login_type'] != 0): ?>
 
         <li class="nav-item">
-            <a href="#" class="nav-link nav-joblist">
+            <a href="#" class="nav-link nav-dutylist">
               <i class="nav-icon fas fa-user-friends"></i>
               <p>
-                Job List
+                Duty List
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.php?page=new_joblist" class="nav-link nav-new_joblist tree-item">
+                <a href="./index.php?page=new_dutylist" class="nav-link nav-new_joblist tree-item">
                   <i class="fas fa-angle-right nav-icon"></i>
                   <p>Add New</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index.php?page=view_joblist" class="nav-link nav-job_list tree-item">
+                <a href="./index.php?page=view_dutylist" class="nav-link nav-job_list tree-item">
                   <i class="fas fa-angle-right nav-icon"></i>
                   <p>List</p>
                 </a>
