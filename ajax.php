@@ -144,7 +144,7 @@ if($action == 'get_report'){
 // 	if($save)
 // 		echo $save;
 		
-//ob_end_flush();
+ob_end_flush();
 
-//}
+
 ?>

@@ -1,0 +1,62 @@
+
+INSERT INTO `duty_list` (`id`, `empcode`, `noc`,`desig`,`dutyfrm`,`tutq1`,`progq1p`,`tutq2`,`progq2p`,`tutq3`,`progq3p`) VALUES
+
+
+    (1,1809,'Mr. Manoj Perera','Director (ICT)','ICT','Preparation of software agreement and payment clearance for the external stakeholders to maintain the software sustainability. Provide guidance and training for the existing developers to meet the institutional deadlines. Identification and fixing of performance bugs remain in the UDA financial management system.','85','Preparation of Terms of Reference (TOR''s) and required technical specifications according to the UDA requirements. Administration and guidance of all software engineers for the facilitation of automated solutions to the UDA. Provision of an uninterrupted internet facility for the UDA and external stakeholders to access internet and UDA software applications.
+    Preparation of necessary technical agreements for the external stakeholders to maintain the software sustainability.
+    Management and administration of UDA website and official Facebook page. 
+    Maintenance of the UDA exiting network and upgrading from time to time to meet the new user requirements. Design and development of a Housing Management System for the URPPC project.','85','Preparation of Terms of Reference (TOR''s) and required technical specifications according to the UDA requirements. Administration and guidance of all software engineers for the facilitation of automated solutions to the UDA. 
+    Provision of an uninterrupted internet facility for the UDA and external stakeholders to access internet and UDA software applications.
+    Preparation of necessary technical agreements for the external stakeholders to maintain the software sustainability.
+    Management and administration of UDA website and official Facebook page. 
+    Maintenance o the UDA exiting network and upgrading from time to time to meet the new user requirements. 
+    Design and development of a Housing Management System for the URPPC project. 
+    Provide technical facilitation for eliminating software bugs in the online document approval system.
+    Provision of backup facilities for all available software systems in the UDA.','85'),
+
+
+    (2,06765,'Mr. TD Ruhunage','Senior System Analyst','ICT','Recruited on November 2021',NULL,NULL,NULL,'To identify the gaps in the existing network system and preparation of required documentation for the implementation of the complete network facility for UDA.',0.85),
+    (3,08528,'Mr. GPG Wijesinghe','Programmer',NULL,NULL,NULL,NULL,NULL,NULL,NULL),
+    (4,07562,'Mrs. KAD Shashikala','HR Officer','ICT','All administrative and HR-related works at the division. In/Out letter maintaining, drafting letters, and sustaining ICT assets registry at the division.','85','Completion of the division assets registry.
+    Study of the existing files to identify documentation and related approval gaps.',85,'Maintaining the in and out letter registry. Handling all administrative and HR-related work at the division.
+    Study of the existing files to identify documentation and related approval gaps.',0.85),
+    (5,03985,'Ms. SL Wijeweera','IS Officer','ICT','Maintainance of software and address operating system-related issues. Preparation of computer specifications and providing recommendations on hardware maintenance. Assistance to the existing developers for the development of software solutions for the UDA. Troubleshooting on computer equipment. SPEC Preparation. Data backups (HR System).',85,'Troubleshooting on computer equipment. SPEC Preparation. Completion of the HR system.',85,'Troubleshooting on computer equipment. SPEC Preparation. Completion of the HR system. Data backups (HR System).',0.8),
+    
+    (6,09591,'Mr. TDM Thalagala','IS Officer','ICT',NULL,65,'Network troubleshooting and zoom facility management.',70,'Network troubleshooting and zoom facility management.',0.8),
+    (7,08685,'Mr. GC Satharasinghe','IS Officer','ICT','Purchasing of internet-related connections (dongle, routers, and access points).
+    Troubleshooting of internet-related issues.
+    Identification and installation of virus guard.',80,'Purchasing of internet-related connections (dongle, routers, and access points).
+    Troubleshooting of internet-related issues.
+    Identification and installation of virus guard.',85,'Purchasing of internet-related connections (dongle, routers, and access points).
+    Troubleshooting of internet-related issues.
+    Identification and installation of virus guard.',0.8),
+    
+    (8,06070,'Mr. PJGM Piyatissa','IS Officer','ICT','Continuously updates the UDA web and attendance management system.
+    Perform necessary backup and documentation for the web and leave management system.
+    Continuously updates the UDA FaceBook page.',82,'Continuously updates the UDA web and attendance management system.
+    Perform necessary backup and documentation for the web and leave management system.
+    Continuously updates the UDA FaceBook page.',80,'Continuously updates the UDA web and attendance management system.
+    Perform necessary backup and documentation for the web and leave management system.
+    Continuously updates the UDA FaceBook page. To establish real-time connectivity with the UDA sub-office to the main leave management system.',0.7),
+    
+    (9,09090,'Mrs. UM Dilrukshi','IS Officer','ICT','Support for the UDA website management, recording and evaluation of ICT-related payment, preparation of statistical information, and hardware and software maintenance.',80,'Support for the UDA website management, recording and evaluation of ICT-related payment, preparation of statistical information, and hardware and software maintenance.',80,'Support for the UDA website management, recording and evaluation of ICT-related payment, preparation of statistical information, and hardware and software maintenance.',0.8),
+
+    (10,0884,'Mr. LC Bodaragama','IS Officer (Trainee)','ICT','Maintaining the housing application concerning the requirements from Housing Division.',80,'Maintaining the housing application concerning the requirements from Housing Division.',80,'Maintaining the housing application concerning the requirements from Housing Division.',0.85),
+    
+    (11,03628,'Mr. MGDP Lakmal','Cleark','ICT','Updating letter registry and KPI record book',80,'Maintaining Letter Receiving register, Division File System, Recording KPI File, and Coordinating with other divisions for ICT services as necessary.',80,'Maintaining Letter Receiving register, Division File System, Recording KPI File, and Coordinating with other divisions for ICT services as necessary.',0.8),
+    
+    (12,06329,'Mr. NNT Karunarathne','Office Aid','ICT',NULL,80,'Letter distributions, conduct regular cleaning services and maintain equipment.',80,'Letter distributions, conduct regular cleaning services and maintain equipment.',0.85),
+    
+    (13,06766,'Mr. KDIC Siriwardena','ISO (Contract)','ICT','Recruited on November 2021',NULL,NULL,NULL,'Design and develop new modules for the online building application system. Resolve existing bugs and issues in the online building application system. Design and develop employee appraisal system and project monitoring system.',0.85),
+    
+    (14,1006767,'Mrs. RPGLS Gunarathne','ISO (Contract)','ICT','Recruited on November 2021',NULL,NULL,NULL,'Continuous updates to the UDA website, including the development of new modules, updates to the existing modules, and backup process. Design and develop employee appraisal system and project monitoring system.',0.85),
+    
+    (15,0907,'Mr. BM Nilanga','Computer Operator(Trainee)','ICT','Recruited on October 2021',NULL,NULL,NULL,'Letter typing(Sinhala/English)',85),
+    
+    (16,03116,'Mr. LS Wijerathne','Audio Visual Equipment Operator','ICT','Provide Audio-Visual equipment and facilitation of services concerning multimedia.',80,'Provide Audio-Visual equipment and facilitation of services concerning multimedia.',80,'Provide Audio-Visual equipment and facilitation of services concerning multimedia.',80),
+    
+    (17,08583,'Mr. SP Jayasena','Audio Visual Equipment Operator','ICT','Provide Audio-Visual equipment and facilitation of services concerning multimedia.',80,'Provide Audio-Visual equipment and facilitation of services concerning multimedia.',80,'Provide Audio-Visual equipment and facilitation of services concerning multimedia.',80),
+    
+    (18,08172,'Mr. BR Perera','Audio Visual Equipment Operator','ICT','Provide Audio-Visual equipment and facilitation of services concerning multimedia.',80,'Provide Audio-Visual equipment and facilitation of services concerning multimedia.',80,'Provide Audio-Visual equipment and facilitation of services concerning multimedia.',85),
+    
+    (19,08303,'Mr. MCP Liyanaarachchi','Actg. ISO/ FA','ICT','Completion of the remaining TEC reports.',85,'Preparing TEC reports, Analyzing & Preparing Answers to the Queries, Preparation of replies, and Preparation of TORs.',80,'Preparing TEC reports, Analyzing & Preparing Answers to the Queries, Preparation of replies, and Preparation of TORs.',0.8);
