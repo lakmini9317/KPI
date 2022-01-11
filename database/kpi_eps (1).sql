@@ -89,6 +89,10 @@ CREATE TABLE `duty_list` (
   `updated_date` int(11) NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+
+INSERT INTO `duty_list` (`id`, `empcode`, `noc`,`desig`,`dutyfrm`,`tutq1`,`progq1p`,`progq1l`,`tutq2`,`progq2p`,`progq2l`,`tutq3`,`progq3p`,`progq3l`) VALUES
+(4, 4111, 'RND Division','testdata','testdata','testdata','testdata','testdata','testdata','testdata','testdata','testdata','testdata','testdata');
+
 -- --------------------------------------------------------
 
 --

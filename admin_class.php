@@ -357,15 +357,42 @@ Class Action {
 		}
 	}
 
-	function save_dutylist(){
-		
-	}
 	function delete_employee(){
 		extract($_POST);
 		$delete = $this->db->query("DELETE FROM employee_list where id = ".$id);
 		if($delete)
 			return 1;
 	}
+
+	function save_dutylist(){		
+		extract($_POST);
+		$data = "";
+		foreach($_POST as $k => $v){
+			if(!in_array($k, array('id','cpass','password')) && !is_numeric($k)){
+				if(empty($data)){
+					$data .= " $k='$v' ";
+				}else{
+					$data .= ", $k='$v' ";
+				}
+			}
+		}
+		
+		$check = $this->db->query("SELECT * FROM duty_list where email ='$email' ".(!empty($id) ? " and id != {$id} " : ''))->num_rows;
+		if($check > 0){
+			return 2;
+			exit;
+		}
+		
+	    else{
+			$save = $this->db->query("UPDATE employee_list set $data where id = $id");
+		}
+
+		if($save){
+			return 1;
+		}
+	}
+		
+		
 	function save_evaluator(){
 		extract($_POST);
 		$data = "";

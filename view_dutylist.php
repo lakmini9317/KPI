@@ -3,9 +3,12 @@
 	<div class="card card-outline card-success">
 		<div class="card-header">
 			<div class="card-tools">
-				<a class="btn btn-block btn-sm btn-default btn-flat border-primary" href="./index.php?page=new_employee"><i class="fa fa-plus"></i> Add New Employee</a>
+				<a class="btn btn-block btn-sm btn-default btn-flat border-primary" href="./index.php?page=#"><i class="fa fa-plus"></i> Add New Employee</a>
 			</div>
 		</div>
+
+	
+
 		<div class="card-body">
 			<table class="table tabe-hover table-bordered" id="list">
 				<thead>
@@ -14,7 +17,14 @@
 						<th>EMP Code</th>
 						<th>Name</th>
 						<th>Designation</th>
-						<th>Duties Framework</th>
+						<th>Duty Framework</th>
+						<th>Target up to Q1</th>
+						<th>Work Progress Q1</th>
+						<th>Target up to Q2</th>
+						<th>Work Progress up to Q2</th>
+						<th>Target up to Q3</th>
+						<th>Work Progress up to Q3</th>
+						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -30,6 +40,12 @@
 						<td><b><?php echo ucwords($row['noc']) ?></b></td>
 						<td><b><?php echo $row['desig'] ?></b></td>
 						<td><b><?php echo $row['dutyfrm']  ?></b></td>
+						<td><?php echo $row['tutq1']  ?></td>
+						<td><b><?php echo $row['progq1p']  ?></b></td>
+						<td><?php echo $row['tutq2']  ?></td>
+						<td><b><?php echo $row['progq2p']  ?></b></td>
+						<td><?php echo $row['tutq3']  ?></td>
+						<td><b><?php echo $row['progq3p']  ?></b></td>
 						<td class="text-center">
 							<button type="button" class="btn btn-default btn-sm btn-flat border-info wave-effect text-info dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
 		                      Action
