@@ -1,4 +1,10 @@
 <?php
+include 'db_connect.php';
+$qry = $conn->query("SELECT * FROM duty_list where id = ".$_GET['id'])->fetch_array();
+foreach($qry as $k => $v){
+	$$k = $v;
+}
+//include 'new_employee.php';
 ?>
 <div class="col-lg-12">
 	<div class="card">
@@ -75,7 +81,7 @@
 				<hr>
 				<div class="col-lg-12 text-right justify-content-center d-flex">
 					<button class="btn btn-primary mr-2">Save</button>
-					<button class="btn btn-secondary" type="button" onclick="location.href = 'index.php?page=view_dutylist'">Cancel</button>
+					<button class="btn btn-secondary" type="button" onclick="location.href = 'index.php?page=employee_list'">Cancel</button>
 				</div>
 			</form>
 		</div>

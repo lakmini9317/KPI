@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 10, 2022 at 08:28 AM
+-- Generation Time: Jan 06, 2022 at 05:50 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 7.3.31
 
@@ -63,31 +63,6 @@ INSERT INTO `designation_list` (`id`, `designation`, `description`) VALUES
 (4, 'Clerk', '1.	Maintaining  letter - receiving register\r\n2.	Maintaining the file system in the division\r\n3.	Coordinating and helping to officers and visitors\r\n4.	Answering the telephone\r\n5.	Organizing welfare/ common activities in the division\r\n6.	Duties assigned by the higher officers'),
 (5, 'Caretaker', 'Caretaker'),
 (6, 'test desig', 'efefwe');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `duty_list`
---
-
-CREATE TABLE `duty_list` (
-  `id` int(30) NOT NULL,
-  `empcode` int(11) NOT NULL,
-  `noc` varchar(11) NOT NULL,
-  `desig` varchar(11) NOT NULL,
-  `dutyfrm` varchar(11) NOT NULL,
-  `tutq1` varchar(11) NOT NULL,
-  `progq1p` varchar(11) NOT NULL,
-  `progq1l` varchar(11) NOT NULL,
-  `tutq2` varchar(11) NOT NULL,
-  `progq2p` varchar(11) NOT NULL,
-  `progq2l` varchar(11) NOT NULL,
-  `tutq3` varchar(11) NOT NULL,
-  `progq3p` varchar(11) NOT NULL,
-  `progq3l` varchar(11) NOT NULL,
-  `created_date` int(11) NOT NULL DEFAULT current_timestamp(),
-  `updated_date` int(11) NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -219,9 +194,7 @@ CREATE TABLE `task_list` (
 INSERT INTO `task_list` (`id`, `task`, `description`, `employee_id`, `due_date`, `completed`, `status`, `date_created`) VALUES
 (3, 'test task', '							ewewewq', 3, '2021-12-24', '2021-12-27', 2, '2021-12-23 09:31:14'),
 (4, 'test task 2', 'early task', 3, '2021-12-27', '2021-12-26', 2, '2021-12-28 12:26:47'),
-(5, 'test task', '							Test Task', 6, '2022-01-08', '2022-01-07', 2, '2022-01-06 09:37:31'),
-(6, 'test task 3', 'ytjhtrutr', 4, '2022-01-07', '0000-00-00', 0, '2022-01-07 10:30:07'),
-(7, 'test taskxx', 'csfsdff', 4, '2022-01-07', '0000-00-00', 0, '2022-01-07 12:10:17');
+(5, 'test task', '							Test Task', 6, '2022-01-08', '0000-00-00', 2, '2022-01-06 09:37:31');
 
 -- --------------------------------------------------------
 
@@ -332,11 +305,6 @@ ALTER TABLE `task_progress`
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
-  -- Indexes for table `duty_list`
---
-ALTER TABLE `duty_list`
-  ADD PRIMARY KEY (`id`);
-
 --
 -- AUTO_INCREMENT for dumped tables
 --
@@ -381,7 +349,7 @@ ALTER TABLE `system_settings`
 -- AUTO_INCREMENT for table `task_list`
 --
 ALTER TABLE `task_list`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `task_progress`
@@ -393,11 +361,6 @@ ALTER TABLE `task_progress`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
-  -- AUTO_INCREMENT for table `joblist`
---
-ALTER TABLE `duty_list`
   MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 

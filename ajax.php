@@ -76,6 +76,14 @@ if($action == 'delete_employee'){
 	if($save)
 		echo $save;
 }
+//dutylist save
+//check admin_class.php line 360
+if($action == 'save_dutylist'){
+	$save = $crud->save_dutylist();
+	if($save)
+		echo $save;
+}
+
 if($action == 'save_evaluator'){
 	$save = $crud->save_evaluator();
 	if($save)
@@ -131,12 +139,12 @@ if($action == 'get_report'){
 	if($get)
 		echo $get;
 }
-if($action == 'save_dutylist'){
-	$save = $crud->save_dutylist();
-	if($save)
-		echo $save;
+// if($action == 'save_dutylist'){
+// 	$save = $crud->save_dutylist();
+// 	if($save)
+// 		echo $save;
 		
-ob_end_flush();
+//ob_end_flush();
 
-}
+//}
 ?>

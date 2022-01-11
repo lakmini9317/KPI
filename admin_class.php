@@ -356,6 +356,10 @@ Class Action {
 			return 1;
 		}
 	}
+
+	function save_dutylist(){
+		
+	}
 	function delete_employee(){
 		extract($_POST);
 		$delete = $this->db->query("DELETE FROM employee_list where id = ".$id);
