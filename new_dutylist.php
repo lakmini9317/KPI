@@ -3,7 +3,7 @@
 <div class="col-lg-12">
 	<div class="card">
 		<div class="card-body">
-			<form action="" id="manage_dutylist">
+			<form action="dutysubmit.php" id="manage_dutylist" method="post">
 				<input type="hidden" name="id" value="<?php echo isset($id) ? $id : '' ?>">
 				<div class="row">
 			      <div class="col-md-6 border-right">
@@ -74,7 +74,7 @@
 				</div>
 				<hr>
 				<div class="col-lg-12 text-right justify-content-center d-flex">
-					<button class="btn btn-primary mr-2">Save</button>
+					<input type="submit" class="primary" value="Submit">
 					<button class="btn btn-secondary" type="button" onclick="location.href = 'index.php?page=view_dutylist'">Cancel</button>
 				</div>
 			</form>
@@ -89,28 +89,4 @@
 		border-radius: 100% 100%;
 	}
 </style>
-<script>
 
-		$.ajax({
-			url:'ajax.php?action=save_dutylist',
-			data: new FormData($(this)[0]),
-		    cache: false,
-		    contentType: false,
-		    processData: false,
-		    method: 'POST',
-		    type: 'POST',
-			success:function(resp){
-				if(resp == 1){
-					alert_toast('Data successfully saved.',"success");
-					setTimeout(function(){
-						location.replace('index.php?page=new_dutylist')
-					},750)
-				}else if(resp == 2){
-					$('#msg').html("<div class='alert alert-danger'>Email already exist.</div>");
-					$('[name="email"]').addClass("border-danger")
-					end_load()
-				}
-			}
-		})
-	})
-</script>
