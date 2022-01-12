@@ -367,6 +367,7 @@ Class Action {
 	function save_dutylist(){		
 		extract($_POST);
 		$data = "";
+		
 		foreach($_POST as $k => $v){
 			if(!in_array($k, array('id','cpass','password')) && !is_numeric($k)){
 				if(empty($data)){
@@ -388,7 +389,9 @@ Class Action {
 		}
 
 		if($save){
-			return 1;
+			return 1; 
+
+			
 		}
 	}
 		
