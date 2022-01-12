@@ -5,25 +5,32 @@
 			<div class="card-tools">
 				
 			</div>
-		</div>
-
-	
+		</div>	
 
 		<div class="card-body">
 			<table class="table tabe-hover table-bordered" id="list">
 				<thead>
+					<tr class="text-center">
+
+						<th rowspan='2'>#</th>
+						<th rowspan='2'>EMP Code</th>
+						<th rowspan='2'>Name</th>
+						<th rowspan='2'>Designation</th>
+						<th rowspan='2'>Duty Framework</th>
+						<th colspan='2'>Quarter 01 </th>
+						<th colspan='2'>Quarter 02</th>
+						<th colspan='2'>Quarter 03</th>
+						
+					</tr>
+
 					<tr>
-						<th class="text-center">#</th>
-						<th width="1%"  >EMP Code</th>
-						<th>Name</th>
-						<th>Designation</th>
-						<th>Duty Framework</th>
-						<th>Target up to Q1 </th>
-						<th width="1%">Work Progress Q1 (%)</th>
-						<th>Target up to Q2 </th>
-						<th width="1%">Work Progress up to Q2 (%)</th>
-						<th>Target up to Q3</th>
-						<th width="1%">Work Progress up to Q3 (%)</th>
+						
+						<th>Target  </th>
+						<th>Progress(%)</th>
+						<th>Target  </th>
+						<th>Progress(%)</th>
+						<th>Target </th>
+						<th>Progress(%)</th>
 						
 					</tr>
 				</thead>
