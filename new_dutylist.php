@@ -96,17 +96,30 @@
 					<button class="btn btn-secondary" type="button" onclick="location.href = 'index.php?page=view_dutylist'">Cancel</button>
 				</div>
 			</form>
+				
 		</div>
 	</div>
 </div>
-<style>
-	img#cimg{
-		height: 15vh;
-		width: 15vh;
-		object-fit: cover;
-		border-radius: 100% 100%;
-	}
-</style>
+
+<script>
+	$.ajax({
+			url:'ajax.php?action=save_dutylist',
+			data: new FormData($(this)[0]),
+		    cache: false,
+		    contentType: false,
+		    processData: false,
+		    method: 'POST',
+		    type: 'POST',
+			success:function(resp){
+				if(resp == 1){
+					alert_toast('Data successfully saved.',"success");
+					setTimeout(function(){
+						location.replace('index.php?page=view_dutylist')
+					},750)
+				}
+			}
+		})
+</script>
 
 
 
