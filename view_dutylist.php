@@ -3,7 +3,7 @@
 	<div class="card card-outline card-success">
 		<div class="card-header">
 			<div class="card-tools">
-				<a class="btn btn-block btn-sm btn-default btn-flat border-primary" href="./index.php?page=#"><i class="fa fa-plus"></i> Add New Employee</a>
+				
 			</div>
 		</div>
 
@@ -18,13 +18,13 @@
 						<th>Name</th>
 						<th>Designation</th>
 						<th>Duty Framework</th>
-						<th>Target up to Q1</th>
-						<th>Work Progress Q1</th>
-						<th>Target up to Q2</th>
-						<th>Work Progress up to Q2</th>
+						<th>Target up to Q1 </th>
+						<th>Work Progress Q1 (%)</th>
+						<th>Target up to Q2 </th>
+						<th>Work Progress up to Q2 (%)</th>
 						<th>Target up to Q3</th>
-						<th>Work Progress up to Q3</th>
-						<th>Action</th>
+						<th>Work Progress up to Q3 (%)</th>
+						
 					</tr>
 				</thead>
 				<tbody>
@@ -46,18 +46,7 @@
 						<td><b><?php echo $row['progq2p']  ?></b></td>
 						<td><?php echo $row['tutq3']  ?></td>
 						<td><b><?php echo $row['progq3p']  ?></b></td>
-						<td class="text-center">
-							<button type="button" class="btn btn-default btn-sm btn-flat border-info wave-effect text-info dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-		                      Action
-		                    </button>
-		                    <div class="dropdown-menu" style="">
-		                      <a class="dropdown-item view_employee" href="./index.php?page=display_dutylist&id=<?php echo $row['id']?>" data-id="<?php echo $row['id'] ?>">View</a>
-		                      <div class="dropdown-divider"></div>
-		                      <a class="dropdown-item" href="./index.php?page=edit_dutylist&id=<?php echo $row['id'] ?>">Edit</a>
-		                      <div class="dropdown-divider"></div>
-		                      <a class="dropdown-item delete_employee" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>">Delete</a>
-		                    </div>
-						</td>
+						
 					</tr>	
 				<?php endwhile; ?>
 				</tbody>

@@ -114,3 +114,16 @@
 		})
 	})
 </script>
+
+<td class="text-center">
+							<button type="button" class="btn btn-default btn-sm btn-flat border-info wave-effect text-info dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+		                      Action
+		                    </button>
+		                    <div class="dropdown-menu" style="">
+		                      <a class="dropdown-item view_employee" href="./index.php?page=display_dutylist&id=<?php echo $row['id']?>" data-id="<?php echo $row['id'] ?>">View</a>
+		                      <div class="dropdown-divider"></div>
+		                      <a class="dropdown-item" href="./index.php?page=edit_dutylist&id=<?php echo $row['id'] ?>">Edit</a>
+		                      <div class="dropdown-divider"></div>
+		                      <a class="dropdown-item delete_employee" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>">Delete</a>
+		                    </div>
+						</td>
