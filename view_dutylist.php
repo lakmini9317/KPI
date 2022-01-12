@@ -14,7 +14,7 @@
 				<thead>
 					<tr>
 						<th class="text-center">#</th>
-						<th width="1%">EMP Code</th>
+						<th width="1%"  >EMP Code</th>
 						<th>Name</th>
 						<th>Designation</th>
 						<th>Duty Framework</th>
