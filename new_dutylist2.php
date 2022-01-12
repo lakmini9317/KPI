@@ -49,7 +49,7 @@
 
 						<div class="form-group">
 							<label for="" class="control-label">Work Progress up to 30.09.2021</label>
-							<div class="col-md-2 ">
+						  <div class="col-md-2 ">
 							<input type="text" name="progq2p" class="form-control form-control-sm" required value="<?php echo isset($progq2p) ? $progq2p : '' ?>">
 						  </div>
 						  <div class="col-md-2 ">
@@ -60,17 +60,17 @@
 						<div class="form-group">
 								<label for="" class="control-label">Target up to 31.12.2021</label>
 								<textarea name="tutq3" class="form-control form-control-sm" required value="<?php echo isset($tutq3) ? $lastname : '' ?>"></textarea>
-							</div>
-
-							<div class="form-group">
+						</div>
+						<div class="form-group">
 							<label for="" class="control-label">Work Progress up to 31.12.2021</label>
 							<div class="col-md-2 ">
 							<input type="text" name="progq3p" class="form-control form-control-sm" required value="<?php echo isset($progq3p) ? $progq3p : '' ?>">
-						  </div>
-						  <div class="col-md-2 ">
+						</div>
+						<div class="col-md-2 ">
 							<input type="text" name="progq3l" class="form-control form-control-sm" required value="<?php echo isset($progq3l) ? $progq3l : '' ?>">
-						  </div>
-						  </div>
+						 </div>
+					 </div>
+
 				</div>
 				<hr>
 				<div class="col-lg-12 text-right justify-content-center d-flex">
