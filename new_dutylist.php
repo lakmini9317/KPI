@@ -33,7 +33,6 @@
 						</div>
 
 						<div class="form-group">
-<<<<<<< Updated upstream
 							<label for="" class="control-label">Work Progress up to 31.03.2021</label>
 							<div class="form-row">
                             	<div class="form-group col-md-2">
@@ -45,26 +44,12 @@
 									<input type="text" name="progq1l" class="form-control form-control-sm" required value="<?php echo isset($progq1l) ? $progq1l : '' ?>">
 						  		</div>
 							</div>
-=======
-						    <label for="" class="control-label">Work Progress up to 31.03.2021</label>
-						  <div class="form-row">
-                            <div class="form-group col-md-2">
-							 <label for="">Completed</label>
-							<input type="text" name="progq1p" class="form-control form-control-sm" required value="<?php echo isset($progq1p) ? $progq1p : '' ?>">
-						  </div>
-						  
-						  <div class="col-md-1 ">
-							<label for="">Balance</label>
-							<input type="text" name="progq1l" class="form-control form-control-sm" required value="<?php echo isset($progq1l) ? $progq1l : '' ?>">
-						  </div>
->>>>>>> Stashed changes
 						</div>
 
 						<div class="form-group">
 							<label for="" class="control-label">Target upto 30.09.2021</label>
 							<textarea name="tutq2" class="form-control form-control-sm" required value="<?php echo isset($tutq2) ? $tutq2 : '' ?>"></textarea>
 						</div>
-<<<<<<< Updated upstream
 
 						<div class="form-group">
 							<label for="" class="control-label">Work Progress up to 30.09.2021</label>
@@ -78,20 +63,6 @@
 									<input type="text" name="progq2l" class="form-control form-control-sm" required value="<?php echo isset($progq2l) ? $progq2l : '' ?>">
 								</div>
 						 	</div>
-=======
-								<div class="form-group">
-									<label for="" class="control-label">Work Progress up to 30.09.2021</label>
-								<div class="form-row">
-									<div class="form-group col-md-2">
-									<label for="">Completed</label>
-									<input type="text" name="progq2p" class="form-control form-control-sm" required value="<?php echo isset($progq2p) ? $progq2p : '' ?>">
-								</div>
-								<div class="col-md-1 ">
-									<label for="">Balance</label>
-									<input type="text" name="progq2l" class="form-control form-control-sm" required value="<?php echo isset($progq2l) ? $progq2l : '' ?>">
-								</div>
-							</div>
->>>>>>> Stashed changes
 						</div>
 
 						<div class="form-group">
@@ -100,7 +71,6 @@
 						</div>
 
 						<div class="form-group">
-<<<<<<< Updated upstream
 							<label for="" class="control-label">Work Progress up to 31.12.2021</label>
 
 							<div class="form-row">
@@ -118,22 +88,6 @@
 					</div>
 				</div> <br>
 				
-=======
-							 	<label for="" class="control-label">Work Progress up to 31.12.2021</label>
-							<div class="form-row">
-                               <div class="form-group col-md-2">
-								<label for="">Completed</label>
-								<input type="text" name="progq3p" class="form-control form-control-sm" required value="<?php echo isset($progq3p) ? $progq3p : '' ?>">
-						    </div>
-						<div class="col-md-1 ">
-								<label for="">Balance</label>
-								<input type="text" name="progq3l" class="form-control form-control-sm" required value="<?php echo isset($progq3l) ? $progq3l : '' ?>">
-						</div>
-					 </div>
-					 
-					 <hr>
-
->>>>>>> Stashed changes
 				<div class="col-lg-12 text-right justify-content-center d-flex">
 					<button class="btn btn-primary mr-2">Save</button>
 					<button class="btn btn-secondary" type="button" onclick="location.href = 'index.php?page=view_dutylist'">Cancel</button>
