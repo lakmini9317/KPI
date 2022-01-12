@@ -26,7 +26,7 @@
 					</div>
 
 					<div class="col-md-6">
-
+						<h4>Quarter 01</h4>
 						<div class="form-group">
 							<label for="" class="control-label">Target upto 31.03.2021</label>
 							<textarea name="tutq1" class="form-control form-control-sm" required value="<?php echo isset($tutq1) ? $tutq1 : '' ?>"></textarea>
@@ -46,6 +46,7 @@
 							</div>
 						</div>
 
+						<h4>Quarter 02</h4>
 						<div class="form-group">
 							<label for="" class="control-label">Target upto 30.09.2021</label>
 							<textarea name="tutq2" class="form-control form-control-sm" required value="<?php echo isset($tutq2) ? $tutq2 : '' ?>"></textarea>
@@ -58,6 +59,7 @@
 									<label for="inputCity">Completed</label>
 									<input type="text" name="progq2p" class="form-control form-control-sm" required value="<?php echo isset($progq2p) ? $progq2p : '' ?>">
 						  		</div>
+
 								<div class="col-md-1 ">
 									<label for="inputCity">Balance</label>
 									<input type="text" name="progq2l" class="form-control form-control-sm" required value="<?php echo isset($progq2l) ? $progq2l : '' ?>">
@@ -65,6 +67,7 @@
 						 	</div>
 						</div>
 
+						<h4>Quarter 03</h4>
 						<div class="form-group">
 							<label for="" class="control-label">Target up to 31.12.2021</label>
 							<textarea name="tutq3" class="form-control form-control-sm" required value="<?php echo isset($tutq3) ? $lastname : '' ?>"></textarea>
@@ -104,4 +107,6 @@
 		border-radius: 100% 100%;
 	}
 </style>
+
+
 
