@@ -14,16 +14,16 @@
 				<thead>
 					<tr>
 						<th class="text-center">#</th>
-						<th>EMP Code</th>
+						<th width="1%">EMP Code</th>
 						<th>Name</th>
 						<th>Designation</th>
 						<th>Duty Framework</th>
 						<th>Target up to Q1 </th>
-						<th>Work Progress Q1 (%)</th>
+						<th width="1%">Work Progress Q1 (%)</th>
 						<th>Target up to Q2 </th>
-						<th>Work Progress up to Q2 (%)</th>
+						<th width="1%">Work Progress up to Q2 (%)</th>
 						<th>Target up to Q3</th>
-						<th>Work Progress up to Q3 (%)</th>
+						<th width="1%">Work Progress up to Q3 (%)</th>
 						
 					</tr>
 				</thead>
