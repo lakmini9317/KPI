@@ -385,7 +385,7 @@ Class Action {
 		}
 		
 	    else{
-			$save = $this->db->query("UPDATE employee_list set $data where id = $id");
+			$save = $this->db->query("UPDATE duty_list set $data where id = $id");
 		}
 
 		if($save){
@@ -576,5 +576,41 @@ Class Action {
 		}
 		return json_encode($data);
 
+	}
+}
+
+function save_dutylist(){
+	extract($_POST);
+	$data = "";
+	foreach($_POST as $k => $v){
+		if(!in_array($k, array('id','user_ids')) && !is_numeric($k)){
+			if(empty($data)){
+				$data .= " $k='$v' ";
+			}else{
+				$data .= ", $k='$v' ";
+			}
+		}
+	}
+	$chk = $this->db->query("SELECT * FROM duty_list where empcode = '$empcode' and id != '{$id}' ")->num_rows;
+	if($chk > 0){
+		return 2;
+	}
+	if(isset($user_ids)){
+		$data .= ", user_ids='".implode(',',$user_ids)."' ";
+	}
+	if(empty($id)){
+		$save = $this->db->query("INSERT INTO duty_list set $data");
+	}else{
+		$save = $this->db->query("UPDATE duty_list set $data where id = $id");
+	}
+	if($save){
+		return 1;
+	}
+}
+function delete_dutylist(){
+	extract($_POST);
+	$delete = $this->db->query("DELETE FROM duty_list where id = $id");
+	if($delete){
+		return 1;
 	}
 }

@@ -143,7 +143,13 @@ if($action == 'get_report'){
  	$save = $crud->save_dutylist();
 	if($save)
 		echo $save;
- }		
+ }
+
+ if($action == 'delete_dutylist'){
+	$save = $crud->delete_dutylist();
+	if($save)
+		echo $save;
+}		
 ob_end_flush();
 
 

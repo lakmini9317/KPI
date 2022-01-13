@@ -1,9 +1,12 @@
 <?php
+
+
 ?>
+
 <div class="col-lg-12">
 	<div class="card">
 		<div class="card-body">
-			<form action="dutysubmit.php" id="manage_dutylist" method="post">
+			<form action="" id="manage-dutylist">
 				<input type="hidden" name="id" value="<?php echo isset($id) ? $id : '' ?>">
 				<div class="row">
 			      	<div class="col-md-6 border-right">
@@ -101,24 +104,32 @@
 	</div>
 </div>
 
+
 <script>
-	$.ajax({
-			url:'ajax.php?action=save_dutylist',
-			data: new FormData($(this)[0]),
-		    cache: false,
-		    contentType: false,
-		    processData: false,
-		    method: 'POST',
-		    type: 'POST',
-			success:function(resp){
-				if(resp == 1){
-					alert_toast('Data successfully saved.',"success");
-					setTimeout(function(){
-						location.replace('index.php?page=view_dutylist')
-					},750)
+	$(document).ready(function(){
+		$('#manage-dutylist').submit(function(e){
+			e.preventDefault();
+			start_load()
+			$('#msg').html('')
+			$.ajax({
+				url:'ajax.php?action=save_dutylist',
+				method:'POST',
+				data:$(this).serialize(),
+				success:function(resp){
+					if(resp == 1){
+						alert_toast("Data successfully saved.","success");
+						setTimeout(function(){
+							location.reload()	
+						},1750)
+					}else if(resp == 2){
+						$('#msg').html('<div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> OOPS.</div>')
+						end_load()
+					}
 				}
-			}
+			})
 		})
+	})
+
 </script>
 
 

@@ -21,6 +21,7 @@ VALUES ('$empcode','$noc','$desig','$dutyfrm','$tutq1','$progq1p','$progq1l','$t
 
 if(mysqli_query($conn, $sql)){
     echo "<h3>data stored in a database successfully.</h3>"; 
+    
     } else{
         echo "ERROR: Hush! Sorry $sql. " 
         . mysqli_error($conn);
