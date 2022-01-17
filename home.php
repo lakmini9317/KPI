@@ -86,6 +86,32 @@ if($_SESSION['login_type'] != 1)
               </div>
             </div>
           </div></a>
+
+          <div class="col-12 col-sm-6 col-md-4" >
+           <a href="./index.php?page=view_dutylist"> 
+            <div class="small-box bg-light shadow-sm border">
+              <div class="inner">
+                <h3><?php echo $conn->query("SELECT * FROM duty_list")->num_rows; ?></h3>
+                <p>Duty Frameworks</p>
+              </div>
+                  <div class="icon">
+                <i class="fa fa-tasks" style="color:#FFAB45;"></i>
+              </div>
+            </div>
+          </div></a>
+
+          <div class="col-12 col-sm-6 col-md-4" >
+           <a href="./index.php?page=Report"> 
+            <div class="small-box bg-light shadow-sm border">
+              <div class="inner">
+                <h3><?php echo $conn->query("SELECT * FROM duty_list")->num_rows; ?></h3>
+                <p>Duty Framework Progress</p>
+              </div>
+                  <div class="icon">
+                <i class="fa fa-tasks" style="color:#FFAB45;"></i>
+              </div>
+            </div>
+          </div></a>
       </div>
 
 <?php else: ?>

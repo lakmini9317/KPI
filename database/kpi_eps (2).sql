@@ -320,7 +320,7 @@ ALTER TABLE `designation_list`
 -- Indexes for table `duty_list`
 --
 ALTER TABLE `duty_list`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`empcode`);
 
 --
 -- Indexes for table `employee_list`
@@ -384,7 +384,7 @@ ALTER TABLE `designation_list`
 -- AUTO_INCREMENT for table `duty_list`
 --
 ALTER TABLE `duty_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `empcode` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `employee_list`
