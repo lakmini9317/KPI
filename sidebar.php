@@ -68,7 +68,7 @@
         <?php endif; ?>
           <?php if($_SESSION['login_type'] == 2): ?>
           <li class="nav-item dropdown">
-            <a href="./index.php?page=department" class="nav-link nav-department">
+            <a href="./index.php?page=Divisions" class="nav-link nav-department">
               <i class="nav-icon fas fa-th-list"></i>
               <p>
                 Divisions

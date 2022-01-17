@@ -71,19 +71,19 @@
 
       </head>  
       <body>  
-           <br /><br /> 
+           <br /> <br/> 
            
            <div class="row">
                <div class="col-md" >  
                     <h3>Duties Report </h3>  
-                    <br />  
+                    <br/>  
                     <div id="piechart" style="width: 900px; height: 500px;"></div>  
                </div>  
            <div>
                
            <br/>	
            
-           <div class="col-md" >  
+           <div class="col-md">  
                 <h3>Completion Report</h3>  
                 <br/>  
                 <div id="piechart2" style="width: 900px; height: 500px;"></div>  
@@ -98,4 +98,3 @@
  </html>
 
  
-<
