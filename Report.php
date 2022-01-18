@@ -1,5 +1,5 @@
 <?php  
- $connect = mysqli_connect("localhost", "root", "admin", "kpi_eps");  
+ $connect = mysqli_connect("localhost", "root", "", "kpi eps");  
  
  $query = "SELECT dutyfrm, count(*) as number FROM duty_list GROUP BY dutyfrm";  
  $result = mysqli_query($connect, $query); 
@@ -74,19 +74,20 @@
            <br /> <br/> 
            
           <div class="row">
-               <div class="col-md-6" >  
+               <div class="col-md-6 col-sm-12 col-lg-6" >  
                     <h3>Duties Report </h3>  
                     <br/>  
                     <div id="piechart" style=" height: 500px;"></div>  
                </div>            	
            
-               <div class="col-md-6">  
+               <div class="col-md-6 col-sm-12 col-lg-6">  
                     <h3>Completion Report</h3>  
                     <br/>  
                     <div id="piechart2" style="height: 500px;"></div>  
                </div> 
-          <div> 
+          <div> <br>
 
+          
 
 
 
