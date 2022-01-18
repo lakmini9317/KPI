@@ -8,6 +8,13 @@
  $query2 = "SELECT progq1p, count(*) as number FROM duty_list GROUP BY progq1p";  
  $result2 = mysqli_query($connect, $query2);  
 
+ $query3 = "SELECT progq2p, count(*) as number FROM duty_list GROUP BY progq2p";  
+ $result3 = mysqli_query($connect, $query3);  
+
+
+ $query4 = "SELECT progq3p, count(*) as number FROM duty_list GROUP BY progq3p";  
+ $result4 = mysqli_query($connect, $query4);  
+
  ?>  
  <!DOCTYPE html>  
  <html>  
@@ -22,8 +29,12 @@
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
            <script type="text/javascript">  
            google.charts.load('current', {'packages':['corechart']});  
+
            google.charts.setOnLoadCallback(drawChart);
            google.charts.setOnLoadCallback(drawChart2);
+           google.charts.setOnLoadCallback(drawChart3);
+           google.charts.setOnLoadCallback(drawChart4);
+
            function drawChart()  
            {  
                 var data = google.visualization.arrayToDataTable([  
@@ -64,6 +75,46 @@
                 chart.draw(data, options);  
            } 
 
+           function drawChart3()  
+           {  
+                var data = google.visualization.arrayToDataTable([  
+                          ['Duty', 'Number'],  
+                          <?php  
+                          while($row = mysqli_fetch_array($result3))  
+                          {  
+                               echo "['".$row["progq2p"]."', ".$row["number"]."],";  
+                          }  
+                          ?>  
+                     ]);  
+                var options = {  
+                      title: 'Percentages ',  
+                      //is3D:true,  
+                      pieHole: 0.4  
+                     };  
+                var chart = new google.visualization.PieChart(document.getElementById('piechart3'));  
+                chart.draw(data, options);  
+           } 
+
+           function drawChart4()  
+           {  
+                var data = google.visualization.arrayToDataTable([  
+                          ['Duty', 'Number'],  
+                          <?php  
+                          while($row = mysqli_fetch_array($result4))  
+                          {  
+                               echo "['".$row["progq3p"]."', ".$row["number"]."],";  
+                          }  
+                          ?>  
+                     ]);  
+                var options = {  
+                      title: 'Percentages ',  
+                      //is3D:true,  
+                      pieHole: 0.4  
+                     };  
+                var chart = new google.visualization.PieChart(document.getElementById('piechart4'));  
+                chart.draw(data, options);  
+           } 
+
            
 
            </script>  
@@ -81,11 +132,26 @@
                </div>            	
            
                <div class="col-md-6 col-sm-12 col-lg-6">  
-                    <h3>Completion Report</h3>  
+                    <h3>Q1 Completion Report</h3>  
                     <br/>  
                     <div id="piechart2" style="height: 500px;"></div>  
                </div> 
           <div> <br>
+
+          <div class="row">
+
+               <div class="col-md-6 col-sm-12 col-lg-6" >  
+                    <h3>Q2 Completion Report </h3>  
+                    <br/>  
+                    <div id="piechart3" style=" height: 500px;"></div>  
+               </div>            	
+           
+               <div class="col-md-6 col-sm-12 col-lg-6">  
+                    <h3>Q3 Completion Report</h3>  
+                    <br/>  
+                    <div id="piechart4" style="height: 500px;"></div>  
+               </div> 
+          <div> 
 
           
 

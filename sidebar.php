@@ -65,6 +65,7 @@
               </p>
             </a>
           </li>
+          
         <?php endif; ?>
           <?php if($_SESSION['login_type'] == 2): ?>
           <li class="nav-item dropdown">
@@ -75,6 +76,7 @@
               </p>
             </a>
           </li> 
+
           <li class="nav-item dropdown">
             <a href="./index.php?page=designation" class="nav-link nav-designation">
               <i class="nav-icon fas fa-list-alt"></i>
@@ -83,6 +85,7 @@
               </p>
             </a>
           </li> 
+
           <li class="nav-item">
             <a href="#" class="nav-link nav-edit_employee">
               <i class="nav-icon fas fa-user-friends"></i>
@@ -106,6 +109,7 @@
               </li>
             </ul>
           </li>
+
           <li class="nav-item">
             <a href="#" class="nav-link nav-edit_evaluator">
               <i class="nav-icon fas fa-user-secret"></i>
@@ -129,6 +133,7 @@
               </li>
             </ul>
           </li>
+
           <li class="nav-item">
             <a href="#" class="nav-link nav-edit_user">
               <i class="nav-icon fas fa-users"></i>
