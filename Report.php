@@ -1,5 +1,5 @@
 <?php  
- $connect = mysqli_connect("localhost", "root", "", "kpi eps");  
+ $connect = mysqli_connect("localhost", "root", "admin", "kpi_eps");  
  
  $query = "SELECT dutyfrm, count(*) as number FROM duty_list GROUP BY dutyfrm";  
  $result = mysqli_query($connect, $query); 
@@ -24,7 +24,7 @@
 
            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
            
-           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
            <script type="text/javascript">  
@@ -119,9 +119,9 @@
 
            </script>  
 
+     </head>  
 
-      </head>  
-      <body>  
+     <body>  
            <br /> <br/> 
            
           <div class="row">
@@ -132,34 +132,29 @@
                </div>            	
            
                <div class="col-md-6 col-sm-12 col-lg-6">  
-                    <h3>Q1 Completion Report</h3>  
+                    <h3>Quarter 01 Completion Report</h3>  
                     <br/>  
                     <div id="piechart2" style="height: 500px;"></div>  
-               </div> 
-          <div> <br>
-
-          <div class="row">
-
-               <div class="col-md-6 col-sm-12 col-lg-6" >  
-                    <h3>Q2 Completion Report </h3>  
+               </div>  <br>
+               
+               <div class="col-lg-6 col-md-6" style="padding-top:100px;">  
+                    <h3>Quarter 02 Completion Report </h3>  
                     <br/>  
                     <div id="piechart3" style=" height: 500px;"></div>  
                </div>            	
            
-               <div class="col-md-6 col-sm-12 col-lg-6">  
-                    <h3>Q3 Completion Report</h3>  
+               <div class="col-lg-6 col-md-6" style="padding-top:100px;">  
+                    <h3>Quarter 03 Completion Report</h3>  
                     <br/>  
                     <div id="piechart4" style="height: 500px;"></div>  
-               </div> 
-          <div> 
+               </div>
+          <div> <br/>
 
           
+                
+               
 
-
-
-           
-</div>
-      </body>  
+     </body>  
  </html>
 
  
