@@ -1,5 +1,5 @@
 <?php  
- $connect = mysqli_connect("localhost", "root", "admin", "kpi_eps");  
+ $connect = mysqli_connect("localhost", "root", "", "kpi eps");  
  
  $query = "SELECT dutyfrm, count(*) as number FROM duty_list GROUP BY dutyfrm";  
  $result = mysqli_query($connect, $query); 
@@ -14,6 +14,9 @@
 
  $query4 = "SELECT progq3p, count(*) as number FROM duty_list GROUP BY progq3p";  
  $result4 = mysqli_query($connect, $query4);  
+
+ $query5 = "SELECT progq3p, count(*) as number FROM duty_list GROUP BY progq3p" ;  
+ $result5 = mysqli_query($connect, $query5);
 
  ?>  
  <!DOCTYPE html>  
@@ -34,6 +37,7 @@
            google.charts.setOnLoadCallback(drawChart2);
            google.charts.setOnLoadCallback(drawChart3);
            google.charts.setOnLoadCallback(drawChart4);
+           google.charts.setOnLoadCallback(drawChart5);
 
            function drawChart()  
            {  
@@ -95,12 +99,32 @@
                 chart.draw(data, options);  
            } 
 
-           function drawChart4()  
+            function drawChart4()  
+            {  
+                 var data = google.visualization.arrayToDataTable([  
+                           ['Duty', 'Number'],  
+                           <?php  
+                           while($row = mysqli_fetch_array($result4))  
+                           {  
+                                echo "['".$row["progq3p"]."', ".$row["number"]."],";  
+                           }  
+                           ?>  
+                      ]);  
+                 var options = {  
+                       title: 'Percentages ',  
+                       //is3D:true,  
+                       pieHole: 0.4  
+                      };  
+                 var chart = new google.visualization.PieChart(document.getElementById('piechart4'));  
+                 chart.draw(data, options);  
+            } 
+
+            function drawChart5()  
            {  
                 var data = google.visualization.arrayToDataTable([  
                           ['Duty', 'Number'],  
                           <?php  
-                          while($row = mysqli_fetch_array($result4))  
+                          while($row = mysqli_fetch_array($result5) )  
                           {  
                                echo "['".$row["progq3p"]."', ".$row["number"]."],";  
                           }  
@@ -111,10 +135,9 @@
                       //is3D:true,  
                       pieHole: 0.4  
                      };  
-                var chart = new google.visualization.PieChart(document.getElementById('piechart4'));  
+                var chart = new google.visualization.LineChart(document.getElementById('piechart5'));  
                 chart.draw(data, options);  
            } 
-
            
 
            </script>  
@@ -139,25 +162,22 @@
                
                <div class="col-lg-6 col-md-6" style="padding-top:100px;">  
                     <h3>Quarter 02 Completion Report </h3>  
-=======
-               </div> 
-
-            
-
-               <div class="col-md-6 col-sm-12 col-lg-6" >
-               <br/>  
-                    <h3>Q2 Completion Report </h3>  
->>>>>>> Stashed changes
                     <br/>  
                     <div id="piechart3" style=" height: 500px;"></div>  
                </div>            	
            
-<<<<<<< Updated upstream
-               <div class="col-lg-6 col-md-6" style="padding-top:100px;">  
+                <div class="col-lg-6 col-md-6" style="padding-top:100px;">  
                     <h3>Quarter 03 Completion Report</h3>  
                     <br/>  
                     <div id="piechart4" style="height: 500px;"></div>  
+               </div> 
+
+               <div class="col-lg-6 col-md-6" style="padding-top:100px;">  
+                    <h3>Quarter 04 Completion Report</h3>  
+                    <br/>  
+                    <div id="piechart5" style="height: 500px;"></div>  
                </div>
+
           <div> <br/>
 
           
@@ -165,24 +185,6 @@
                
 
      </body>  
-=======
-               <div class="col-md-6 col-sm-12 col-lg-6"> 
-               <br/> 
-                    <h3>Q3 Completion Report</h3>  
-                    <br/>  
-                    <div id="piechart4" style="height: 500px;"></div>  
-               </div> 
-        
-
-          <div> <br>
-
-          
-                
-     </div>
-
-
-      </body>  
->>>>>>> Stashed changes
  </html>
 
  
