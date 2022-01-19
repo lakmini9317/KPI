@@ -139,10 +139,20 @@
                
                <div class="col-lg-6 col-md-6" style="padding-top:100px;">  
                     <h3>Quarter 02 Completion Report </h3>  
+=======
+               </div> 
+
+            
+
+               <div class="col-md-6 col-sm-12 col-lg-6" >
+               <br/>  
+                    <h3>Q2 Completion Report </h3>  
+>>>>>>> Stashed changes
                     <br/>  
                     <div id="piechart3" style=" height: 500px;"></div>  
                </div>            	
            
+<<<<<<< Updated upstream
                <div class="col-lg-6 col-md-6" style="padding-top:100px;">  
                     <h3>Quarter 03 Completion Report</h3>  
                     <br/>  
@@ -155,6 +165,24 @@
                
 
      </body>  
+=======
+               <div class="col-md-6 col-sm-12 col-lg-6"> 
+               <br/> 
+                    <h3>Q3 Completion Report</h3>  
+                    <br/>  
+                    <div id="piechart4" style="height: 500px;"></div>  
+               </div> 
+        
+
+          <div> <br>
+
+          
+                
+     </div>
+
+
+      </body>  
+>>>>>>> Stashed changes
  </html>
 
  
