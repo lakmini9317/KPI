@@ -139,7 +139,9 @@
                 var options = {  
                       title: 'Percentages ',  
                       is3D:true,  
-                      pieHole: 0.5  
+                      pieHole: 0.5,
+                      vAxis: {title: 'Percentage'},
+                      hAxis: {title: 'Progress'}  
                      };  
                 var chart = new google.visualization.BarChart(document.getElementById('piechart5'));  
                 chart.draw(data, options);  
