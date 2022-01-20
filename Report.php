@@ -31,6 +31,7 @@
           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
            <script type="text/javascript">  
+
            google.charts.load('current', {'packages':['corechart']});  
 
            google.charts.setOnLoadCallback(drawChart);
@@ -42,18 +43,19 @@
            function drawChart()  
            {  
                 var data = google.visualization.arrayToDataTable([  
-                          ['Duty', 'Number'],  
+                          ['Duty', 'Duty Frameworks'],  
                           <?php  
                           while($row = mysqli_fetch_array($result))  
                           {  
                                echo "['".$row["dutyfrm"]."', ".$row["number"]."],";  
                           }  
                           ?>  
-                     ]);  
+                     ]); 
+                      
                 var options = {  
                       title: 'Percentages ',  
-                      //is3D:true,  
-                      pieHole: 0.4  
+                      is3D:true,  
+                      pieHole: 0.5  
                      };  
                 var chart = new google.visualization.PieChart(document.getElementById('piechart'));  
                 chart.draw(data, options);  
@@ -62,18 +64,19 @@
            function drawChart2()  
            {  
                 var data = google.visualization.arrayToDataTable([  
-                          ['Duty', 'Number'],  
+                          ['Duty', 'Progress'],  
                           <?php  
                           while($row = mysqli_fetch_array($result2))  
                           {  
                                echo "['".$row["progq1p"]."', ".$row["number"]."],";  
                           }  
                           ?>  
-                     ]);  
+                     ]);
+
                 var options = {  
-                      title: 'Percentages ',  
-                      //is3D:true,  
-                      pieHole: 0.4  
+                      title: 'Quater 01 Progress ',  
+                      is3D:true,  
+                      pieHole: 0.5  
                      };  
                 var chart = new google.visualization.PieChart(document.getElementById('piechart2'));  
                 chart.draw(data, options);  
@@ -82,7 +85,7 @@
            function drawChart3()  
            {  
                 var data = google.visualization.arrayToDataTable([  
-                          ['Duty', 'Number'],  
+                          ['Duty', 'Progress'],  
                           <?php  
                           while($row = mysqli_fetch_array($result3))  
                           {  
@@ -90,10 +93,11 @@
                           }  
                           ?>  
                      ]);  
+
                 var options = {  
-                      title: 'Percentages ',  
-                      //is3D:true,  
-                      pieHole: 0.4  
+                      title: 'Quater 02 Progress ',  
+                      is3D:true,  
+                      pieHole: 0.5  
                      };  
                 var chart = new google.visualization.PieChart(document.getElementById('piechart3'));  
                 chart.draw(data, options);  
@@ -102,7 +106,7 @@
             function drawChart4()  
             {  
                  var data = google.visualization.arrayToDataTable([  
-                           ['Duty', 'Number'],  
+                           ['Duty', 'Progress'],  
                            <?php  
                            while($row = mysqli_fetch_array($result4))  
                            {  
@@ -110,10 +114,11 @@
                            }  
                            ?>  
                       ]);  
+
                  var options = {  
-                       title: 'Percentages ',  
-                       //is3D:true,  
-                       pieHole: 0.4  
+                       title: 'Quater 03 Progress ',  
+                       is3D:true,  
+                       pieHole: 0.5  
                       };  
                  var chart = new google.visualization.PieChart(document.getElementById('piechart4'));  
                  chart.draw(data, options);  
@@ -122,7 +127,7 @@
             function drawChart5()  
            {  
                 var data = google.visualization.arrayToDataTable([  
-                          ['Duty', 'Number'],  
+                          ['Duty', 'EMP Count'],  
                           <?php  
                           while($row = mysqli_fetch_array($result5) )  
                           {  
@@ -130,12 +135,13 @@
                           }  
                           ?>  
                      ]);  
+
                 var options = {  
                       title: 'Percentages ',  
-                      //is3D:true,  
-                      pieHole: 0.4  
+                      is3D:true,  
+                      pieHole: 0.5  
                      };  
-                var chart = new google.visualization.LineChart(document.getElementById('piechart5'));  
+                var chart = new google.visualization.BarChart(document.getElementById('piechart5'));  
                 chart.draw(data, options);  
            } 
            
