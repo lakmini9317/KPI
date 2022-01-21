@@ -17,9 +17,11 @@ function drawVisualization() {
     vAxis: {title: 'Percenatge'},
     hAxis: {title: 'Quarter'},
     seriesType: 'bars',
-    series: {10: {type: 'line'}}
+    series: {12: {type: 'line'}}
   };
 
   var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
   chart.draw(data, options);
 }
+
+
