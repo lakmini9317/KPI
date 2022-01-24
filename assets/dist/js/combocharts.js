@@ -4,7 +4,7 @@ google.charts.setOnLoadCallback(drawVisualization);
 function drawVisualization() {
   // Some raw data (not necessarily accurate)
   var data = google.visualization.arrayToDataTable([
-    ['Division', 'Chairman Office', 'DG Office', 'Board of Mgt. Office', 'ITS ', 'Legal', 'ADG', 'hrmtrans', 'hrmsec','progress','finance','ddg'],
+    ['Division', 'Chairman Office', 'DG Office', 'Board of Mgt. Office', 'ITS ', 'Legal', 'ADG', 'HRM-Transport', 'HRM- Security','Progress Monitoring','Finance','DDG'],
     ['Q1',  100,      100,        100,       80.6,           97,      98,     100,   85.7,    92,      96,    98],
     ['Q2',  100,      100,        100,       82.3,           98,      97,     100,   83.3,    94,      94,    99],
     ['Q3',  100,      100,        100,       82.5,           98,      98,     100,   86.8,    86.8,    96,    98],

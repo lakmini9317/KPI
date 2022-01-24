@@ -1,5 +1,5 @@
 <?php  
- $connect = mysqli_connect("localhost", "root", "admin", "kpi_eps");  
+ $connect = mysqli_connect("localhost", "root", "", "kpi eps");  
  
  $query = "SELECT dutyfrm, count(*) as number FROM duty_list GROUP BY dutyfrm";  
  $result = mysqli_query($connect, $query); 
@@ -32,6 +32,8 @@
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
           <script type="text/javascript" src="assets/dist/js/combocharts.js"></script>
           <script type="text/javascript" src="assets/dist/js/combochart2.js"></script>
+          <script type="text/javascript" src="assets/dist/js/combochart3.js"></script>
+          <script type="text/javascript" src="assets/dist/js/combochart4.js"></script>
           <script type="text/javascript">  
           
 
@@ -210,13 +212,31 @@
                     <div id="chart_div" style="height: 500px;"></div>  
                </div> 
           </div>
+
+
+          <div class="row">
+               <div class="col-lg-12 col-md-12" style="padding-top:100px;">  
+                    <h3>Division Report </h3>  
+                    <br/>  
+                    <div id="chart_div2" style="height: 500px;"></div>  
+               </div> 
+          </div>
+
+          <div class="row">
+               <div class="col-lg-12 col-md-12" style="padding-top:100px;">  
+                    <h3>Division Report </h3>  
+                    <br/>  
+                    <div id="chart_div3" style="height: 500px;"></div>  
+               </div> 
+          </div>
+
                <br/> <br>
 
           
 
 
           
-                
+
                
 
      </body>  

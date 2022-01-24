@@ -13,7 +13,7 @@ google.charts.load('current', {'packages':['corechart']});
         ]);
 
         var options = {
-          title : 'Quater wise Report',
+          title : 'Annual Report',
           vAxis: {title: 'Percenatge'},
           hAxis: {title: ''},
           seriesType: 'bars',
