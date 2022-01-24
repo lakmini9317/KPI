@@ -143,8 +143,8 @@
                       title: 'Percentages ',  
                       is3D:true,  
                       pieHole: 0.5,
-                      vAxis: {title: 'Percentage'},
-                      hAxis: {title: 'Progress'}  
+                      vAxis: {title: '-'},
+                      hAxis: {title: '-'}  
                      };  
                 var chart = new google.visualization.BarChart(document.getElementById('piechart5'));  
                 chart.draw(data, options);  
@@ -188,17 +188,18 @@
                     <br/>  
                     <div id="piechart5" style="height: 500px;"></div>  
                </div> -->
+
                <div class="col-lg-6 col-md-6" style="padding-top:100px;">  
                     <h3>Yearly Division Report</h3>  
                     <br/>  
-                    <div id="chart_div1" style="height: 500px;"></div>  
+                    <div id="chart_di" style="height: 500px;"></div>  
                </div>
 
-               <div class="col-lg-6 col-md-6" style="padding-top:100px;">  
+             <div class="col-lg-6 col-md-6" style="padding-top:100px;">  
                     <h3>Division Report </h3>  
                     <br/>  
                     <div id="chart_div" style="height: 500px;"></div>  
-               </div>
+               </div> 
 
           <div> 
                <br/> <br>

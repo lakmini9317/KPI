@@ -15,11 +15,11 @@ google.charts.load('current', {'packages':['corechart']});
         var options = {
           title : 'Quater wise Report',
           vAxis: {title: 'Percenatge'},
-          hAxis: {title: 'Quarter'},
+          hAxis: {title: ''},
           seriesType: 'bars',
           series: {30: {type: 'line'}}
         };
 
-        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_di'));
         chart.draw(data, options);
       }
