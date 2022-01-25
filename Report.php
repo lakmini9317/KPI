@@ -1,5 +1,5 @@
 <?php  
- $connect = mysqli_connect("localhost", "root", "", "kpi eps");  
+ $connect = mysqli_connect("localhost", "root", "admin", "kpi_eps");  
  
  $query = "SELECT dutyfrm, count(*) as number FROM duty_list GROUP BY dutyfrm";  
  $result = mysqli_query($connect, $query); 
