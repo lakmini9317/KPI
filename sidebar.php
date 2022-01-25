@@ -159,7 +159,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="./index.php?page=view_dutylist" class="nav-link nav-edit_user">
+            <a href="./index.php?page=view_ict" class="nav-link nav-edit_user">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 New List
