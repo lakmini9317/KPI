@@ -159,10 +159,10 @@
           </li>
 
           <li class="nav-item">
-            <a href="./index.php?page=view_ict" class="nav-link nav-edit_user">
-              <i class="nav-icon fas fa-users"></i>
+            <a href="./index.php?page=view_division_reports" class="nav-link nav-edit_user">
+              <i class="nav-icon fas fa-file-alt"></i>
               <p>
-                New List
+                Division Reports
               </p>
             </a>
             
