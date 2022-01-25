@@ -104,7 +104,7 @@ if($_SESSION['login_type'] != 1)
            <a href="./index.php?page=Report"> 
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
-                <h3><?php echo $conn->query("SELECT * FROM duty_list")->num_rows; ?></h3>
+                <h3><?php echo $conn->query("SELECT empcode FROM duty_list")->num_rows; ?></h3>
                 <p>Duty Framework Progress</p>
               </div>
                   <div class="icon">
