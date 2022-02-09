@@ -159,7 +159,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="./index.php?page=view_division_reports" class="nav-link nav-edit_user">
+            <a href="./index.php?page=view_division_reports" class="nav-link ">
               <i class="nav-icon fas fa-file-alt"></i>
               <p>
                 Division Reports
