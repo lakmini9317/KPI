@@ -1,11 +1,6 @@
 <?php 
 
 include '../db_connect.php';
- 
-$query = "SELECT divisub, count(*) as number FROM duty_list GROUP BY divisub";  
-$result = mysqli_query($conn, $query); 
-$query = "SELECT sum(new_customers) AS new, sum(old_customers) AS old, region FROM duty_list GROUP BY divisub";
-$exec = mysqli_query($YOURCONNECTIONVARIABLE ,$query);
 
 
 ?>
@@ -20,17 +15,12 @@ $exec = mysqli_query($YOURCONNECTIONVARIABLE ,$query);
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  	<script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js"> </script>
-	<script type = "text/javascript">
-		google.charts.load('current', {packages: ['corechart']});     
-    </script>
-
-
-
 	<title>Division Report</title>
 </head>
-<body>
-<h4>Division Report</h4> <br>
+<body class="container" width="80%">
+	<h4>Division Report</h4> <br>
+
+
 	<div class="row">
 		
 		<div class="col-lg-12">
