@@ -4,10 +4,10 @@ include 'db_connect.php';
 $emp =(isset($_POST['empcode']) ? $_POST['empcode'] : '');
 $division =(isset($_POST['division']) ? $_POST['division'] : '');
 
-$query="select empcode,noc,taskq1,progq1 from duty_list2 where empcode=$emp"; 
+$query="select empcode,noc,tutq1,progq1p from duty_list where empcode=$emp"; 
 $result=mysqli_query($conn,$query);
 
-$chartQuery = "SELECT * FROM duty_list2 where division=$division";
+$chartQuery = "SELECT * FROM duty_list where division=$division";
 $chartQueryRecords = mysqli_query($conn,$chartQuery);
 
 
@@ -42,7 +42,7 @@ $chartQueryRecords = mysqli_query($conn,$chartQuery);
 
               while($row = mysqli_fetch_assoc($chartQueryRecords)){
 
-                  echo "['".$row['empcode']."',".$row['taskq1']."],".$row['progq1']."";
+                  echo "['".$row['empcode']."',".$row['tutq1']."],".$row['progq1p']."";
               }
           ?>
       ]);
