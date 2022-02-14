@@ -1,10 +1,25 @@
-<?php 
+<?Php
+	require '../db_connect.php';
 
-include '../db_connect.php';
+	if($stmt = $conn->query("SELECT empcode,progq1p,progq2p,progq3p FROM duty_list WHERE divisub='ITS Division'")){
+
+	//echo "No of records : ".$stmt->num_rows."<br>";
+	$php_data_array = Array(); 
 
 
+	while ($row = $stmt->fetch_row()) {
+	
+	$php_data_array[] = $row; 
+	}
+
+	}else{
+	echo $connection->error;
+	}
+
+	echo "<script>
+			var my_2d = ".json_encode($php_data_array)."
+	</script>";
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,68 +31,135 @@ include '../db_connect.php';
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<title>Division Report</title>
+	
 </head>
-<body class="container" width="80%">
-	<h4>Division Report</h4> <br>
+
+<body>
+
+<?Php
+require "../db_connect.php";
+
+if($stmt = $conn->query("SELECT empcode,progq1p,progq2p,progq3p FROM duty_list WHERE divisub='ITS division'")){
+
+  //echo "No of records : ".$stmt->num_rows."<br>";
+$php_data_array = Array(); 
 
 
-	<div class="row">
+while ($row = $stmt->fetch_row()) {
+   
+   $php_data_array[] = $row; 
+   }
+
+}else{
+echo $connection->error;
+}
+
+echo "<script>
+        var my_2d = ".json_encode($php_data_array)."
+</script>";
+?>
+
+<h2>ITS Division Report</h2>
+
+<div id="chart_div"></div>
+<br><br>
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+
+      
+      google.charts.load('current', {packages: ['corechart', 'bar']});
+      google.charts.setOnLoadCallback(drawChart);
+	  
+      function drawChart() {
+
+        
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'EMP Code');
+        data.addColumn('number', 'Progress Q1');
+		    data.addColumn('number', 'Progress Q2');
+        data.addColumn('number', 'Progress Q3');
+        for(i = 0; i < my_2d.length; i++)
+        
+    data.addRow([my_2d[i][0], parseInt(my_2d[i][1]),parseInt(my_2d[i][2]),parseInt(my_2d[i][3])]);
+       var options = {
+          title: '',
+          hAxis: {title: 'Emp Code',  titleTextStyle: {color: '#666'}},
+          vAxis: {minValue: 0},
+		  width:2000,
+		  height:1000
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+       }
+
+</script>
+
+	
+	
+	
+	
+
+	<div class="container">
 		
 		<div class="col-lg-12">
-		<table class="table tabe-hover table-bordered" id="list" >
-		<thead>
-			<tr class="text-center">
+			<table class="table tabe-hover table-bordered" id="list" >
+				<thead>
+					<tr class="text-center">
 
-				<th rowspan='2'>#</th>
-				<th rowspan='2'>EMP Code</th>
-				<th rowspan='2'>Name</th>
-				<th rowspan='2'>Designation</th>
-				<th rowspan='2'>Duty Framework</th>
-				<th colspan='2'>Quarter 01 </th>
-				<th colspan='2'>Quarter 02</th>
-				<th colspan='2'>Quarter 03</th>
-				
-			</tr>
+						<th rowspan='2'>#</th>
+						<th rowspan='2'>EMP Code</th>
+						<th rowspan='2'>Name</th>
+						<th rowspan='2'>Designation</th>
+						<th rowspan='2'>Duty Framework</th>
+						<th colspan='2'>Quarter 01 </th>
+						<th colspan='2'>Quarter 02</th>
+						<th colspan='2'>Quarter 03</th>
+						
+					</tr>
 
-			<tr>
-				
-				<th>Target  </th>
-				<th>Progress(%)</th>
-				<th>Target  </th>
-				<th>Progress(%)</th>
-				<th>Target </th>
-				<th>Progress(%)</th>
-				
-			</tr>
-		</thead>
-		<tbody>
-			<?php
-			$i = 1;
-			
-			$qry = $conn->query("SELECT * FROM duty_list WHERE divisub='ITS Division'");
-			while($row= $qry->fetch_assoc()):
-			?>
-			<tr>
-				<th class="text-center"><?php echo $i++ ?></th>
-				<td><b><?php echo $row['empcode'] ?></b></td>
-				<td><b><?php echo ucwords($row['noc']) ?></b></td>
-				<td><b><?php echo $row['desig'] ?></b></td>
-				<td><b><?php echo $row['dutyfrm']  ?></b></td>
-				<td><?php echo $row['tutq1']  ?></td>
-				<td><b><?php echo $row['progq1p']  ?></b></td>
-				<td><?php echo $row['tutq2']  ?></td>
-				<td><b><?php echo $row['progq2p']  ?></b></td>
-				<td><?php echo $row['tutq3']  ?></td>
-				<td><b><?php echo $row['progq3p']  ?></b></td>
-				
-			</tr>	
-		<?php endwhile; ?>
-		</tbody>
-	</table>
+					<tr>
+						
+						<th>Target  </th>
+						<th>Progress(%)</th>
+						<th>Target  </th>
+						<th>Progress(%)</th>
+						<th>Target </th>
+						<th>Progress(%)</th>
+						
+					</tr>
+				</thead>
+				<tbody>
+					<?php
+					$i = 1;
+					
+					$qry = $conn->query("SELECT * FROM duty_list WHERE divisub='ITS Division'");
+					while($row= $qry->fetch_assoc()):
+					?>
+					<tr>
+						<th class="text-center"><?php echo $i++ ?></th>
+						<td><b><?php echo $row['empcode'] ?></b></td>
+						<td><b><?php echo ucwords($row['noc']) ?></b></td>
+						<td><b><?php echo $row['desig'] ?></b></td>
+						<td><b><?php echo $row['dutyfrm']  ?></b></td>
+						<td><?php echo $row['tutq1']  ?></td>
+						<td><b><?php echo $row['progq1p']  ?></b></td>
+						<td><?php echo $row['tutq2']  ?></td>
+						<td><b><?php echo $row['progq2p']  ?></b></td>
+						<td><?php echo $row['tutq3']  ?></td>
+						<td><b><?php echo $row['progq3p']  ?></b></td>
+						
+					</tr>	
+					<?php endwhile; ?>
+				</tbody>
+			</table>
 		</div>
 	</div>
 	
 			
+	
 
 	
 
@@ -86,31 +168,3 @@ include '../db_connect.php';
 
 
 
-<script>
-	$(document).ready(function(){
-		$('#list').dataTable()
-	$('.view_employee').click(function(){
-		uni_modal("<i class='fa fa-id-card'></i> Employee Details","view_employee.php?id="+$(this).attr('data-id'))
-	})
-	$('.delete_employee').click(function(){
-	_conf("Are you sure to delete this Employee?","delete_employee",[$(this).attr('data-id')])
-	})
-	})
-	function delete_employee($id){
-		start_load()
-		$.ajax({
-			url:'ajax.php?action=delete_employee',
-			method:'POST',
-			data:{id:$id},
-			success:function(resp){
-				if(resp==1){
-					alert_toast("Data successfully deleted",'success')
-					setTimeout(function(){
-						location.reload()
-					},1500)
-
-				}
-			}
-		})
-	}
-</script>
