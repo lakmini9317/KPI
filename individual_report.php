@@ -1,9 +1,9 @@
 <?php
 $emp =(isset($_POST['empcode']) ? $_POST['empcode'] : '');
 
-$connect = mysqli_connect("localhost", "root", "admin", "kpi_eps"); 
+$connect = mysqli_connect("localhost", "root", "", "kpi eps"); 
 
-$query2 = "SELECT progq1, count(*) as number FROM duty_list2 where empcode=$emp GROUP BY progq1";  
+$query2 = "SELECT progq1p, count(*) as number FROM duty_list where empcode=$emp GROUP BY progq1p";  
 $result2 = mysqli_query($connect, $query2); 
 
  
