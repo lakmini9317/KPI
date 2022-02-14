@@ -1,7 +1,7 @@
 <?php
 $emp =(isset($_POST['empcode']) ? $_POST['empcode'] : '');
 
-$connect = mysqli_connect("localhost", "root", "", "kpi eps"); 
+$connect = mysqli_connect("localhost", "root", "admin", "kpi eps"); 
 
 $query2 = "SELECT progq1p, count(*) as number FROM duty_list where empcode=$emp GROUP BY progq1p";  
 $result2 = mysqli_query($connect, $query2); 
@@ -30,11 +30,11 @@ $result2 = mysqli_query($connect, $query2);
             function drawChart()  
             {  
                 var data = google.visualization.arrayToDataTable([  
-                    ['Duty', 'Progress'],  
+                    ['empcode', 'Progress'],  
                     <?php  
                     while($row = mysqli_fetch_array($result2))  
                     {  
-                        echo "['".$row["progq1"]."', ".$row["number"]."],";  
+                        echo "['".$row["empcode"]."', '".$row["tutq1"]."','".$row["tutq2"]."','".$row["tutq3"]."']";  
                     }  
                     ?>  
                 ]);
