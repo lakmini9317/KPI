@@ -1,5 +1,7 @@
 <?Php
 	require '../db_connect.php';
+	// include '../topbar.php'; 
+    // include '../sidebar.php';
 
 	if($stmt = $conn->query("SELECT empcode,progq1p,progq2p,progq3p FROM duty_list WHERE divisub='ITS Division'")){
 
@@ -39,7 +41,7 @@
 <?Php
 require "../db_connect.php";
 
-if($stmt = $conn->query("SELECT empcode,progq1p,progq2p,progq3p FROM duty_list WHERE divisub='ITS division'")){
+if($stmt = $conn->query("SELECT empcode,noc,progq1p,progq2p,progq3p FROM duty_list WHERE divisub='ITS division'")){
 
   //echo "No of records : ".$stmt->num_rows."<br>";
 $php_data_array = Array(); 
@@ -63,7 +65,7 @@ echo "<script>
 
 <div id="chart_div" style='width:50%'></div>
 <br><br>
-
+<div class="card-body">
 <div class="row">
 		
 		<div class="col-lg-12">
@@ -135,16 +137,16 @@ echo "<script>
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'EMP Code');
         data.addColumn('number', 'Progress Q1');
-		    data.addColumn('number', 'Progress Q2');
+		data.addColumn('number', 'Progress Q2');
         data.addColumn('number', 'Progress Q3');
         for(i = 0; i < my_2d.length; i++)
         
-    data.addRow([my_2d[i][0], parseInt(my_2d[i][1]),parseInt(my_2d[i][2]),parseInt(my_2d[i][3])]);
+    data.addRow([my_2d[i][1], parseInt(my_2d[i][2]),parseInt(my_2d[i][3]),parseInt(my_2d[i][4])]);
        var options = {
           title: '',
           hAxis: {title: 'Emp Code',  titleTextStyle: {color: '#666'}},
           vAxis: {minValue: 0},
-		  width:2000,
+		  width:1500,
 		  height:1000
         };
 

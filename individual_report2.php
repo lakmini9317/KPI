@@ -3,7 +3,7 @@ include 'db_connect.php';
 
 $emp =(isset($_POST['empcode']) ? $_POST['empcode'] : '');
 
-$query="select empcode,noc,tutq1,progq1p,tutq2,progq2p,tutq3,progq3p from duty_list where empcode=$emp"; 
+$query="select empcode,noc,tutq1,progq1p,tutq2,progq2p,tutq3,progq3p from duty_list where empcode='$emp'"; 
 $result=mysqli_query($conn,$query);
 
 

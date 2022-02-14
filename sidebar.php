@@ -175,8 +175,18 @@
                 Individual Reports
               </p>
             </a>
-            
           </li>
+
+          <li class="nav-item">
+            <a href="./index.php?page=Progress Check" class="nav-link ">
+              <i class="nav-icon fas fa-file-alt"></i>
+              <p>
+                Progress Check
+              </p>
+            </a>
+          </li>
+
+
         <?php endif; ?>
         </ul>
       </nav>
