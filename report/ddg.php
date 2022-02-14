@@ -24,7 +24,7 @@
 						<th colspan='2'>Quarter 01 </th>
 						<th colspan='2'>Quarter 02</th>
 						<th colspan='2'>Quarter 03</th>
-						
+						<th colspan='2'>Quarter 04</th>
 					</tr>
 
 					<tr>
@@ -35,6 +35,8 @@
 						<th>Progress(%)</th>
 						<th>Target </th>
 						<th>Progress(%)</th>
+						<th>Target </th>
+						<th>Progress(%)</th>
 						
 					</tr>
 				</thead>
@@ -42,7 +44,7 @@
 					<?php
 					$i = 1;
 					
-					$qry = $conn->query("SELECT * FROM duty_list WHERE divisub='ITS Division'");
+					$qry = $conn->query("SELECT * FROM duty_list WHERE divisub='DG Office'");
 					while($row= $qry->fetch_assoc()):
 					?>
 					<tr>
@@ -57,6 +59,8 @@
 						<td><b><?php echo $row['progq2p']  ?></b></td>
 						<td><?php echo $row['tutq3']  ?></td>
 						<td><b><?php echo $row['progq3p']  ?></b></td>
+						<td><?php echo $row['tutq4']  ?></td>
+						<td><b><?php echo $row['progq4p']  ?></b></td>
 						
 					</tr>	
 				<?php endwhile; ?>

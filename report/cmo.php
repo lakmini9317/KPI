@@ -9,8 +9,6 @@
 			</div>
 		</div>	
 
-
-
 		<div class="card-body">
 			<table class="table tabe-hover table-bordered" id="list">
 				<thead>
@@ -42,7 +40,7 @@
 					<?php
 					$i = 1;
 					
-					$qry = $conn->query("SELECT * FROM duty_list WHERE divisub='ITS Division'");
+					$qry = $conn->query("SELECT * FROM duty_list WHERE divisub='Chairman Office'");
 					while($row= $qry->fetch_assoc()):
 					?>
 					<tr>
@@ -57,6 +55,8 @@
 						<td><b><?php echo $row['progq2p']  ?></b></td>
 						<td><?php echo $row['tutq3']  ?></td>
 						<td><b><?php echo $row['progq3p']  ?></b></td>
+						<td><?php echo $row['tutq4']  ?></td>
+						<td><b><?php echo $row['progq4p']  ?></b></td>
 						
 					</tr>	
 				<?php endwhile; ?>
