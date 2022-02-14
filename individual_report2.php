@@ -18,47 +18,8 @@ $result=mysqli_query($conn,$query);
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
 
-    <script type="text/javascript">
-
-      google.charts.load('current', {
-        'packages':['imagebarchart'],
-        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
-      });
-
-      google.charts.setOnLoadCallback(drawRegionsMap);
-
-
-    function drawRegionsMap() {
-
-      var data = google.visualization.arrayToDataTable([
-          ['empcode', 'target1', 'progress1', 'target2', 'progress2', 'target3', 'progress3'],
-          <?php
-
-              while($row = mysqli_fetch_assoc($chartQueryRecords)){
-
-                  echo "['".$row['empcode']."','".$row['tutq1']."','".$row['progq1p']."','".$row['tut12']."','".$row['progq2p']."','".$row['tutq3']."','".$row['progq3p']."']";
-              }
-          ?>
-      ]);
-
-
-      var options = {
-      };
-
-      var chart = new google.visualization.ImageBarChart(document.getElementById('divisionChart'));
-      chart.draw(data, options);
-
-    }
-
-</script>
-
-
-
-
-
-
 </head>
-</head>
+
 <body>
 
 
@@ -110,7 +71,9 @@ $result=mysqli_query($conn,$query);
               <td colspan="3" rowspan="1" headers="">No Data Found</td>
             </tr>
             <?php endif; ?>
-            <?php mysqli_free_result($result); ?>
+            <?php
+            //  mysqli_free_result($result);
+              ?>
           </tbody>
         </table>
       </div>
@@ -121,7 +84,6 @@ $result=mysqli_query($conn,$query);
 
 
 
-  <div id="divisionChart" style="width: 900px; height: 500px;"></div>
 
 </body>
 </html>
