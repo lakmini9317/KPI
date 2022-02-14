@@ -48,7 +48,7 @@ $result=mysqli_query($conn,$query);
               <th scope="col">Tasks Q2</th>
               <th scope="col">Progress Q2</th>
               <th scope="col">Tasks Q3</th>
-              <th scope="col">Progress Q3</th>
+              <th scope="col">Progress Q3</th>    
             </tr>
           </thead>
           <tbody>
