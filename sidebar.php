@@ -167,6 +167,16 @@
             </a>
             
           </li>
+
+          <li class="nav-item">
+            <a href="./index.php?page=individual_report2" class="nav-link ">
+              <i class="nav-icon fas fa-file-alt"></i>
+              <p>
+                Individual Reports
+              </p>
+            </a>
+            
+          </li>
         <?php endif; ?>
         </ul>
       </nav>
