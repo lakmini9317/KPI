@@ -92,7 +92,7 @@ if($_SESSION['login_type'] != 1)
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT * FROM duty_list")->num_rows; ?></h3>
-                <p>Duty Frameworks</p>
+                <p>Overall Duty Frameworks</p>
               </div>
                   <div class="icon">
                 <i class="fa fa-tasks" style="color:#FFAB45;"></i>
@@ -118,7 +118,7 @@ if($_SESSION['login_type'] != 1)
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT empcode FROM duty_list")->num_rows; ?></h3>
-                <p>Individual Reports</p>
+                <p>Individual Division Reports</p>
               </div>
                   <div class="icon">
                 <i class="fa fa-tasks" style="color:#FFAB45;"></i>
