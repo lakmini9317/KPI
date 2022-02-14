@@ -15,7 +15,7 @@ if($_SESSION['login_type'] != 1)
                 <p>HRM Divisions</p>
               </div>
               <div class="icon">
-                <i class="fa fa-th-list" style="color:#FFAB45;"></i>
+                <i class="fa fa-tasks" style="color:#FFAB45;"></i>
               </div>
             </div></a>
           </div>
@@ -28,7 +28,7 @@ if($_SESSION['login_type'] != 1)
                 <p>Finance Divisions</p>
               </div> 
               <div class="icon">
-                <i class="fa fa-list-alt" style="color:#FFAB45;"></i>
+                <i class="fa fa-tasks" style="color:#FFAB45;"></i>
               </div>
             </div></a>
           </div>
@@ -41,7 +41,7 @@ if($_SESSION['login_type'] != 1)
                 <p>ITS Divisions</p>
               </div>
               <div class="icon">
-                <i class="fa fa-users" style="color:#FFAB45;"></i>
+                <i class="fa fa-tasks" style="color:#FFAB45;"></i>
               </div>
             </div></a>
           </div>
@@ -51,11 +51,12 @@ if($_SESSION['login_type'] != 1)
           <a href="./index.php?page=employee_list">
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
-                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='ITS Division'")->num_rows; ?></h3>
-                <p>Total Employees</p>
+                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='Internal Audit'")->num_rows; ?></h3>
+                <p>Internal Audit
+</p>
               </div>
               <div class="icon">
-                <i class="fa fa-user-friends" style="color:#FFAB45;"></i>
+                <i class="fa fa-tasks" style="color:#FFAB45;"></i>
               </div>
             </div></a>
           </div>
@@ -64,11 +65,11 @@ if($_SESSION['login_type'] != 1)
            <a href="./index.php?page=evaluator_list">
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
-                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='ITS Division'")->num_rows; ?></h3>
-                <p>Total Evaluators</p>
+                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='Land Development and Management'")->num_rows; ?></h3>
+                <p>Land Development and Management</p>
               </div>
               <div class="icon">
-                <i class="fa fa-user-secret" style="color:#FFAB45;"></i>
+                <i class="fa fa-tasks" style="color:#FFAB45;"></i>
               </div>
             </div></a>
           </div>
@@ -78,8 +79,8 @@ if($_SESSION['login_type'] != 1)
            <a href="./index.php?page=task_list"> 
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
-                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='ITS Division'")->num_rows; ?></h3>
-                <p>Total Tasks</p>
+                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='DDG Consultancy'")->num_rows; ?></h3>
+                <p>DDG Consultancy</p>
               </div>
                   <div class="icon">
                 <i class="fa fa-tasks" style="color:#FFAB45;"></i>
@@ -91,8 +92,8 @@ if($_SESSION['login_type'] != 1)
            <a href="./index.php?page=view_dutylist"> 
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
-                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='ITS Division'")->num_rows; ?></h3>
-                <p>Duty Frameworks</p>
+                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='ADG Office'")->num_rows; ?></h3>
+                <p>ADG Office</p>
               </div>
                   <div class="icon">
                 <i class="fa fa-tasks" style="color:#FFAB45;"></i>
@@ -104,8 +105,8 @@ if($_SESSION['login_type'] != 1)
            <a href="./index.php?page=Report"> 
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
-                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='ITS Division'")->num_rows; ?></h3>
-                <p>Duty Framework Progress</p>
+                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='Board of Mgt,'")->num_rows; ?></h3>
+                <p>Board of Mgt</p>
               </div>
                   <div class="icon">
                 <i class="fa fa-tasks" style="color:#FFAB45;"></i>
@@ -117,8 +118,8 @@ if($_SESSION['login_type'] != 1)
            <a href="./index.php?page=individual_report"> 
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
-                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='ITS Division'")->num_rows; ?></h3>
-                <p>Individual Reports</p>
+                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='Chairman Office'")->num_rows; ?></h3>
+                <p>Chairman Office</p>
               </div>
                   <div class="icon">
                 <i class="fa fa-tasks" style="color:#FFAB45;"></i>
@@ -127,6 +128,13 @@ if($_SESSION['login_type'] != 1)
           </div></a>
       </div>
 
+
+      
+
+      
+
+
+      
 <?php else: ?>
    <div class="col-12">
           <div class="card">

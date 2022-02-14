@@ -114,7 +114,7 @@ if($_SESSION['login_type'] != 1)
           </div></a>
 
           <div class="col-12 col-sm-6 col-md-4" >
-           <a href="./index.php?page=individual_report"> 
+           <a href="./index.php?page=Divisions Reports"> 
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT empcode FROM duty_list")->num_rows; ?></h3>
