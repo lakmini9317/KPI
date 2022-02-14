@@ -61,48 +61,10 @@ echo "<script>
 
 <h2>ITS Division Report</h2>
 
-<div id="chart_div"></div>
+<div id="chart_div" style='width:50%'></div>
 <br><br>
 
-
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-
-      
-      google.charts.load('current', {packages: ['corechart', 'bar']});
-      google.charts.setOnLoadCallback(drawChart);
-	  
-      function drawChart() {
-
-        
-        var data = new google.visualization.DataTable();
-        data.addColumn('string', 'EMP Code');
-        data.addColumn('number', 'Progress Q1');
-		    data.addColumn('number', 'Progress Q2');
-        data.addColumn('number', 'Progress Q3');
-        for(i = 0; i < my_2d.length; i++)
-        
-    data.addRow([my_2d[i][0], parseInt(my_2d[i][1]),parseInt(my_2d[i][2]),parseInt(my_2d[i][3])]);
-       var options = {
-          title: '',
-          hAxis: {title: 'Emp Code',  titleTextStyle: {color: '#666'}},
-          vAxis: {minValue: 0},
-		  width:2000,
-		  height:1000
-        };
-
-        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-       }
-
-</script>
-
-	
-	
-	
-	
-
-	<div class="container">
+<div class="row">
 		
 		<div class="col-lg-12">
 			<table class="table tabe-hover table-bordered" id="list" >
@@ -157,6 +119,46 @@ echo "<script>
 			</table>
 		</div>
 	</div>
+	
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+
+      
+      google.charts.load('current', {packages: ['corechart', 'bar']});
+      google.charts.setOnLoadCallback(drawChart);
+	  
+      function drawChart() {
+
+        
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'EMP Code');
+        data.addColumn('number', 'Progress Q1');
+		    data.addColumn('number', 'Progress Q2');
+        data.addColumn('number', 'Progress Q3');
+        for(i = 0; i < my_2d.length; i++)
+        
+    data.addRow([my_2d[i][0], parseInt(my_2d[i][1]),parseInt(my_2d[i][2]),parseInt(my_2d[i][3])]);
+       var options = {
+          title: '',
+          hAxis: {title: 'Emp Code',  titleTextStyle: {color: '#666'}},
+          vAxis: {minValue: 0},
+		  width:2000,
+		  height:1000
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+       }
+
+</script>
+
+	
+	
+	
+	
+
 	
 			
 	
