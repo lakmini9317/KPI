@@ -2,15 +2,9 @@
 include 'db_connect.php';
 
 $emp =(isset($_POST['empcode']) ? $_POST['empcode'] : '');
-$division =(isset($_POST['division']) ? $_POST['division'] : '');
 
-$query="select empcode,noc,tutq1,progq1p from duty_list where empcode=$emp"; 
+$query="select empcode,noc,tutq1,progq1p,tutq2,progq2p,tutq3,progq3p from duty_list where empcode=$emp"; 
 $result=mysqli_query($conn,$query);
-
-$chartQuery = "SELECT * FROM duty_list where division=$division";
-$chartQueryRecords = mysqli_query($conn,$chartQuery);
-
-
 
 
 ?>
@@ -37,12 +31,12 @@ $chartQueryRecords = mysqli_query($conn,$chartQuery);
     function drawRegionsMap() {
 
       var data = google.visualization.arrayToDataTable([
-          ['empcode', 'target', 'progress'],
+          ['empcode', 'target1', 'progress1', 'target2', 'progress2', 'target3', 'progress3'],
           <?php
 
               while($row = mysqli_fetch_assoc($chartQueryRecords)){
 
-                  echo "['".$row['empcode']."',".$row['tutq1']."],".$row['progq1p']."";
+                  echo "['".$row['empcode']."','".$row['tutq1']."','".$row['progq1p']."','".$row['tut12']."','".$row['progq2p']."','".$row['tutq3']."','".$row['progq3p']."']";
               }
           ?>
       ]);
@@ -72,8 +66,6 @@ $chartQueryRecords = mysqli_query($conn,$chartQuery);
              
       <label>EMP Code</label>
       <input type="text" name="empcode"><br>
-      <label>Division</label>
-      <input type="text" name="division"><br>
       <button type="submit" class="btn btn-md btn-primary" >Search</button>
     
   </form> <br><br>
@@ -90,10 +82,12 @@ $chartQueryRecords = mysqli_query($conn,$chartQuery);
             <tr>
               <th scope="col">EMP Code</th>
               <th scope="col">Name</th>
-              <th scope="col">Tasks Q1
-
-              </th>
-              <th scope="col">Progress</th>
+              <th scope="col">Tasks Q1</th>
+              <th scope="col">Progress Q1</th>
+              <th scope="col">Tasks Q2</th>
+              <th scope="col">Progress Q2</th>
+              <th scope="col">Tasks Q3</th>
+              <th scope="col">Progress Q3</th>
             </tr>
           </thead>
           <tbody>
@@ -105,6 +99,10 @@ $chartQueryRecords = mysqli_query($conn,$chartQuery);
                 <td><?php echo $array[1];?></td>
                 <td><?php echo $array[2];?></td>
                 <td><?php echo $array[3];?></td>
+                <td><?php echo $array[4];?></td>
+                <td><?php echo $array[5];?></td>
+                <td><?php echo $array[6];?></td>
+                <td><?php echo $array[7];?></td>
             </tr>
             <?php endwhile; ?>
             <?php else: ?>
