@@ -1,7 +1,7 @@
 <?php  
- $connect = mysqli_connect("localhost", "root", "admin", "kpi_eps");  
+ $connect = mysqli_connect("localhost", "root", "", "kpi eps");  
  
- $query = "SELECT dutyfrm, count(*) as number FROM duty_list GROUP BY dutyfrm";  
+ $query = "SELECT divisub, count(*) as number FROM duty_list GROUP BY divisub";  
  $result = mysqli_query($connect, $query); 
  
  
@@ -52,15 +52,15 @@
                           <?php  
                           while($row = mysqli_fetch_array($result))  
                           {  
-                               echo "['".$row["dutyfrm"]."', ".$row["number"]."],";  
+                               echo "['".$row["divisub"]."', ".$row["number"]."],";  
                           }  
                           ?>  
                      ]); 
                       
                 var options = {  
-                      title: 'Percentages ',  
-                      is3D:true,  
-                      pieHole: 0.5  
+                      title: 'All Divisions & Sub office ',  
+                      //is3D:true,  
+                      pieHole: 0.2  
                      };  
                 var chart = new google.visualization.PieChart(document.getElementById('piechart'));  
                 chart.draw(data, options);  
@@ -79,7 +79,7 @@
                      ]);
 
                 var options = {  
-                      title: 'Quater 01 Progress ',  
+                      title: 'Quater 01 Duties Progress ',  
                       is3D:true,  
                       pieHole: 0.5  
                      };  
@@ -100,7 +100,7 @@
                      ]);  
 
                 var options = {  
-                      title: 'Quater 02 Progress ',  
+                      title: 'Quater 02 Duties Progress ',  
                       is3D:true,  
                       pieHole: 0.5  
                      };  
@@ -121,7 +121,7 @@
                       ]);  
 
                  var options = {  
-                       title: 'Quater 03 Progress ',  
+                       title: 'Quater 03 Duties Progress ',  
                        is3D:true,  
                        pieHole: 0.5  
                       };  
@@ -168,19 +168,19 @@
                </div>            	
            
                <div class="col-md-6 col-sm-12 col-lg-6">  
-                    <h3>Quarter 01 Completion Report</h3>  
+                    <h3>Quarter 01 Duties Completion Report</h3>  
                     <br/>  
                     <div id="piechart2" style="height: 500px;"></div>  
                </div>  <br>
                
                <div class="col-lg-6 col-md-6" style="padding-top:100px;">  
-                    <h3>Quarter 02 Completion Report </h3>  
+                    <h3>Quarter 02 Duties Completion Report </h3>  
                     <br/>  
                     <div id="piechart3" style=" height: 500px;"></div>  
                </div>            	
            
                 <div class="col-lg-6 col-md-6" style="padding-top:100px;">  
-                    <h3>Quarter 03 Completion Report</h3>  
+                    <h3>Quarter 03 Duties Completion Report</h3>  
                     <br/>  
                     <div id="piechart4" style="height: 500px;"></div>  
                </div> 
