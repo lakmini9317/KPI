@@ -1,4 +1,4 @@
-<?php include('db_connect.php') ?>
+<?php include('./db_connect.php') ?>
 <?php
 $twhere ="";
 if($_SESSION['login_type'] != 1)
@@ -34,7 +34,7 @@ if($_SESSION['login_type'] != 1)
           </div>
 
            <div class="col-12 col-sm-6 col-md-4">
-            <a href="./index.php?page=user_list">
+            <a href="./itdiv.php">
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='ITS Division'")->num_rows; ?></h3>
