@@ -1,82 +1,139 @@
+<?php include('db_connect.php') ?>
 <?php
-$emp =(isset($_POST['empcode']) ? $_POST['empcode'] : '');
-
-$connect = mysqli_connect("localhost", "root", "", "kpi eps"); 
-
-$query2 = "SELECT progq1p, count(*) as number FROM duty_list where empcode=$emp GROUP BY progq1p";  
-$result2 = mysqli_query($connect, $query2); 
-
- 
-// $connect->close();
-?> 
-
-<!DOCTYPE html>  
-<html>  
-    <head>  
-        <title>Report Dashboard</title>  
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
-        
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-          
-        <script type="text/javascript"> 
-                  
-            google.charts.load('current', {'packages':['corechart']}); 
-            google.charts.setOnLoadCallback(drawChart);
-          
-            function drawChart()  
-            {  
-                var data = google.visualization.arrayToDataTable([  
-                    ['Duty', 'Progress'],  
-                    <?php  
-                    while($row = mysqli_fetch_array($result2))  
-                    {  
-                        echo "['".$row["progq1"]."', ".$row["number"]."],";  
-                    }  
-                    ?>  
-                ]);
-
-                var options = {  
-                    title: 'Quater 01 Progress ',  
-                    is3D:true,  
-                    pieHole: 0.5  
-                };  
-
-                var chart = new google.visualization.PieChart(document.getElementById('piechart2'));  
-                chart.draw(data, options);  
-            }       
-
-        </script> 
-
-            
-    </head>  
-
-    <body>  
-
-    
-        <form action="" method="post">
-             
-            <label>EMP Code</label>
-            <input type="text" name="empcode"><br>
-            <button type="submit" class="btn btn-md btn-primary" >Search</button>
-           
-        </form> <br><br>
-
+$twhere ="";
+if($_SESSION['login_type'] != 1)
+  $twhere = "  ";
+?>
+<!-- Info boxes -->
+<?php if($_SESSION['login_type'] == 2): ?>
         <div class="row">
-            <div class="col-md-6 col-sm-12 col-lg-6">  
-                <h3>Quarter 01 Progress</h3>  
-                <br/>  
-                <div id="piechart2" style="height: 500px;"></div>  
-            </div>  <br>
-        </div> 
-        
-         
+          <div class="col-12 col-sm-6 col-md-4">
+           <a href="./index.php?page=divisions">
+            <div class="small-box bg-light shadow-sm border">
+              <div class="inner">
+                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='HRM'")->num_rows; ?></h3>
+                <p>HRM Divisions</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-th-list" style="color:#FFAB45;"></i>
+              </div>
+            </div></a>
+          </div>
 
+           <div class="col-12 col-sm-6 col-md-4">
+           <a href="./index.php?page=designation">
+            <div class="small-box bg-light shadow-sm border">
+              <div class="inner">
+                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='Finance'")->num_rows; ?></h3>
+                <p>Finance Divisions</p>
+              </div> 
+              <div class="icon">
+                <i class="fa fa-list-alt" style="color:#FFAB45;"></i>
+              </div>
+            </div></a>
+          </div>
 
-    </body>  
- </html>
+           <div class="col-12 col-sm-6 col-md-4">
+            <a href="./index.php?page=user_list">
+            <div class="small-box bg-light shadow-sm border">
+              <div class="inner">
+                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='ITS Division'")->num_rows; ?></h3>
+                <p>ITS Divisions</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-users" style="color:#FFAB45;"></i>
+              </div>
+            </div></a>
+          </div>
 
- 
+          
+          <div class="col-12 col-sm-6 col-md-4">
+          <a href="./index.php?page=employee_list">
+            <div class="small-box bg-light shadow-sm border">
+              <div class="inner">
+                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='ITS Division'")->num_rows; ?></h3>
+                <p>Total Employees</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-user-friends" style="color:#FFAB45;"></i>
+              </div>
+            </div></a>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4">
+           <a href="./index.php?page=evaluator_list">
+            <div class="small-box bg-light shadow-sm border">
+              <div class="inner">
+                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='ITS Division'")->num_rows; ?></h3>
+                <p>Total Evaluators</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-user-secret" style="color:#FFAB45;"></i>
+              </div>
+            </div></a>
+          </div>
+
+          
+          <div class="col-12 col-sm-6 col-md-4" >
+           <a href="./index.php?page=task_list"> 
+            <div class="small-box bg-light shadow-sm border">
+              <div class="inner">
+                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='ITS Division'")->num_rows; ?></h3>
+                <p>Total Tasks</p>
+              </div>
+                  <div class="icon">
+                <i class="fa fa-tasks" style="color:#FFAB45;"></i>
+              </div>
+            </div>
+          </div></a>
+
+          <div class="col-12 col-sm-6 col-md-4" >
+           <a href="./index.php?page=view_dutylist"> 
+            <div class="small-box bg-light shadow-sm border">
+              <div class="inner">
+                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='ITS Division'")->num_rows; ?></h3>
+                <p>Duty Frameworks</p>
+              </div>
+                  <div class="icon">
+                <i class="fa fa-tasks" style="color:#FFAB45;"></i>
+              </div>
+            </div>
+          </div></a>
+
+          <div class="col-12 col-sm-6 col-md-4" >
+           <a href="./index.php?page=Report"> 
+            <div class="small-box bg-light shadow-sm border">
+              <div class="inner">
+                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='ITS Division'")->num_rows; ?></h3>
+                <p>Duty Framework Progress</p>
+              </div>
+                  <div class="icon">
+                <i class="fa fa-tasks" style="color:#FFAB45;"></i>
+              </div>
+            </div>
+          </div></a>
+
+          <div class="col-12 col-sm-6 col-md-4" >
+           <a href="./index.php?page=individual_report"> 
+            <div class="small-box bg-light shadow-sm border">
+              <div class="inner">
+                <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='ITS Division'")->num_rows; ?></h3>
+                <p>Individual Reports</p>
+              </div>
+                  <div class="icon">
+                <i class="fa fa-tasks" style="color:#FFAB45;"></i>
+              </div>
+            </div>
+          </div></a>
+      </div>
+
+<?php else: ?>
+   <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              Welcome <?php echo $_SESSION['login_name'] ?>!
+            </div>
+          </div>
+      </div>
+          
+<?php endif; ?>
