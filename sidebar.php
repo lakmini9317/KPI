@@ -158,7 +158,7 @@
             </ul>
           </li>
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="./index.php?page=view_division_reports" class="nav-link ">
               <i class="nav-icon fas fa-file-alt"></i>
               <p>
@@ -166,10 +166,10 @@
               </p>
             </a>
             
-          </li>
+          </li> -->
 
           <li class="nav-item">
-            <a href="./index.php?page=individual_report2" class="nav-link ">
+            <a href="./index.php?page=Individual_Report" class="nav-link ">
               <i class="nav-icon fas fa-file-alt"></i>
               <p>
                 Individual Reports

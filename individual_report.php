@@ -1,82 +1,89 @@
 <?php
+include 'db_connect.php';
+
 $emp =(isset($_POST['empcode']) ? $_POST['empcode'] : '');
 
-$connect = mysqli_connect("localhost", "root", "admin", "kpi eps"); 
+$query="select empcode,noc,tutq1,progq1p,tutq2,progq2p,tutq3,progq3p from duty_list where empcode='$emp'"; 
+$result=mysqli_query($conn,$query);
 
-$query2 = "SELECT progq1p, count(*) as number FROM duty_list where empcode=$emp GROUP BY progq1p";  
-$result2 = mysqli_query($connect, $query2); 
 
- 
-// $connect->close();
-?> 
+?>
 
-<!DOCTYPE html>  
-<html>  
-    <head>  
-        <title>Report Dashboard</title>  
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Individual Report</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
-        
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-          
-        <script type="text/javascript"> 
-                  
-            google.charts.load('current', {'packages':['corechart']}); 
-            google.charts.setOnLoadCallback(drawChart);
-          
-            function drawChart()  
-            {  
-                var data = google.visualization.arrayToDataTable([  
-                    ['empcode', 'Progress'],  
-                    <?php  
-                    while($row = mysqli_fetch_array($result2))  
-                    {  
-                        echo "['".$row["empcode"]."', '".$row["tutq1"]."','".$row["tutq2"]."','".$row["tutq3"]."']";  
-                    }  
-                    ?>  
-                ]);
 
-                var options = {  
-                    title: 'Quater 01 Progress ',  
-                    is3D:true,  
-                    pieHole: 0.5  
-                };  
+</head>
 
-                var chart = new google.visualization.PieChart(document.getElementById('piechart2'));  
-                chart.draw(data, options);  
-            }       
+<body>
 
-        </script> 
 
-            
-    </head>  
-
-    <body>  
-
-    
-        <form action="" method="post">
+  <form action="" method="post">
              
-            <label>EMP Code</label>
-            <input type="text" name="empcode"><br>
-            <button type="submit" class="btn btn-md btn-primary" >Search</button>
-           
-        </form> <br><br>
-
-        <div class="row">
-            <div class="col-md-6 col-sm-12 col-lg-6">  
-                <h3>Quarter 01 Progress</h3>  
-                <br/>  
-                <div id="piechart2" style="height: 500px;"></div>  
-            </div>  <br>
-        </div> 
-        
-         
+      <label>EMP Code</label>
+      <input type="text" name="empcode"><br>
+      <button type="submit" class="btn btn-md btn-primary" >Search</button>
+    
+  </form> <br><br>
 
 
-    </body>  
- </html>
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="page-header">
+            <h2>Individual Progress</h2>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">EMP Code</th>
+              <th scope="col">Name</th>
+              <th scope="col">Tasks Q1</th>
+              <th scope="col">Progress Q1</th>
+              <th scope="col">Tasks Q2</th>
+              <th scope="col">Progress Q2</th>
+              <th scope="col">Tasks Q3</th>
+              <th scope="col">Progress Q3</th>    
+            </tr>
+          </thead>
+          <tbody>
+            
+            <?php if ($result->num_rows > 0): ?>
+            <?php while($array=mysqli_fetch_row($result)): ?>
+            <tr>
+                <th scope="row"><?php echo $array[0];?></th>
+                <td><?php echo $array[1];?></td>
+                <td><?php echo $array[2];?></td>
+                <td><?php echo $array[3];?></td>
+                <td><?php echo $array[4];?></td>
+                <td><?php echo $array[5];?></td>
+                <td><?php echo $array[6];?></td>
+                <td><?php echo $array[7];?></td>
+            </tr>
+            <?php endwhile; ?>
+            <?php else: ?>
+            <tr>
+              <td colspan="3" rowspan="1" headers="">No Data Found</td>
+            </tr>
+            <?php endif; ?>
+            <?php
+            //  mysqli_free_result($result);
+              ?>
+          </tbody>
+        </table>
+      </div>
+    </div>        
+  </div> <br><br>
 
- 
+  
+
+
+
+
+</body>
+</html>

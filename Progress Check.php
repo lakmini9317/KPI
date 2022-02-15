@@ -83,7 +83,7 @@ echo "<script>
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'EMP Code');
         data.addColumn('number', 'Progress Q1');
-		  data.addColumn('number', 'Progress Q2');
+		    data.addColumn('number', 'Progress Q2');
         data.addColumn('number', 'Progress Q3');
         for(i = 0; i < my_2d.length; i++)
         
@@ -92,7 +92,7 @@ echo "<script>
           title: '',
           hAxis: {title: 'Name',  titleTextStyle: {color: '#666'}},
           vAxis: {minValue: 0},
-		  width:1000,
+		  width:1400,
 		  height:700
         };
 

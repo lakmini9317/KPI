@@ -1,3 +1,5 @@
+
+
 <?php include'../db_connect.php' ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,8 +11,7 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   	<script type = "text/javascript" src = "https://www.gstatic.com/charts/loader.js"> </script>
-	<script type = "text/javascript">
-		google.charts.load('current', {packages: ['corechart']});     
+	<script type = "text/javascript">google.charts.load('current', {packages: ['corechart']});     
     </script>
 
 
@@ -18,6 +19,30 @@
 	<title>Division Report</title>
 </head>
 <body>
+
+
+<?Php
+require "../db_connect.php";
+
+if($stmt = $conn->query("SELECT empcode,noc,progq1p,progq2p,progq3p FROM duty_list WHERE divisub='Land Development and Management'")){
+
+  //echo "No of records : ".$stmt->num_rows."<br>";
+$php_data_array = Array(); 
+
+
+while ($row = $stmt->fetch_row()) {
+   
+   $php_data_array[] = $row; 
+   }
+
+}else{
+echo $connection->error;
+}
+
+echo "<script>
+        var my_2d = ".json_encode($php_data_array)."
+</script>";
+?>
 <h4>Division Report</h4> <br>
 
 <div class="col-lg-12">
@@ -84,31 +109,42 @@
 		</div>
 	</div>
 </div>
-<script>
-	$(document).ready(function(){
-		$('#list').dataTable()
-	$('.view_employee').click(function(){
-		uni_modal("<i class='fa fa-id-card'></i> Employee Details","view_employee.php?id="+$(this).attr('data-id'))
-	})
-	$('.delete_employee').click(function(){
-	_conf("Are you sure to delete this Employee?","delete_employee",[$(this).attr('data-id')])
-	})
-	})
-	function delete_employee($id){
-		start_load()
-		$.ajax({
-			url:'ajax.php?action=delete_employee',
-			method:'POST',
-			data:{id:$id},
-			success:function(resp){
-				if(resp==1){
-					alert_toast("Data successfully deleted",'success')
-					setTimeout(function(){
-						location.reload()
-					},1500)
 
-				}
-			}
-		})
-	}
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+
+      
+      google.charts.load('current', {packages: ['corechart', 'bar']});
+      google.charts.setOnLoadCallback(drawChart);
+	  
+      function drawChart() {
+
+        
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'EMP Code');
+        data.addColumn('number', 'Progress Q1');
+		data.addColumn('number', 'Progress Q2');
+        data.addColumn('number', 'Progress Q3');
+        for(i = 0; i < my_2d.length; i++)
+        
+    data.addRow([my_2d[i][1], parseInt(my_2d[i][2]),parseInt(my_2d[i][3]),parseInt(my_2d[i][4])]);
+       var options = {
+          title: '',
+          hAxis: {title: 'Emp Code',  titleTextStyle: {color: '#666'}},
+          vAxis: {minValue: 0},
+		  width:1500,
+		  height:1000
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+       }
+
 </script>
+
+
+</body>
+</html>
+
+
