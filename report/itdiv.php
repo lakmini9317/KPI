@@ -2,7 +2,7 @@
 
 	
 
-	if($stmt = $conn->query("SELECT empcode,progq1p,progq2p,progq3p FROM duty_list WHERE divisub='ITS Division'")){
+	if($stmt = $conn->query("SELECT empcode,progq1p,progq2p,progq3p,progq4p FROM duty_list WHERE divisub='ITS Division'")){
 
 	//echo "No of records : ".$stmt->num_rows."<br>";
 	$php_data_array = Array(); 

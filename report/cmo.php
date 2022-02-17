@@ -16,7 +16,7 @@
 <?Php
 require "./db_connect.php";
 
-if($stmt = $conn->query("SELECT empcode,noc,progq1p,progq2p,progq3p FROM duty_list WHERE divisub='Chairman Office'")){
+if($stmt = $conn->query("SELECT empcode,noc,progq1p,progq2p,progq3p,progq4p FROM duty_list WHERE divisub='Chairman Office'")){
 
   //echo "No of records : ".$stmt->num_rows."<br>";
 $php_data_array = Array(); 
