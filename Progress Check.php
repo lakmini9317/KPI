@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+  table,tr,th,td{
+    border:1px solid black;
+    padding:10px;
+  }
+
+  table{
+    margin-bottom:20px;
+  }
+</style>
 </head>
 
 
@@ -85,9 +96,10 @@ echo "<script>
         data.addColumn('number', 'Progress Q1');
 		    data.addColumn('number', 'Progress Q2');
         data.addColumn('number', 'Progress Q3');
+        data.addColumn('number', 'Progress Q4');
         for(i = 0; i < my_2d.length; i++)
         
-    data.addRow([my_2d[i][1], parseInt(my_2d[i][2]),parseInt(my_2d[i][3]),parseInt(my_2d[i][4])]);
+    data.addRow([my_2d[i][1], parseInt(my_2d[i][2]),parseInt(my_2d[i][3]),parseInt(my_2d[i][4]),parseInt(my_2d[i][5])]);
        var options = {
           title: '',
           hAxis: {title: 'Name',  titleTextStyle: {color: '#666'}},

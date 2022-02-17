@@ -1,6 +1,4 @@
 
-
-<?php include'../db_connect.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +14,7 @@
 
 
 
-	<title>Division Report</title>
+<title>Division Report</title>
 </head>
 <body>
 
@@ -45,6 +43,11 @@ echo "<script>
 ?>
 <h4>Division Report</h4> <br>
 
+
+
+<div id="chart_div" style='width:50%'></div>
+
+
 <div class="col-lg-12">
 	<div class="card card-outline card-success">
 		<div class="card-header">
@@ -66,6 +69,7 @@ echo "<script>
 						<th colspan='2'>Quarter 01 </th>
 						<th colspan='2'>Quarter 02</th>
 						<th colspan='2'>Quarter 03</th>
+						<th colspan='2'>Quarter 04</th>
 						
 					</tr>
 
@@ -74,6 +78,8 @@ echo "<script>
 						<th>Target  </th>
 						<th>Progress(%)</th>
 						<th>Target  </th>
+						<th>Progress(%)</th>
+						<th>Target </th>
 						<th>Progress(%)</th>
 						<th>Target </th>
 						<th>Progress(%)</th>
@@ -126,14 +132,15 @@ echo "<script>
         data.addColumn('number', 'Progress Q1');
 		data.addColumn('number', 'Progress Q2');
         data.addColumn('number', 'Progress Q3');
+		data.addColumn('number', 'Progress Q4');
         for(i = 0; i < my_2d.length; i++)
         
-    data.addRow([my_2d[i][1], parseInt(my_2d[i][2]),parseInt(my_2d[i][3]),parseInt(my_2d[i][4])]);
+    data.addRow([my_2d[i][1], parseInt(my_2d[i][2]),parseInt(my_2d[i][3]),parseInt(my_2d[i][4]),parseInt(my_2d[i][5])]);
        var options = {
           title: '',
           hAxis: {title: 'Emp Code',  titleTextStyle: {color: '#666'}},
           vAxis: {minValue: 0},
-		  width:1500,
+		  width:2000,
 		  height:1000
         };
 
