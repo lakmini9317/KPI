@@ -8,7 +8,7 @@ if($_SESSION['login_type'] != 1)
 <?php if($_SESSION['login_type'] == 2): ?>
         <div class="row">
           <div class="col-12 col-sm-6 col-md-4">
-          <a href="./report/hrm.php">
+          <a href="./index.php?page=report/hrm">
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='HRM'")->num_rows; ?></h3>
@@ -21,7 +21,7 @@ if($_SESSION['login_type'] != 1)
           </div>
 
            <div class="col-12 col-sm-6 col-md-4">
-           <a href="./report/finance.php">
+           <a href="./index.php?page=report/finance">
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='Finance'")->num_rows; ?></h3>
@@ -34,7 +34,7 @@ if($_SESSION['login_type'] != 1)
           </div>
 
            <div class="col-12 col-sm-6 col-md-4">
-            <a href="./report/itdiv.php">
+            <a href="./index.php?page=report/itdiv">
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='ITS Division'")->num_rows; ?></h3>
@@ -48,7 +48,7 @@ if($_SESSION['login_type'] != 1)
 
           
           <div class="col-12 col-sm-6 col-md-4">
-          <a href="./report/inaudit.php">
+          <a href="./index.php?page=report/inaudit">
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='Internal Audit'")->num_rows; ?></h3>
@@ -61,7 +61,7 @@ if($_SESSION['login_type'] != 1)
           </div>
 
           <div class="col-12 col-sm-6 col-md-4">
-           <a href="./report/landdm.php">
+           <a href="./index.php?page=report/landdm">
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='Land Development and Management'")->num_rows; ?></h3>
@@ -75,7 +75,7 @@ if($_SESSION['login_type'] != 1)
 
           
           <div class="col-12 col-sm-6 col-md-4" >
-          <a href="./report/ddg.php">
+          <a href="./index.php?page=report/ddg">
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='DG Office'")->num_rows; ?></h3>
@@ -88,7 +88,7 @@ if($_SESSION['login_type'] != 1)
           </div></a>
 
           <div class="col-12 col-sm-6 col-md-4" >
-           <a href="./report/adg.php"> 
+           <a href="./index.php?page=report/adg"> 
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='ADG Office'")->num_rows; ?></h3>
@@ -101,7 +101,7 @@ if($_SESSION['login_type'] != 1)
           </div></a>
 
           <div class="col-12 col-sm-6 col-md-4" >
-           <a href="./report/bom.php"> 
+           <a href="./index.php?page=report/bom"> 
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='Board of Mgt,'")->num_rows; ?></h3>
@@ -114,7 +114,7 @@ if($_SESSION['login_type'] != 1)
           </div></a>
 
           <div class="col-12 col-sm-6 col-md-4" >
-           <a href="./report/cmo.php"> 
+           <a href="./index.php?page=report/cmo"> 
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT * FROM duty_list WHERE divisub='Chairman Office'")->num_rows; ?></h3>
