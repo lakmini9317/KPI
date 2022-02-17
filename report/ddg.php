@@ -1,4 +1,4 @@
-<?php include'../db_connect.php' ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +13,28 @@
 		google.charts.load('current', {packages: ['corechart']});     
     </script>
 
+<?Php
+require "./db_connect.php";
 
+if($stmt = $conn->query("SELECT empcode,noc,progq1p,progq2p,progq3p FROM duty_list WHERE divisub='DG Office'")){
+
+  //echo "No of records : ".$stmt->num_rows."<br>";
+$php_data_array = Array(); 
+
+
+while ($row = $stmt->fetch_row()) {
+   
+   $php_data_array[] = $row; 
+   }
+
+}else{
+echo $connection->error;
+}
+
+echo "<script>
+        var my_2d = ".json_encode($php_data_array)."
+</script>";
+?>
 
 	<title>Division Report</title>
 </head>
@@ -28,7 +49,7 @@
 			</div>
 		</div>	
 
-
+		<div id="chart_div" style='width:50%'></div>
 
 		<div class="card-body">
 			<table class="table tabe-hover table-bordered" id="list">
@@ -88,31 +109,39 @@
 		</div>
 	</div>
 </div>
-<script>
-	$(document).ready(function(){
-		$('#list').dataTable()
-	$('.view_employee').click(function(){
-		uni_modal("<i class='fa fa-id-card'></i> Employee Details","view_employee.php?id="+$(this).attr('data-id'))
-	})
-	$('.delete_employee').click(function(){
-	_conf("Are you sure to delete this Employee?","delete_employee",[$(this).attr('data-id')])
-	})
-	})
-	function delete_employee($id){
-		start_load()
-		$.ajax({
-			url:'ajax.php?action=delete_employee',
-			method:'POST',
-			data:{id:$id},
-			success:function(resp){
-				if(resp==1){
-					alert_toast("Data successfully deleted",'success')
-					setTimeout(function(){
-						location.reload()
-					},1500)
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
 
-				}
-			}
-		})
-	}
+      
+      google.charts.load('current', {packages: ['corechart', 'bar']});
+      google.charts.setOnLoadCallback(drawChart);
+	  
+      function drawChart() {
+
+        
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'EMP Code');
+        data.addColumn('number', 'Progress Q1');
+		data.addColumn('number', 'Progress Q2');
+        data.addColumn('number', 'Progress Q3');
+		data.addColumn('number', 'Progress Q4');
+        for(i = 0; i < my_2d.length; i++)
+        
+    data.addRow([my_2d[i][1], parseInt(my_2d[i][2]),parseInt(my_2d[i][3]),parseInt(my_2d[i][4]),parseInt(my_2d[i][5])]);
+       var options = {
+          title: '',
+          hAxis: {title: 'Emp Code',  titleTextStyle: {color: '#666'}},
+          vAxis: {minValue: 0},
+		  width:2000,
+		  height:1000
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+       }
+
 </script>
+
+
+</body>
+</html>

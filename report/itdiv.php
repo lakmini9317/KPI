@@ -1,7 +1,6 @@
 <?Php
-	require '../db_connect.php';
-	// include '../topbar.php'; 
-    // include '../sidebar.php';
+
+	
 
 	if($stmt = $conn->query("SELECT empcode,progq1p,progq2p,progq3p FROM duty_list WHERE divisub='ITS Division'")){
 
@@ -39,7 +38,7 @@
 <body>
 
 <?Php
-require "../db_connect.php";
+require "./db_connect.php";
 
 if($stmt = $conn->query("SELECT empcode,noc,progq1p,progq2p,progq3p FROM duty_list WHERE divisub='ITS division'")){
 

@@ -16,7 +16,6 @@
     margin-bottom:20px;
   }
 </style>
-
 </head>
 
 
@@ -97,9 +96,10 @@ echo "<script>
         data.addColumn('number', 'Progress Q1');
 		    data.addColumn('number', 'Progress Q2');
         data.addColumn('number', 'Progress Q3');
+        data.addColumn('number', 'Progress Q4');
         for(i = 0; i < my_2d.length; i++)
         
-    data.addRow([my_2d[i][1], parseInt(my_2d[i][2]),parseInt(my_2d[i][3]),parseInt(my_2d[i][4])]);
+    data.addRow([my_2d[i][1], parseInt(my_2d[i][2]),parseInt(my_2d[i][3]),parseInt(my_2d[i][4]),parseInt(my_2d[i][5])]);
        var options = {
           title: '',
           hAxis: {title: 'Name',  titleTextStyle: {color: '#666'}},
