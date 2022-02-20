@@ -186,6 +186,14 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a href="./index.php?page=report/AdminLevelProgress" class="nav-link ">
+              <i class="nav-icon fas fa-file-alt"></i>
+              <p>
+                Admin Progress Check
+              </p>
+            </a>
+          </li>
 
         <?php endif; ?>
         </ul>
