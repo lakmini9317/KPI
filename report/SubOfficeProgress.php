@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html>
 <head>
@@ -37,7 +38,7 @@ require "config.php";// Database connection
 
 $emp =(isset($_POST['empcode']) ? $_POST['empcode'] : '');
 
-if($stmt = $connection->query("SELECT desig,noc,progq1p,progq2p,progq3p,progq4p,divisub FROM adminduty_list")){
+if($stmt = $connection->query("SELECT desig,noc,progq1p,progq2p,progq3p,progq4p,divisub FROM subadminduty_list")){
 
   //echo "No of records : ".$stmt->num_rows."<br>";
 $php_data_array = Array(); // create PHP array

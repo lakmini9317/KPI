@@ -39,7 +39,7 @@ echo "<script>
 <title>Division Report</title>
 </head>
 <body>
-<h4>Division Report</h4> <br>
+<h4>Board of Mgt, Division Report</h4> <br>
 
 <div class="col-lg-12">
 	<div class="card card-outline card-success">

@@ -39,7 +39,7 @@ echo "<script>
         var my_2d = ".json_encode($php_data_array)."
 </script>";
 ?>
-<h4>Division Report</h4> <br>
+<h4>Internal Audit Division Report</h4> <br>
 
 <div class="col-lg-12">
 	<div class="card card-outline card-success">

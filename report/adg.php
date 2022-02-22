@@ -35,8 +35,7 @@ echo "<script>
         var my_2d = ".json_encode($php_data_array)."
 </script>";
 ?>
-
-	<title>Division Report</title>
+<title>Division Report</title>
 </head>
 <body>
 <h4>Division Report</h4> <br>
