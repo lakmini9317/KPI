@@ -190,7 +190,15 @@
             <a href="./index.php?page=report/AdminLevelProgress" class="nav-link ">
               <i class="nav-icon fas fa-file-alt"></i>
               <p>
-                Admin Progress Check
+                Administration Progress View
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="./index.php?page=report/SubOfficeProgress" class="nav-link ">
+              <i class="nav-icon fas fa-file-alt"></i>
+              <p>
+                Sub Office Progress Check View
               </p>
             </a>
           </li>
