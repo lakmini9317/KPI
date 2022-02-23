@@ -195,7 +195,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="./index.php?page=report/SubOfficeProgress" class="nav-link ">
+            <a href="./index.php?page=Sub Office Progress" class="nav-link ">
               <i class="nav-icon fas fa-file-alt"></i>
               <p>
                 Sub Office Progress Check View

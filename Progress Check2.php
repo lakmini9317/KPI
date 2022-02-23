@@ -15,6 +15,8 @@
   table{
     margin-bottom:20px;
   }
+
+  
 </style>
 </head>
 
@@ -25,12 +27,12 @@
 <div class="container pt-5">
 <form action="" method="post">
 
-<label>Division</label>
+<label>Sub Office</label>
 
 <select name="division">
         <option value="" disabled selected>Choose option</option>
         <option value="Galle Office">Galle Office</option>
-        <option value="Finance">Finance</option>
+        <option value="Ampara">Ampara</option>
         
       </select>
 <!-- <input type="text" name="division"><br> -->
