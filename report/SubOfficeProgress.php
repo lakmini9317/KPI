@@ -24,21 +24,43 @@
 <body>
 
 
-<!-- <div class="container pt-5">
+<div class="container pt-5">
 <form action="" method="post">
-             
-<label>EMP Code</label>
-<input type="text" name="empcode"><br>
+
+<label>Division</label>
+
+<select name="division">
+        <option value="" disabled selected>Choose option</option>
+        <option value="Ampara ">Ampara</option>
+        <option value="Anuradapura( NCP)">Anuradapura(NCP)</option>
+        <option value="Badulla Office">Badulla Office</option>
+        <option value="Dambulla Office">Dambulla Office</option>
+        <option value="Eastern Provincial Office">Eastern Provincial Office</option>
+        <option value="Galle Office">Galle Office</option>
+        <option value="Hambantota Office">Hambantota Office</option>
+        <option value="Kalutara Office">Kalutara Office</option>
+        <option value="Kandy Office">Kandy Office</option>
+        <option value="Katharagama Office">Katharagama Office</option>
+        <option value="Kagalla Office">Kagalla Office</option>
+        <option value="Kurunegala Office">Kurunegala Office</option>
+        <option value="Matara Office">Matara Office</option>
+        <option value="Nothern Region">Nothern Region</option>
+        <option value="Puttlam District">Puttlam District</option>
+        <option value="Sothern Region">Sothern Region</option>
+        <option value="Rathnapura Office">Rathnapura Office</option>
+
+      </select>
+<!-- <input type="text" name="division"><br> -->
 <button type="submit" class="btn btn-warning" >Search</button>
 
-</form> <br><br> -->
+</form> <br><br>
 </div>
 <?Php
 require "config.php";// Database connection
 
-$emp =(isset($_POST['empcode']) ? $_POST['empcode'] : '');
+$subdivi =(isset($_POST['division']) ? $_POST['division'] : '');
 
-if($stmt = $connection->query("SELECT desig,noc,progq1p,progq2p,progq3p,progq4p,divisub FROM subadminduty_list")){
+if($stmt = $connection->query("SELECT desig,noc,progq1p,progq2p,progq3p,progq4p,divisub FROM subadminduty_list WHERE divisub='$subdivi' ")){
 
   //echo "No of records : ".$stmt->num_rows."<br>";
 $php_data_array = Array(); // create PHP array
@@ -101,7 +123,7 @@ echo "<script>
         data.addColumn('number', 'Progress Q4');
         for(i = 0; i < my_2d.length; i++)
         
-    data.addRow([my_2d[i][1], parseInt(my_2d[i][5])]);
+    data.addRow([my_2d[i][1],parseInt(my_2d[i][5])]);
        var options = {
           title: '',
           hAxis: {title: 'Name',  titleTextStyle: {color: '#666'}},

@@ -23,21 +23,48 @@
 <body>
 
 
-<!-- <div class="container pt-5">
+<div class="container">
 <form action="" method="post">
-             
-<label>EMP Code</label>
-<input type="text" name="empcode"><br>
-<button type="submit" class="btn btn-warning" >Search</button>
 
-</form> <br><br> -->
+<label>Division</label>
+
+<select name="division">
+        <option value="" disabled selected>Choose Division</option>
+
+        <option value="ADG Office">ADG Office</option>
+        <option value="Chairman Office">Chairman Office</option>
+        <option value="Colombo Metro Region Division">Colombo Metro Region Division</option>
+        <option value="DG Office">DG Office</option>
+        <option value="DDG Planning">DDG Planning</option>
+        <option value="Enforcement, Audit & Monitoring Unit">Enforcement, Audit & Monitoring Unit</option>
+        <option value="Environment & Landscape Division">Environment & Landscape Division</option>
+        <option value="Finance">Finance</option>
+        <option value="GIS">GIS</option>
+        <option value="HRM">HRM</option>
+        <option value="ITS Division">ITS Division</option>
+        <option value="Land Development and Management">Land Development and Management</option>
+        <option value="Legal">Legal</option>
+        <option value="Project Consulting">Project Consulting </option>
+        <option value="Real Estate Mgt. & Dev.">Real Estate Mgt. & Dev.</option>
+        <option value="Transport">Project Consulting </option>
+        <option value="Western Province">Western Province</option>
+        <option value="Western Region">Western Region</option>
+
+      </select>
+<!-- <input type="text" name="division"><br> -->
+<button type="submit" class="btn  btn-warning" >Search</button>
+</form> <br><br>
 </div>
+
 <?Php
 require "config.php";// Database connection
 
+$subdivi =(isset($_POST['division']) ? $_POST['division'] : '');
+
+
 $emp =(isset($_POST['empcode']) ? $_POST['empcode'] : '');
 
-if($stmt = $connection->query("SELECT desig,noc,progq1p,progq2p,progq3p,progq4p,divisub FROM adminduty_list")){
+if($stmt = $connection->query("SELECT desig,noc,progq1p,progq2p,progq3p,progq4p,divisub FROM adminduty_list WHERE divisub='$subdivi'")){
 
   //echo "No of records : ".$stmt->num_rows."<br>";
 $php_data_array = Array(); // create PHP array
