@@ -27,9 +27,9 @@
 
 <label>Division</label>
 
-<select id="division">
+<select name="division">
         <option value="" disabled selected>Choose option</option>
-        <option value="Land Development and Management">Land Development and Management</option>
+        <option value="Galle Office">Galle Office</option>
         <option value="Finance">Finance</option>
         
       </select>
