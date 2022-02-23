@@ -24,9 +24,16 @@
 
 <div class="container pt-5">
 <form action="" method="post">
-             
+
 <label>Division</label>
-<input type="text" name="division"><br>
+
+<select id="division">
+        <option value="" disabled selected>Choose option</option>
+        <option value="Land Development and Management">Land Development and Management</option>
+        <option value="Finance">Finance</option>
+        
+      </select>
+<!-- <input type="text" name="division"><br> -->
 <button type="submit" class="btn btn-warning" >Search</button>
 
 </form> <br><br>
@@ -36,7 +43,7 @@ require "config.php";// Database connection
 
 $subdivi =(isset($_POST['division']) ? $_POST['division'] : '');
 
-if($stmt = $connection->query("SELECT desig,noc,progq1p,progq2p,progq3p,progq4p,divisub FROM subadminduty_list WHERE divisub='$subdivi'")){
+if($stmt = $connection->query("SELECT desig,noc,progq1p,progq2p,progq3p,progq4p,divisub FROM subadminduty_list WHERE divisub='$subdivi' ")){
 
   //echo "No of records : ".$stmt->num_rows."<br>";
 $php_data_array = Array(); // create PHP array
