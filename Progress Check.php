@@ -6,14 +6,26 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
   table,tr,th,td{
     border:1px solid black;
     padding:10px;
+    margin-bottom:20px;
   }
 
   table{
     margin-bottom:20px;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th:nth-child(odd) {
+    background-color: #fce6c7;
+  }
+  th:nth-child(even) {
+    background-color: #fce6c7;
   }
 </style>
 </head>

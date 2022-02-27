@@ -16,8 +16,28 @@ $result=mysqli_query($conn,$query);
     <title>Individual Report</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+  table,tr,th,td{
+    border:1px solid black;
+    padding:10px;
+    margin-bottom:20px;
+  }
 
-
+  table{
+    margin-bottom:20px;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th:nth-child(odd) {
+    background-color: #fce6c7;
+  }
+  th:nth-child(even) {
+    background-color: #fce6c7;
+  }
+</style>
 </head>
 
 <body>
@@ -48,7 +68,8 @@ $result=mysqli_query($conn,$query);
               <th scope="col">Tasks Q2</th>
               <th scope="col">Progress Q2</th>
               <th scope="col">Tasks Q3</th>
-              <th scope="col">Progress Q3</th>    
+              <th scope="col">Progress Q3</th>
+                 
             </tr>
           </thead>
           <tbody>
@@ -64,6 +85,7 @@ $result=mysqli_query($conn,$query);
                 <td><?php echo $array[5];?></td>
                 <td><?php echo $array[6];?></td>
                 <td><?php echo $array[7];?></td>
+                
             </tr>
             <?php endwhile; ?>
             <?php else: ?>

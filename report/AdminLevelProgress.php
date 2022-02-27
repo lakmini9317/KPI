@@ -15,6 +15,14 @@
 
   table{
     margin-bottom:20px;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  tr:hover {
+    background-color: coral;
+  }
+  th:nth-child(odd) {
+    background-color: #FEE9D9;
   }
 </style>
 </head>
@@ -23,10 +31,10 @@
 <body>
 
 
-<div class="container">
+<div class="container" style=''>
 <form action="" method="post">
 
-<label>Division</label>
+<label>Select Division</label>
 
 <select name="division">
         <option value="" disabled selected>Choose Division</option>
@@ -52,7 +60,7 @@
 
       </select>
 <!-- <input type="text" name="division"><br> -->
-<button type="submit" class="btn  btn-warning" >Search</button>
+<button type="submit" class="btn btn-primary btn-sm" >Search</button>
 </form> <br><br>
 </div>
 
@@ -64,7 +72,7 @@ $subdivi =(isset($_POST['division']) ? $_POST['division'] : '');
 
 $emp =(isset($_POST['empcode']) ? $_POST['empcode'] : '');
 
-if($stmt = $connection->query("SELECT desig,noc,progq1p,progq2p,progq3p,progq4p,divisub FROM adminduty_list WHERE divisub='$subdivi'")){
+if($stmt = $connection->query("SELECT desig,noc,progq1p,progq2p,progq3p,progq4p,divisub,empcode FROM adminduty_list WHERE divisub='$subdivi'")){
 
   //echo "No of records : ".$stmt->num_rows."<br>";
 $php_data_array = Array(); // create PHP array
@@ -74,6 +82,7 @@ $php_data_array = Array(); // create PHP array
 echo "<table>
 <thead> 
 <tr> 
+<th>Emp No</th>
 <th>Division</th>
 <th>Designation</th>
 <th>Name</th>
@@ -86,6 +95,7 @@ echo "<table>
 
    while ($row = $stmt->fetch_row()) {
    echo "<tr>
+   <td>$row[7]</td>
    <td>$row[6]</td>
    <td>$row[0]</td>
    <td>$row[1]</td>
