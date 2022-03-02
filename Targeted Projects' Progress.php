@@ -21,20 +21,14 @@
 <div class="container pt-5">
 <form action="" method="post">
              
-<label>Select Project Region / Province</label>
+<label>Select Project Region</label>
 
 <select name="division">
-        <option value="" disabled selected>Choose Province</option>
-        <option value="Central  Province">Central  Province</option>
-        <option value="CMR">Colombo Metro  Region</option>
-        <option value="Eastern  Province">Eastern  Province</option>
-        <option value="Northern Province">Northern Province</option>
-        <option value="North Central Provincee">North Central Province</option>
-        <option value="North Western  Province">North Western  Province</option>
-        <option value="Sabaragamuwa Province">Sabaragamuwa Province</option>
-        <option value="Southern Province">Southern Province</option>
-        <option value="Uva Province ">Uva Province</option>
-        <option value="Western Province">Western Province</option>
+        <option value="" disabled selected>Choose Region</option>
+        <option value="WesternRegion">Western Region</option>
+        <option value="Nothern Region">Nothern  Region</option>
+        <option value="Southern Region">Southern Region</option>
+        
 </select>
 <button type="submit" class="btn btn-warning" >Search</button>
 
@@ -46,24 +40,32 @@ require "config.php";// Database connection
 
 $subdivi =(isset($_POST['division']) ? $_POST['division'] : '');
 
-if($stmt = $connection->query("SELECT prjname,pt,pp,tc FROM allprojects WHERE province='$subdivi'")){
+if($stmt = $connection->query("SELECT province,LaggingRegions,WalkingTracks,PublicInstitutions,NineProvinces,100City,pfap,AvrPf FROM projectstatus2 WHERE divisub='$subdivi'")){
 
 //   echo "No of records : ".$stmt->num_rows."<br>";
-  
 $php_data_array = Array(); // create PHP array
 
 $row2 = mysqli_fetch_array($stmt,MYSQLI_NUM);
 
 echo "<table>
 <tr>
-<th>Project Name</th>
 
+<th>Province</th>
+<th>Lagging Region</th>
+<th>Walking Tracks</th>
+<th>Public Institutions</th>
+<th>Nine Provinces</th>
+<th>100 City</th>
 </tr>";
 while ($row = $stmt->fetch_row()) {
   
    echo "<tr>
    <td>$row[0]</td>
-   
+   <td>$row[1]</td>
+   <td>$row[2]</td>
+   <td>$row[3]</td>
+   <td>$row[4]</td>
+   <td>$row[5]</td>
    </tr>";
    $php_data_array[] = $row; // Adding to array
    }
@@ -98,18 +100,25 @@ echo "<script>
         // Create the data table.
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Project Name');
-        data.addColumn('number', 'Physical Target(%)');
-	data.addColumn('number', 'Physical Progress(%)');
-        data.addColumn('number', 'Target completion (%)');
+        data.addColumn('number', 'Lagging Region');
+	data.addColumn('number', 'Walking Tracks');
+        data.addColumn('number', 'Public Institutions');
+        data.addColumn('number', 'Nine Provinces');
+        data.addColumn('number', '100 Cities');
+        data.addColumn('number', 'Performance for all projects');
+      
+       
         
         
         for(i = 0; i < my_2d.length; i++)
-        data.addRow([my_2d[i][0], parseInt(my_2d[i][1]),parseInt(my_2d[i][2]),parseInt(my_2d[i][3])]);
+        data.addRow([my_2d[i][0], parseInt(my_2d[i][1]),parseInt(my_2d[i][2]),parseInt(my_2d[i][3]),parseInt(my_2d[i][4]),parseInt(my_2d[i][5]),parseInt(my_2d[i][6])]);
 
        var options = {
           title: '',
-          hAxis: {title: 'Project Name',  titleTextStyle: {color: '#333'}},
-          vAxis: {title: 'Project Progress',minValue: 0},width:1500,height:700
+          hAxis: {title: 'Province',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0},
+		  width:1500,
+		  height:700
         };
 
         var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
