@@ -202,6 +202,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="./index.php?page=Administration Grade" class="nav-link ">
+              <i class="nav-icon fas fa-file-alt"></i>
+              <p>
+                Administration Grading
+              </p>
+            </a>
+          </li>
 
         <?php endif; ?>
         </ul>
