@@ -1,6 +1,6 @@
 <?php
 
-include_once('gr_config.php');
+include_once('config.php');
 $user_fun = new Userfunction();
 $counter = 1;
 

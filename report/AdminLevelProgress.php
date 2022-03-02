@@ -57,6 +57,8 @@
         <option value="Transport">Project Consulting </option>
         <option value="Western Province">Western Province</option>
         <option value="Western Region">Western Region</option>
+        <option value="Sothern Region">Sothern Region</option>
+        <option value="Nothern Region">Nothern Region</option>
 
       </select>
 <!-- <input type="text" name="division"><br> -->

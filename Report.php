@@ -1,5 +1,5 @@
 <?php  
- $connect = mysqli_connect("localhost", "root", "admin", "kpi eps");  
+ $connect = mysqli_connect("localhost", "root", "", "kpi eps");  
  
  $query = "SELECT divisub, count(*) as number FROM duty_list GROUP BY divisub";  
  $result = mysqli_query($connect, $query); 

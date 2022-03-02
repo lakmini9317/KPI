@@ -32,17 +32,17 @@
 		<div class="container">
 			<div class="row m-3 text-center">
 				<div class="col-lg-12">
-					
+					<h1 class="box-title"></h1>
 				</div>
 			</div>
-			<div  class="row justify-content-center">
+			<!-- <div  class="row justify-content-center">
 				<div class="col-lg-6">
-				<!-- <button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#exampleModalCenter" >Add Record</button>	 -->
+				<button type="button" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#exampleModalCenter" >Add Record</button>	
 				</div>
 				<div class="col-lg-6">
-					<!-- <input type="text" id="search" class="form-control" placeholder="Search Now"> -->
+					<input type="text" id="search" class="form-control" placeholder="Search Now">
 				</div>
-			</div>
+			</div> -->
 			<div class="row mt-5" id="tbl_rec">
 		
 			</div>

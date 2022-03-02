@@ -203,10 +203,19 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="./index.php?page=Administration Grade" class="nav-link ">
+            <a href="./index.php?page=Management Level" class="nav-link ">
               <i class="nav-icon fas fa-file-alt"></i>
               <p>
-                Administration Grading
+                Administration Grading Data
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="./index.php?page=Project Progress" class="nav-link ">
+              <i class="nav-icon fas fa-file-alt"></i>
+              <p>
+              Project Progress
               </p>
             </a>
           </li>

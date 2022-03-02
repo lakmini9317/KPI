@@ -44,9 +44,9 @@
         <option value="Kagalla Office">Kagalla Office</option>
         <option value="Kurunegala Office">Kurunegala Office</option>
         <option value="Matara Office">Matara Office</option>
-        <option value="Nothern Region">Nothern Region</option>
+        
         <option value="Puttlam District">Puttlam District</option>
-        <option value="Sothern Region">Sothern Region</option>
+        
         <option value="Rathnapura Office">Rathnapura Office</option>
 
       </select>

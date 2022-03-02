@@ -1,6 +1,6 @@
 <?php
 
-include_once('gr_config.php');
+include_once('config.php');
 $user_fun = new Userfunction();
 
 $json = array();
@@ -43,9 +43,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 			$field_val['effi'] = $effi;
 			$field_val['crtvt'] = $crtvt;
 			$field_val['ta'] = $ta;
-			$field_val['initia'] = $initia;
+			$field_val['initia'] = $initia;			
+			$field_val['wtr'] = $att;
 			$field_val['att'] = $att;
-			$field_val['wtr'] = $wtr;
 			$field_val['ps'] = $ps;
 			$field_val['com'] = $com;
 			$field_val['probs'] = $com;
