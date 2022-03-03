@@ -57,12 +57,18 @@ $row2 = mysqli_fetch_array($stmt,MYSQLI_NUM);
 echo "<table>
 <tr>
 <th>Project Name</th>
-
+<th>Physical Target(%)</th>
+<th>Physical Progress(%)</th>
+<th>Target completion (%)</th>
 </tr>";
+
 while ($row = $stmt->fetch_row()) {
   
    echo "<tr>
    <td>$row[0]</td>
+   <td>$row[1]</td>
+   <td>$row[2]</td>
+   <td>$row[3]</td>
    
    </tr>";
    $php_data_array[] = $row; // Adding to array
@@ -99,7 +105,7 @@ echo "<script>
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Project Name');
         data.addColumn('number', 'Physical Target(%)');
-	data.addColumn('number', 'Physical Progress(%)');
+	      data.addColumn('number', 'Physical Progress(%)');
         data.addColumn('number', 'Target completion (%)');
         
         

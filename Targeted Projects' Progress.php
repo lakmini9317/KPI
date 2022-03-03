@@ -40,7 +40,7 @@ require "config.php";// Database connection
 
 $subdivi =(isset($_POST['division']) ? $_POST['division'] : '');
 
-if($stmt = $connection->query("SELECT province,LaggingRegions,WalkingTracks,PublicInstitutions,NineProvinces,100City,pfap,AvrPf FROM projectstatus2 WHERE divisub='$subdivi'")){
+if($stmt = $connection->query("SELECT  province,LaggingRegions,WalkingTracks,PublicInstitutions,NineProvinces,100City,pfap,AvrPf FROM projectstatus2 WHERE divisub='$subdivi'")){
 
 //   echo "No of records : ".$stmt->num_rows."<br>";
 $php_data_array = Array(); // create PHP array
@@ -99,13 +99,13 @@ echo "<script>
 
         // Create the data table.
         var data = new google.visualization.DataTable();
-        data.addColumn('string', 'Project Name');
-        data.addColumn('number', 'Lagging Region');
-	data.addColumn('number', 'Walking Tracks');
-        data.addColumn('number', 'Public Institutions');
-        data.addColumn('number', 'Nine Provinces');
-        data.addColumn('number', '100 Cities');
-        data.addColumn('number', 'Performance for all projects');
+        data.addColumn('string', 'Project Name  (%)');
+        data.addColumn('number', 'Lagging Region  (%)');
+	data.addColumn('number', 'Walking Tracks (%)');
+        data.addColumn('number', 'Public Institutions (%)');
+        data.addColumn('number', 'Nine Provinces (%)');
+        data.addColumn('number', '100 Cities  (%)');
+        data.addColumn('number', 'Performance for all projects (%)');
       
        
         

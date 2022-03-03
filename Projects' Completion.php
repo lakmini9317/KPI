@@ -51,7 +51,7 @@ require "config.php";// Database connection
 
 $subdivi =(isset($_POST['division']) ? $_POST['division'] : '');
 
-if($stmt = $connection->query("SELECT noc,comprto FROM projectstatus WHERE divisub='$subdivi'")){
+if($stmt = $connection->query("SELECT noc,divisub,comprto FROM projectstatus ")){
 
 //   echo "No of records : ".$stmt->num_rows."<br>";
 $php_data_array = Array(); // create PHP array
@@ -62,7 +62,8 @@ echo "<table>
 <tr>
 
 <th>Name Of Employee</th>
-<th>Complete </th>
+<th>Division </th>
+<th>Complete (%) </th>
 
 </tr>";
 while ($row = $stmt->fetch_row()) {
@@ -70,6 +71,7 @@ while ($row = $stmt->fetch_row()) {
    echo "<tr>
    <td>$row[0]</td>
    <td>$row[1]</td>
+   <td>$row[2]</td>
    <
    
    </tr>";
@@ -113,7 +115,7 @@ echo "<script>
         
         
         for(i = 0; i < my_2d.length; i++)
-        data.addRow([my_2d[i][0], parseInt(my_2d[i][1])]);
+        data.addRow([my_2d[i][0], parseInt(my_2d[i][2])]);
 
        var options = {
           title: '',
