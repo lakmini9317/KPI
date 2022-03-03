@@ -27,7 +27,7 @@
         <option value="" disabled selected>Choose Province</option>
         <option value="Central  Province">Central  Province</option>
         <option value="CMR">Colombo Metro  Region</option>
-        <option value="Eastern  Province">Eastern  Province</option>
+        <option value="Eastern  Province">Eastern  Province</option>
         <option value="Northern Province">Northern Province</option>
         <option value="North Central Provincee">North Central Province</option>
         <option value="North Western  Province">North Western  Province</option>
