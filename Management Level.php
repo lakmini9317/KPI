@@ -1,7 +1,7 @@
 <!doctype html public "-//w3c//dtd html 3.2//en">
 <html>
 <head>
-<title>column chart using data from MySQL table</title>
+<title></title>
 </head>
 <body >
 
@@ -12,7 +12,7 @@
 <label>Select Designation</label>
 
 <select name="division">
-        <option value="" disabled selected>Choose Division</option>
+        <option value="" disabled selected>Choose Designation</option>
 
         <option value="0001">Charirman</option>
         <option value="8293">Director General</option>
@@ -64,7 +64,7 @@ require "config.php";// Database connection
 
 $subdivi =(isset($_POST['division']) ? $_POST['division'] : '');
 
-if($stmt = $connection->query("SELECT empcode,los,swa,attend,dat,kow,loyalty,coop,effi,crtvt,ta,initia,wtr,att,ps,com,probs,bear FROM superadminduty_list WHERE empcode='$subdivi'")){
+if($stmt = $connection->query("SELECT noc,los,swa,attend,dat,kow,loyalty,coop,effi,crtvt,ta,initia,wtr,att,ps,com,probs,bear FROM superadminduty_list WHERE empcode='$subdivi'")){
 
   // echo "No of records : ".$stmt->num_rows."<br>";
 $php_data_array = Array(); // create PHP array
@@ -139,7 +139,7 @@ echo "<script>
         data.addRow([my_2d[i][0], parseInt(my_2d[i][1]),parseInt(my_2d[i][2]),parseInt(my_2d[i][3]),parseInt(my_2d[i][4]),parseInt(my_2d[i][5]),parseInt(my_2d[i][6]),parseInt(my_2d[i][7]),parseInt(my_2d[i][8]),parseInt(my_2d[i][9]),parseInt(my_2d[i][10]),parseInt(my_2d[i][11]),parseInt(my_2d[i][12]),parseInt(my_2d[i][13]),parseInt(my_2d[i][14]),parseInt(my_2d[i][15]),parseInt(my_2d[i][16]),parseInt(my_2d[i][17])]);
 
        var options = {
-          title: '',
+          title: 'Overall Progress',
           hAxis: {title: 'Employee No',  titleTextStyle: {color: '#333'}},
           vAxis: {title: 'Value',minValue: 0},
 		  width:1500,

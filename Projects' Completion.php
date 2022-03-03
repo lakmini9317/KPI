@@ -24,6 +24,7 @@
 <label>Select Project Region</label>
 
 <select name="division">
+  
         <option value="" disabled selected>Choose Region</option>
         <option value="R-1 -Director - Project Management Western Region">Western Region</option>
         <option value="R-2-Director - Project Management Northern Region">Nothern  Region</option>
@@ -53,7 +54,7 @@ $subdivi =(isset($_POST['division']) ? $_POST['division'] : '');
 
 if($stmt = $connection->query("SELECT noc,divisub,comprto FROM projectstatus ")){
 
-//   echo "No of records : ".$stmt->num_rows."<br>";
+//echo "No of records : ".$stmt->num_rows."<br>";
 $php_data_array = Array(); // create PHP array
 
 $row2 = mysqli_fetch_array($stmt,MYSQLI_NUM);
@@ -108,7 +109,7 @@ echo "<script>
         // Create the data table.
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Project Name');
-        data.addColumn('number', 'Lagging Region');
+        data.addColumn('number', 'Project Progress');
 	      
       
        
