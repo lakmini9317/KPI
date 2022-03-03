@@ -64,8 +64,9 @@ require "config.php";// Database connection
 
 $subdivi =(isset($_POST['division']) ? $_POST['division'] : '');
 
-if($stmt = $connection->query("SELECT empcode,los,swa,attend,dat,kow,loyalty,coop,effi,crtvt,ta,initia,wtr,att,ps,com,probs,bear FROM superadminduty_list WHERE empcode='$subdivi'")){
+if($stmt = $connection->query("SELECT SUM(los+swa+attend+dat+kow+loyalty+coop+effi+crtvt+ta+initia+wtr+att+ps+com+probs+bear )AS abc FROM superadminduty_list WHERE empcode='$subdivi'")){
 
+ 
   // echo "No of records : ".$stmt->num_rows."<br>";
 $php_data_array = Array(); // create PHP array
 
@@ -77,7 +78,22 @@ $php_data_array = Array(); // create PHP array
 // <th>j</th>
 // <th>j</th>
 // </tr>";
+
+// while($brow = mysql_fetch_array()){
+
+//   echo $arow = $brow[0];
+
+// }
 while ($row = $stmt->fetch_row()) {
+
+  $arow = $row[0]; 
+  $brow= ($arow/17)*20 ;
+  $NumOfDecimals =2;
+  $crow = number_format($brow, $NumOfDecimals);
+  echo 'Average performance : ' .$crow .' %';
+   
+
+  echo '<br>';
   
   //  echo "<tr>
   //  <td>$row[0]</td>
