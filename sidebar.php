@@ -229,6 +229,15 @@
             </a>
           </li>
 
+          <li class="nav-item">
+            <a href="./index.php?page=Projects' Completion" class="nav-link ">
+              <i class="nav-icon fas fa-file-alt"></i>
+              <p>
+              Projects' Completion
+              </p>
+            </a>
+          </li>
+          
         <?php endif; ?>
         </ul>
       </nav>
