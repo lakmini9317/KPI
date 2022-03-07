@@ -24,10 +24,10 @@
 <label>Select Project Region</label>
 
 <select name="division">
-        <option value="" disabled selected>Choose Region</option>
-        <option value="WesternRegion">Western Region</option>
-        <option value="Nothern Region">Nothern  Region</option>
-        <option value="Southern Region">Southern Region</option>
+    <option value="" disabled selected>Choose Region</option>
+    <option value="WesternRegion">Western Region</option>
+    <option value="Nothern Region">Nothern  Region</option>
+    <option value="Southern Region">Southern Region</option>
         
 </select>
 <button type="submit" class="btn btn-warning" >Search</button>
@@ -40,7 +40,7 @@ require "config.php";// Database connection
 
 $subdivi =(isset($_POST['division']) ? $_POST['division'] : '');
 
-if($stmt = $connection->query("SELECT  province,LaggingRegions,WalkingTracks,PublicInstitutions,NineProvinces,100City,pfap,AvrPf FROM projectstatus2 WHERE divisub='$subdivi'")){
+if($stmt = $connection->query("SELECT province,LaggingRegions,WalkingTracks,PublicInstitutions,NineProvinces,100City,pfap,AvrPf FROM projectstatus2 WHERE divisub='$subdivi'")){
 
 //   echo "No of records : ".$stmt->num_rows."<br>";
 $php_data_array = Array(); // create PHP array
