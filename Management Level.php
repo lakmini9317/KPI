@@ -1,7 +1,7 @@
 <!doctype html public "-//w3c//dtd html 3.2//en">
 <html>
 <head>
-<title>column chart using data from MySQL table</title>
+<title></title>
 </head>
 <body >
 
@@ -79,7 +79,7 @@ if($stmt1 = $connection->query("SELECT SUM(los+swa+attend+dat+kow+loyalty+coop+e
   }
 }
 
-if($stmt = $connection->query ("SELECT los,swa,attend,dat,kow,loyalty,coop,effi,crtvt,ta,initia,wtr,att,ps,com,probs,bear  FROM superadminduty_list WHERE empcode='$subdivi'")){
+if($stmt = $connection->query ("SELECT noc,los,swa,attend,dat,kow,loyalty,coop,effi,crtvt,ta,initia,wtr,att,ps,com,probs,bear  FROM superadminduty_list WHERE empcode='$subdivi'")){
 
  
   // echo "No of records : ".$stmt->num_rows."<br>";
@@ -135,7 +135,7 @@ echo "<script>
 
         // Create the data table.
         var data = new google.visualization.DataTable();
-        data.addColumn('string', 'EMP CODE');
+        data.addColumn('string', 'Employee Name');
         data.addColumn('number', 'Length Of Service');
 		    data.addColumn('number', 'Special Work Appreciation');
         data.addColumn('number', 'Attendance');
@@ -159,7 +159,7 @@ echo "<script>
 
        var options = {
           title: '',
-          hAxis: {title: 'Employee No',  titleTextStyle: {color: '#333'}},
+          hAxis: {title: 'Employee Name',  titleTextStyle: {color: '#333'}},
           vAxis: {title: 'Value',minValue: 0},
 		  width:1500,
 		  height:700
