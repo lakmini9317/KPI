@@ -122,8 +122,8 @@
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2021 <a href="https://www.uda.gov.lk/">UDA ITS</a>.</strong>
-    All rights reserved.
+    <strong>Copyright &copy; 2022 <a href="https://www.uda.gov.lk/">UDA ITS</a>.</strong>
+    All Rights Reserved. Version 0.5.0b
     <div class="float-right d-none d-sm-inline-block">
       <b><?php echo $_SESSION['system']['name'] ?></b>
     </div>
