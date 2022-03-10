@@ -12,7 +12,7 @@
 <label>Select Designation</label>
 
 <select name="division">
-        <option value="" disabled selected>Choose Division</option>
+        <option value="" disabled selected>Choose Designation</option>
 
         <option value="0001">Charirman</option>
         <option value="8293">Director General</option>
