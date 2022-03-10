@@ -129,7 +129,8 @@
 
 				<form method="POST" id="updata">
 					<div class="modal-body">
-						<h5>Human Resources Department</h5> <br>
+
+						<h5><b>Human Resources Department</b></h5> <br>
 
 						<div class="row">
 							<div class="col-md-6">
@@ -143,6 +144,7 @@
 										<option value="2">D</option>
 										<option value="1">E</option>
 									</select>
+									<br><br>
 									<select class="custom-select" id="losw" name="losw">
 									   <option value="" selected>Select Weight</option> 
 									    <option value="1.0">1.0</option>
@@ -170,7 +172,8 @@
 										<option value="3">C</option>
 										<option value="2">D</option>
 										<option value="1">E</option>
-									</select> <br>
+									</select> 
+									<br><br>
 									<select class="custom-select" id="swaw" name="swaw">
 									<option value="" selected>Select Weight</option> 
 									    <option value="1.0">1.0</option>
@@ -201,7 +204,7 @@
 										<option value="2">D</option>
 										<option value="1">E</option>
 									</select>
-									<br>
+									<br><br>
 									<select class="custom-select" id="attendw" name="attendw">
 									<option value="" selected>Select Weight</option> 
 									    <option value="1.0">1.0</option>
@@ -228,7 +231,7 @@
 										<option value="2">D</option>
 										<option value="1">E</option>
 									</select>
-									<br>
+									<br><br>
 									<select class="custom-select" id="datw" name="datw">
 									<option value="" selected>Select Weight</option> 
 									    <option value="1.0">1.0</option>
@@ -250,20 +253,23 @@
 						
 						<br>
 
-						<h5>In Charge of the Department</h5> <br>
+						<h5><b>Incharge of the Department</b></h5> 
+						
+						<br>
 
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group col-md-4">
 									<label><b>Knowledge of Work</b></label>
 									<select class="custom-select" id="kow" name="kow">
-										<option value="" selected>Select</option>
+										<option value="" selected>Select Grade</option>
 										<option value="5">A</option>
 										<option value="4">B</option>
 										<option value="3">C</option>
 										<option value="2">D</option>
 										<option value="1">E</option>
-									</select> <br>
+									</select> 
+									<br><br>
 									<select class="custom-select" id="koww" name="koww">
 									<option value="" selected>Select Weight</option> 
 									    <option value="1.0">1.0</option>
@@ -281,16 +287,16 @@
 								</div>
 
 								<div class="form-group col-md-4">
-									<label><b>loyalty</b></label>
+									<label><b>Loyalty</b></label>
 									<select class="custom-select" id="loyalty" name="loyalty">
-										<option value="" selected>Select</option>
+										<option value="" selected>Select Grade</option>
 										<option value="5">A</option>
 										<option value="4">B</option>
 										<option value="3">C</option>
 										<option value="2">D</option>
 										<option value="1">E</option>
 									</select>
-									<br>
+									<br><br>
 									<select class="custom-select" id="loyaltyw" name="loyaltyw">
 									<option value="" selected>Select Weight</option> 
 									    <option value="1.0">1.0</option>
@@ -310,14 +316,14 @@
 								<div class="form-group  col-md-4">
 									<label><b>Cooperation</b></label>
 									<select class="custom-select" id="coop" name="coop">
-										<option value="" selected>Select</option>
+										<option value="" selected>Select Grade</option>
 										<option value="5">A</option>
 										<option value="4">B</option>
 										<option value="3">C</option>
 										<option value="2">D</option>
 										<option value="1">E</option>
 									</select>
-									<br>
+									<br><br>
 									<select class="custom-select" id="coopw" name="coopw">
 									<option value="" selected>Select Weight</option> 
 									    <option value="1.0">1.0</option>
@@ -342,14 +348,14 @@
 								<div class="form-group col-md-4">
 									<label><b>Efficiency</b></label>
 									<select class="custom-select" id="effi" name="effi">
-										<option value="" selected>Select</option>
+										<option value="" selected>Select Grade</option>
 										<option value="5">A</option>
 										<option value="4">B</option>
 										<option value="3">C</option>
 										<option value="2">D</option>
 										<option value="1">E</option>
 									</select>
-									<br>
+									<br><br>
 									<select class="custom-select" id="effiw" name="effiw">
 									<option value="" selected>Select Weight</option> 
 									    <option value="1.0">1.0</option>
@@ -369,14 +375,14 @@
 								<div class="form-group col-md-4">
 									<label><b>Creativity</b></label>
 									<select class="custom-select" id="crtvt" name="crtvt">
-										<option value="" selected>Select</option>
+										<option value="" selected>Select Grade</option>
 										<option value="5">A</option>
 										<option value="4">B</option>
 										<option value="3">C</option>
 										<option value="2">D</option>
 										<option value="1">E</option>
 									</select>
-									<br>
+									<br><br>
 									<select class="custom-select" id="crtvtw" name="crtvtw">
 									<option value="" selected>Select Weight</option> 
 									    <option value="1.0">1.0</option>
@@ -396,7 +402,7 @@
 								<div class="form-group col-md-4">
 									<label><b>Target Achievement</b></label>
 									<select class="custom-select" id="ta" name="ta">
-										<option value="" selected>Select</option>
+										<option value="" selected>Select Grade</option>
 										<option value="5">A</option>
 										<option value="4">B</option>
 										<option value="3">C</option>
@@ -423,21 +429,23 @@
 							</div>
 						</div>
 
-						<h5>Senior Incharge</h5> <br>
+						<br>
+						<h5><b>Senior Incharge</b></h5> 
+						<br>
 
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group col-md-4">
 									<label><b>Initiative</b></label>
 									<select class="custom-select" id="initia" name="initia">
-										<option value="" selected>Select</option>
+										<option value="" selected>Select Grade</option>
 										<option value="5">A</option>
 										<option value="4">B</option>
 										<option value="3">C</option>
 										<option value="2">D</option>
 										<option value="1">E</option>
 									</select> 
-									<br>
+									<br><br>
 									<select class="custom-select" id="initiaw" name="initiaw">
 									    <option value="" selected>Select Weight</option> 
 									    <option value="1.0">1.0</option>
@@ -456,14 +464,14 @@
 								<div class="form-group col-md-4">
 									<label><b>Willing to Take Responsibility</b></label>
 									<select class="custom-select" id="wtr" name="wtr">
-										<option value="" selected>Select</option>
+										<option value="" selected>Select Grade</option>
 										<option value="5">A</option>
 										<option value="4">B</option>
 										<option value="3">C</option>
 										<option value="2">D</option>
 										<option value="1">E</option>
 									</select>
-									<br>
+									<br><br>
 									<select class="custom-select" id="wtrw" name="wtrw">
 									<option value="" selected>Select Weight</option> 
 									    <option value="1.0">1.0</option>
@@ -482,14 +490,14 @@
 								<div class="form-group col-md-4">
 									<label><b>Attitude</b></label>
 									<select class="custom-select" id="att" name="att">
-										<option value="" selected>Select</option>
+										<option value="" selected>Select Grade</option>
 										<option value="5">A</option>
 										<option value="4">B</option>
 										<option value="3">C</option>
 										<option value="2">D</option>
 										<option value="1">E</option>
 									</select>
-									<br>
+									<br><br>
 									<select class="custom-select" id="attw" name="attw">
 									  <option value="" selected>Select Weight</option> 
 										<option value="1.0">1.0</option>
@@ -508,14 +516,14 @@
 								<div class="form-group col-md-4">
 									<label><b>Planning Skills</b></label>
 									<select class="custom-select" id="ps" name="ps">
-										<option value="" selected>Select</option>
+										<option value="" selected>Select Grade</option>
 										<option value="5">A</option>
 										<option value="4">B</option>
 										<option value="3">C</option>
 										<option value="2">D</option>
 										<option value="1">E</option>
 									</select>
-									<br>
+									<br><br>
 									<select class="custom-select" id="psw" name="psw">    
 									 <option value="" selected>Select Weight</option> 
 										<option value="1.0">1.0</option>
@@ -537,15 +545,16 @@
 								<div class="form-group col-md-4">
 									<label><b>Communication</b></label>
 									<select class="custom-select" id="com" name="com">
-										<option value="" selected>Select</option>
+										<option value="" selected>Select Grade</option>
 										<option value="5">A</option>
 										<option value="4">B</option>
 										<option value="3">C</option>
 										<option value="2">D</option>
 										<option value="1">E</option>
 									</select>
+									<br><br>
 									<select class="custom-select" id="comw" name="comw"> 
-									   <option value="" selected>Select</option>
+									   <option value="" selected>Select Weight</option>
 									    <option value="1.0">1.0</option>
 										<option value="0.9">0.9</option>
 										<option value="0.8">0.8</option>
@@ -563,16 +572,16 @@
 								<div class="form-group col-md-4">
 									<label><b>Problem Solving</b></label>
 									<select class="custom-select" id="probs" name="probs">
-										<option value="" selected>Select</option>
+										<option value="" selected>Select Grade</option>
 										<option value="5">A</option>
 										<option value="4">B</option>
 										<option value="3">C</option>
 										<option value="2">D</option>
 										<option value="1">E</option>
 									</select>
-									<br>
+									<br><br>
 									<select class="custom-select" id="probsw" name="probsw">
-										<option value="" selected>Select</option>
+										<option value="" selected>Select Weight</option>
 										<option value="1.0">1.0</option>
 										<option value="0.9">0.9</option>
 										<option value="0.8">0.8</option>
@@ -590,15 +599,16 @@
 								<div class="form-group col-md-4">
 									<label><b>Bearing</b></label>
 									<select class="custom-select" id="bear" name="bear">
-										<option value="" selected>Select</option>
+										<option value="" selected>Select Grade</option>
 										<option value="5">A</option>
 										<option value="4">B</option>
 										<option value="3">C</option>
 										<option value="2">D</option>
 										<option value="1">E</option>
 									</select>
+									<br><br>
 									<select class="custom-select" id="bearw" name="bearw">
-										<option value="" selected>Select</option>
+										<option value="" selected>Select Weight</option>
 										<option value="1.0">1.0</option>
 										<option value="0.9">0.9</option>
 										<option value="0.8">0.8</option>
@@ -615,19 +625,6 @@
 							</div>
 						</div>
 				
-				
-				
-
-						
-
-						
-
-						
-
-						
-
-
-
 						<div class="form-group">
 							<input type="hidden" name="dataval" id="upd_7">
 							<span class="success-msg" id="umsg_6"></span>			

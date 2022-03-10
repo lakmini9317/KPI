@@ -71,15 +71,30 @@ if($stmt1 = $connection->query("SELECT SUM(los+swa+attend+dat+kow+loyalty+coop+e
     $arow = $row[0]; 
     $brow= ($arow/17)*20 ;
     $NumOfDecimals =2;
-    $crow = number_format($brow, $NumOfDecimals);
-    echo 'Average performance : ' .$crow .' %';
+    $crow1 = number_format($brow, $NumOfDecimals);
+    echo '<b> Average Performance : </b> ' .$crow1 .' %';
      
   
+    echo '<br><br>';
+  }
+}
+
+if($stmt2 = $connection->query("SELECT SUM((los*losw)+(swa*swaw)+(attend*attendw)+(dat*datw)+(kow*koww)+(loyalty*loyaltyw)+(coop*coopw)+(effi*effiw)+(crtvt*crtvtw)+(ta*taw)+(initia*initiaw)+(wtr*wtrw)+(att*attw)+(ps*psw)+(com*comw)+(probs*probsw)+(bear*bearw) )AS abc FROM superadminduty_list WHERE empcode='$subdivi'")){
+
+  while ($row2 = $stmt2->fetch_row()) {
+
+    $arow2 = $row2[0]; 
+    $brow= ($arow2) ;
+    $NumOfDecimals =2;
+    $crow2 = number_format($brow, $NumOfDecimals);
+    echo '<b>Weighted Performance : </b> ' .$crow2 .'%';
+     
     echo '<br>';
   }
 }
 
-if($stmt = $connection->query ("SELECT noc,los,swa,attend,dat,kow,loyalty,coop,effi,crtvt,ta,initia,wtr,att,ps,com,probs,bear  FROM superadminduty_list WHERE empcode='$subdivi'")){
+
+if($stmt = $connection->query("SELECT noc,los,swa,attend,dat,kow,loyalty,coop,effi,crtvt,ta,initia,wtr,att,ps,com,probs,bear  FROM superadminduty_list WHERE empcode='$subdivi'")){
 
  
   // echo "No of records : ".$stmt->num_rows."<br>";
@@ -119,7 +134,7 @@ echo "<script>
 </script>";
 ?>
 
-
+<br>
 <div id="chart_div"></div>
 <br><br>
 

@@ -33,6 +33,24 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
 			$json['com'] = $select_pre['com'];
 			$json['probs'] = $select_pre['probs'];
 			$json['bear'] = $select_pre['bear'];
+			
+			$json['losw'] = $select_pre['losw'];
+			$json['swaw'] = $select_pre['swaw'];
+			$json['attendw'] = $select_pre['attendw'];
+			$json['datw'] = $select_pre['datw'];
+			$json['koww'] = $select_pre['koww'];
+			$json['loyaltyw'] = $select_pre['loyaltyw'];
+			$json['coopw'] = $select_pre['coopw'];
+			$json['effiw'] = $select_pre['effiw'];
+			$json['crtvtw'] = $select_pre['crtvtw'];
+			$json['taw'] = $select_pre['taw'];
+			$json['initiaw'] = $select_pre['initiaw'];
+			$json['wtrw'] = $select_pre['wtrw'];
+			$json['attw'] = $select_pre['attw'];
+			$json['psw'] = $select_pre['psw'];
+			$json['comw'] = $select_pre['comw'];
+			$json['probsw'] = $select_pre['probsw'];
+			$json['bearw'] = $select_pre['bearw'];
 			$json['msg'] = "Success";
 			
 		}
@@ -56,6 +74,24 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
 			$json['com'] = "NULL";
 			$json['probs'] = "NULL";
 			$json['bear'] = "NULL";
+
+			$json['losw'] = "NULL";
+			$json['swaw'] = "NULL";
+			$json['attendw'] = "NULL";
+			$json['datw'] = "NULL";
+			$json['koww'] = "NULL";
+			$json['loyaltyw'] = "NULL";
+			$json['coopw'] = "NULL";
+			$json['effiw'] = "NULL";
+			$json['crtvtw'] = "NULL";
+			$json['taw'] = "NULL";
+			$json['initiaw'] = "NULL";
+			$json['wtrw'] = "NULL";
+			$json['attw'] = "NULL";
+			$json['psw'] = "NULL";
+			$json['comw'] = "NULL";
+			$json['probsw'] = "NULL";
+			$json['bearw'] = "NULL";
 			$json['msg'] = "Fail";
 
 		}
