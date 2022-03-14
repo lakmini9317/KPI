@@ -46,7 +46,7 @@ require "config.php";// Database connection
 
 $subdivi =(isset($_POST['division']) ? $_POST['division'] : '');
 
-if($stmt = $connection->query("SELECT prjname,pt,pp,tc FROM allprojects WHERE province='$subdivi'")){
+if($stmt = $connection->query("SELECT prjname,pt,pp,tc,noc FROM allprojects WHERE province='$subdivi'")){
 
 //   echo "No of records : ".$stmt->num_rows."<br>";
   
@@ -56,6 +56,7 @@ $row2 = mysqli_fetch_array($stmt,MYSQLI_NUM);
 
 echo "<table>
 <tr>
+<th>Employee Name</th>
 <th>Project Name</th>
 <th>Physical Target(%)</th>
 <th>Physical Progress(%)</th>
@@ -65,6 +66,7 @@ echo "<table>
 while ($row = $stmt->fetch_row()) {
   
    echo "<tr>
+   <td>$row[4]</td>
    <td>$row[0]</td>
    <td>$row[1]</td>
    <td>$row[2]</td>

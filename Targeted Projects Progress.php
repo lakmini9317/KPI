@@ -18,7 +18,7 @@
 <body >
 
 
-<div class="container pt-5">
+<!-- <div class="container pt-5">
 <form action="" method="post">
              
 <label>Select Project Region</label>
@@ -33,14 +33,14 @@
 <button type="submit" class="btn btn-warning" >Search</button>
 
 </form> <br><br>
-</div>
+</div> -->
 
 <?Php
 require "config.php";// Database connection
 
 $subdivi =(isset($_POST['division']) ? $_POST['division'] : '');
 
-if($stmt = $connection->query("SELECT province,LaggingRegions,WalkingTracks,PublicInstitutions,NineProvinces,100City,pfap,AvrPf FROM projectstatus2 WHERE divisub='$subdivi'")){
+if($stmt = $connection->query("SELECT province,LaggingRegions,WalkingTracks,PublicInstitutions,NineProvinces,100City,pfap,AvrPf,noc FROM projectstatus2 ")){
 
 //   echo "No of records : ".$stmt->num_rows."<br>";
 $php_data_array = Array(); // create PHP array
@@ -49,7 +49,7 @@ $row2 = mysqli_fetch_array($stmt,MYSQLI_NUM);
 
 echo "<table>
 <tr>
-
+<th>Name</th>
 <th>Province</th>
 <th>Lagging Region</th>
 <th>Walking Tracks</th>
@@ -60,6 +60,7 @@ echo "<table>
 while ($row = $stmt->fetch_row()) {
   
    echo "<tr>
+   <td>$row[8]</td>
    <td>$row[0]</td>
    <td>$row[1]</td>
    <td>$row[2]</td>

@@ -18,7 +18,7 @@
 <body >
 
 
-<div class="container pt-5">
+<!-- <div class="container pt-5">
 <form action="" method="post">
              
 <label>Select Project Region</label>
@@ -45,9 +45,9 @@
 <button type="submit" class="btn btn-warning" >Search</button>
 
 </form> <br><br>
-</div>
+</div> -->
 
-<?Php
+<?php
 require "config.php";// Database connection
 
 $subdivi =(isset($_POST['division']) ? $_POST['division'] : '');
@@ -73,8 +73,7 @@ while ($row = $stmt->fetch_row()) {
    <td>$row[0]</td>
    <td>$row[1]</td>
    <td>$row[2]</td>
-   <
-   
+      
    </tr>";
    $php_data_array[] = $row; // Adding to array
    }
@@ -120,7 +119,7 @@ echo "<script>
 
        var options = {
           title: '',
-          hAxis: {title: 'Province',  titleTextStyle: {color: '#333'}},
+          hAxis: {title: 'Name',  titleTextStyle: {color: '#333'}},
           vAxis: {minValue: 0},
 		  width:1500,
 		  height:700
