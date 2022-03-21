@@ -102,7 +102,7 @@ echo "<script>
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Project Name  (%)');
         data.addColumn('number', 'Lagging Region  (%)');
-	data.addColumn('number', 'Walking Tracks (%)');
+	      data.addColumn('number', 'Walking Tracks (%)');
         data.addColumn('number', 'Public Institutions (%)');
         data.addColumn('number', 'Nine Provinces (%)');
         data.addColumn('number', '100 Cities  (%)');
