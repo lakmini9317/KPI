@@ -75,7 +75,7 @@ if($stmt1 = $connection->query("SELECT SUM(los+swa+attend+dat+kow+loyalty+coop+e
     $brow= ($arow/17)*20 ;
     $NumOfDecimals =2;
     $crow1 = number_format($brow, $NumOfDecimals);
-    echo '<b> Baseline Performance : </b> ' .$crow1 .' %';
+    echo '<b> Baseline Performance   : </b> ' .$crow1 .' %';
      
   
     echo '<br><br>';
