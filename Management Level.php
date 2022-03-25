@@ -17,36 +17,36 @@
         <option value="0001">Charirman</option>
         <option value="8293">Director General</option>
         <option value="9185">Act. Additional Director General</option>
-        <option value="8652">Deputy Director General(Planning)</option>
-        <option value="9344">Deputy Director General(Consultancy)</option>
-        <option value="1807">Deputy Director General(Finance)</option>
-        <option value="1810">Deputy Director General(HRM & Administration)</option>
-        <option value="8154">Act. Deputy Director General(Project)'e</option>
-        <option value="9282">Act. Deputy Director General(Planning)</option>
+        <option value="8652">Deputy Director General (Planning)</option>
+        <option value="9344">Deputy Director General (Consultancy)</option>
+        <option value="1807">Deputy Director General (Finance)</option>
+        <option value="1810">Deputy Director General (HRM & Administration)</option>
+        <option value="8154">Act. Deputy Director General (Project)'e</option>
+        <option value="9282">Act. Deputy Director General (Planning)</option>
         <option value="9309">Acting-Deputy Director General (Real Estate & land Mgt)</option>
-        <option value="8650">Director(Facility Management)</option>
-        <option value="8654">Director(Uva Province)</option>
-        <option value="2175">Director(Real Easte &  Land Development)</option>
-        <option value="8184">Director(Northern Centeral Province) </option>
-        <option value="8190">Director(Northern Province)</option>
+        <option value="8650">Director (Facility Management)</option>
+        <option value="8654">Director (Uva Province)</option>
+        <option value="2175">Director (Real Easte &  Land Development)</option>
+        <option value="8184">Director (Northern Centeral Province) </option>
+        <option value="8190">Director (Northern Province)</option>
         <option value="9750">Director (GIS) </option>
-        <option value="9761">Director(CMR)</option>
-        <option value="8242">Director(North Western Province)</option>
+        <option value="9761">Director (CMR)</option>
+        <option value="8242">Director (North Western Province)</option>
         <option value="8241">Director (Eastern  Province)</option>
-        <option value="8271">Director(Southern  Province)</option>
-        <option value="9774">Director(Project Management-Western  Region)</option>
-        <option value="9795">Director(Land Development & Mgt)</option>
+        <option value="8271">Director (Southern  Province)</option>
+        <option value="9774">Director (Project Management-Western  Region)</option>
+        <option value="9795">Director (Land Development & Mgt)</option>
         <option value="3918">Director (Enviromental &Landscape)</option>
-        <option value="3853">Director(Strategic Planning)</option>
-        <option value="9771">Director(Project Management-Southern Region)</option>
+        <option value="3853">Director (Strategic Planning)</option>
+        <option value="9771">Director (Project Management-Southern Region)</option>
         <option value="2181">Director (Engineering Services)</option>
         <option value="1751">Director (Architectural Consultancy)</option>
-        <option value="3906">Director(Project Management-Northern Region)</option>
+        <option value="3906">Director (Project Management-Northern Region)</option>
         <option value="4810">Director (Research & Development)</option>
-        <option value="8338">Director(Finance)</option>
-        <option value="3986">Director(Administration)</option>
-        <option value="1805">Director(Legal)</option>
-        <option value="1809">Director(ICT)</option>
+        <option value="8338">Director (Finance)</option>
+        <option value="3986">Director (Administration)</option>
+        <option value="1805">Director (Legal)</option>
+        <option value="1809">Director (ICT)</option>
         <option value="1801">Chief Internal Auditor</option>
         <option value="8236">Deputy Director (Planning)- Acting Director (Sabaragamuwa Province)</option>
         <option value="9796">Performing Director (Western Province)- Deputy Director (Planning)</option>
@@ -59,7 +59,10 @@
 </form> <br><br>
 </div>
 
-<?Php
+
+<div id ='rslt'>
+
+<?php
 require "config.php";// Database connection
 
 $subdivi =(isset($_POST['division']) ? $_POST['division'] : '');
@@ -72,12 +75,14 @@ if($stmt1 = $connection->query("SELECT SUM(los+swa+attend+dat+kow+loyalty+coop+e
     $brow= ($arow/17)*20 ;
     $NumOfDecimals =2;
     $crow1 = number_format($brow, $NumOfDecimals);
-    echo '<b> Average Performance : </b> ' .$crow1 .' %';
+    echo '<b> Baseline Performance : </b> ' .$crow1 .' %';
      
   
     echo '<br><br>';
   }
 }
+
+
 
 if($stmt2 = $connection->query("SELECT SUM((los*losw)+(swa*swaw)+(attend*attendw)+(dat*datw)+(kow*koww)+(loyalty*loyaltyw)+(coop*coopw)+(effi*effiw)+(crtvt*crtvtw)+(ta*taw)+(initia*initiaw)+(wtr*wtrw)+(att*attw)+(ps*psw)+(com*comw)+(probs*probsw)+(bear*bearw) )AS abc FROM superadminduty_list WHERE empcode='$subdivi'")){
 
@@ -97,7 +102,7 @@ if($stmt2 = $connection->query("SELECT SUM((los*losw)+(swa*swaw)+(attend*attendw
 if($stmt = $connection->query("SELECT noc,los,swa,attend,dat,kow,loyalty,coop,effi,crtvt,ta,initia,wtr,att,ps,com,probs,bear  FROM superadminduty_list WHERE empcode='$subdivi'")){
 
  
-  // echo "No of records : ".$stmt->num_rows."<br>";
+// echo "No of records : ".$stmt->num_rows."<br>";
 $php_data_array = Array(); // create PHP array
 
 //$row2 = mysqli_fetch_array($stmt,MYSQLI_NUM);
@@ -118,7 +123,7 @@ while ($row = $stmt->fetch_row()) {
   //  <td>$row[1]</td>
   //  <td>$row[2]</td>
   //  </tr>";
-   $php_data_array[] = $row; // Adding to array
+$php_data_array[] = $row; // Adding to array
    }
 echo "</table>";
 }else{
@@ -133,7 +138,7 @@ echo "<script>
         var my_2d = ".json_encode($php_data_array)."
 </script>";
 ?>
-
+</div>
 <br>
 <div id="chart_div"></div>
 <br><br>
@@ -174,7 +179,7 @@ echo "<script>
 
        var options = {
           title: '',
-          hAxis: {title: 'Employee Name',  titleTextStyle: {color: '#333'}},
+          hAxis: {title: 'Employee Name',  titleTextStyle: {color: '#3A5795'}},
           vAxis: {title: 'Value',minValue: 0},
 		  width:1500,
 		  height:700

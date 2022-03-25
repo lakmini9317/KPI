@@ -65,14 +65,15 @@ echo "<table>
 
 while ($row = $stmt->fetch_row()) {
   
-   echo "<tr>
+   echo 
+  "<tr>
    <td>$row[4]</td>
    <td>$row[0]</td>
    <td>$row[1]</td>
    <td>$row[2]</td>
    <td>$row[3]</td>
-   
    </tr>";
+
    $php_data_array[] = $row; // Adding to array
    }
 echo "</table>";
