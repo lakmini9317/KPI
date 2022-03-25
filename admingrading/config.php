@@ -4,7 +4,7 @@ class Userfunction{
 
 	private $DBHOST='localhost';
 	private $DBUSER='root';
-	private $DBPASS='admin';
+	private $DBPASS='';
 	private $DBNAME='kpi eps';
 	public$tblname='superadminduty_list';
 	public $con;

@@ -3,7 +3,7 @@
 $host_name = "localhost";
 $database = "kpi eps"; // Change your database name
 $username = "root";          // Your database user id 
-$password = "admin";          // Your password
+$password = "";          // Your password
 
 //error_reporting(0);// With this no error reporting will be there
 //////// Do not Edit below /////////
