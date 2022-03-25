@@ -34,7 +34,7 @@
 		<div class="container">
 			<div class="row m-3 text-center">
 				<div class="col-lg-12">
-					<h1 class="box-title"></h1>
+					<!-- <h1 class="box-title"></h1> -->
 				</div>
 			</div>
 			<!-- <div  class="row justify-content-center">
@@ -192,6 +192,7 @@
 								<span class="error-msg" id="msg_2"></span>
 								</div>
 							</div>
+							
 
 							<div class="col-md-6">
 								<div class="form-group col-md-4">
