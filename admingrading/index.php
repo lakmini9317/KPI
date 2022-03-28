@@ -138,11 +138,11 @@
 									<label><b>Length of Service</b></label>
 									<select class="custom-select" id="los" name="los">
 										<option value="" selected>Select Grade</option>
-										<option value="5">A</option>
-										<option value="4">B</option>
-										<option value="3">C</option>
-										<option value="2">D</option>
-										<option value="1">E</option>
+										<option value="100">A</option>
+										<option value="75">B</option>
+										<option value="50">C</option>
+										<option value="25">D</option>
+										<option value="0">E</option>
 									</select>
 									<br><br>
 									<select class="custom-select" id="losw" name="losw">
@@ -167,11 +167,11 @@
 									<label><b>Special Work Appreciation</b></label>
 									<select class="custom-select" id="swa" name="swa">
 										<option value="" selected>Select Grade</option>
-										<option value="5">A</option>
-										<option value="4">B</option>
-										<option value="3">C</option>
-										<option value="2">D</option>
-										<option value="1">E</option>
+										<option value="100">A</option>
+										<option value="75">B</option>
+										<option value="50">C</option>
+										<option value="25">D</option>
+										<option value="0">E</option>
 									</select> 
 									<br><br>
 									<select class="custom-select" id="swaw" name="swaw">
@@ -199,11 +199,11 @@
 									<label><b>Attendance</b></label>
 									<select class="custom-select" id="attend" name="attend">
 										<option value="" selected>Select</option>
-										<option value="5">A</option>
-										<option value="4">B</option>
-										<option value="3">C</option>
-										<option value="2">D</option>
-										<option value="1">E</option>
+										<option value="100">A</option>
+										<option value="75">B</option>
+										<option value="50">C</option>
+										<option value="25">D</option>
+										<option value="0">E</option>
 									</select>
 									<br><br>
 									<select class="custom-select" id="attendw" name="attendw">
@@ -226,11 +226,11 @@
 									<label><b>Disciplinary Action Taken</b></label>
 									<select class="custom-select" id="dat" name="dat">
 										<option value="" selected>Select</option>
-										<option value="5">A</option>
-										<option value="4">B</option>
-										<option value="3">C</option>
-										<option value="2">D</option>
-										<option value="1">E</option>
+										<option value="100">A</option>
+										<option value="75">B</option>
+										<option value="50">C</option>
+										<option value="25">D</option>
+										<option value="0">E</option>
 									</select>
 									<br><br>
 									<select class="custom-select" id="datw" name="datw">
@@ -264,11 +264,11 @@
 									<label><b>Knowledge of Work</b></label>
 									<select class="custom-select" id="kow" name="kow">
 										<option value="" selected>Select Grade</option>
-										<option value="5">A</option>
-										<option value="4">B</option>
-										<option value="3">C</option>
-										<option value="2">D</option>
-										<option value="1">E</option>
+										<option value="100">A</option>
+										<option value="75">B</option>
+										<option value="50">C</option>
+										<option value="25">D</option>
+										<option value="0">E</option>
 									</select> 
 									<br><br>
 									<select class="custom-select" id="koww" name="koww">
@@ -291,11 +291,11 @@
 									<label><b>Loyalty</b></label>
 									<select class="custom-select" id="loyalty" name="loyalty">
 										<option value="" selected>Select Grade</option>
-										<option value="5">A</option>
-										<option value="4">B</option>
-										<option value="3">C</option>
-										<option value="2">D</option>
-										<option value="1">E</option>
+										<option value="100">A</option>
+										<option value="75">B</option>
+										<option value="50">C</option>
+										<option value="25">D</option>
+										<option value="0">E</option>
 									</select>
 									<br><br>
 									<select class="custom-select" id="loyaltyw" name="loyaltyw">
@@ -318,11 +318,11 @@
 									<label><b>Cooperation</b></label>
 									<select class="custom-select" id="coop" name="coop">
 										<option value="" selected>Select Grade</option>
-										<option value="5">A</option>
-										<option value="4">B</option>
-										<option value="3">C</option>
-										<option value="2">D</option>
-										<option value="1">E</option>
+										<option value="100">A</option>
+										<option value="75">B</option>
+										<option value="50">C</option>
+										<option value="25">D</option>
+										<option value="0">E</option>
 									</select>
 									<br><br>
 									<select class="custom-select" id="coopw" name="coopw">
@@ -350,11 +350,11 @@
 									<label><b>Efficiency</b></label>
 									<select class="custom-select" id="effi" name="effi">
 										<option value="" selected>Select Grade</option>
-										<option value="5">A</option>
-										<option value="4">B</option>
-										<option value="3">C</option>
-										<option value="2">D</option>
-										<option value="1">E</option>
+										<option value="100">A</option>
+										<option value="75">B</option>
+										<option value="50">C</option>
+										<option value="25">D</option>
+										<option value="0">E</option>
 									</select>
 									<br><br>
 									<select class="custom-select" id="effiw" name="effiw">
@@ -377,11 +377,11 @@
 									<label><b>Creativity</b></label>
 									<select class="custom-select" id="crtvt" name="crtvt">
 										<option value="" selected>Select Grade</option>
-										<option value="5">A</option>
-										<option value="4">B</option>
-										<option value="3">C</option>
-										<option value="2">D</option>
-										<option value="1">E</option>
+										<option value="100">A</option>
+										<option value="75">B</option>
+										<option value="50">C</option>
+										<option value="25">D</option>
+										<option value="0">E</option>
 									</select>
 									<br><br>
 									<select class="custom-select" id="crtvtw" name="crtvtw">
@@ -404,11 +404,11 @@
 									<label><b>Target Achievement</b></label>
 									<select class="custom-select" id="ta" name="ta">
 										<option value="" selected>Select Grade</option>
-										<option value="5">A</option>
-										<option value="4">B</option>
-										<option value="3">C</option>
-										<option value="2">D</option>
-										<option value="1">E</option>
+										<option value="100">A</option>
+										<option value="75">B</option>
+										<option value="50">C</option>
+										<option value="25">D</option>
+										<option value="0">E</option>
 									</select>
 									<br><br>
 									<select class="custom-select" id="taw" name="taw">
@@ -440,11 +440,11 @@
 									<label><b>Initiative</b></label>
 									<select class="custom-select" id="initia" name="initia">
 										<option value="" selected>Select Grade</option>
-										<option value="5">A</option>
-										<option value="4">B</option>
-										<option value="3">C</option>
-										<option value="2">D</option>
-										<option value="1">E</option>
+										<option value="100">A</option>
+										<option value="75">B</option>
+										<option value="50">C</option>
+										<option value="25">D</option>
+										<option value="0">E</option>
 									</select> 
 									<br><br>
 									<select class="custom-select" id="initiaw" name="initiaw">
@@ -466,11 +466,11 @@
 									<label><b>Willing to Take Responsibility</b></label>
 									<select class="custom-select" id="wtr" name="wtr">
 										<option value="" selected>Select Grade</option>
-										<option value="5">A</option>
-										<option value="4">B</option>
-										<option value="3">C</option>
-										<option value="2">D</option>
-										<option value="1">E</option>
+										<option value="100">A</option>
+										<option value="75">B</option>
+										<option value="50">C</option>
+										<option value="25">D</option>
+										<option value="0">E</option>
 									</select>
 									<br><br>
 									<select class="custom-select" id="wtrw" name="wtrw">
@@ -492,11 +492,11 @@
 									<label><b>Attitude</b></label>
 									<select class="custom-select" id="att" name="att">
 										<option value="" selected>Select Grade</option>
-										<option value="5">A</option>
-										<option value="4">B</option>
-										<option value="3">C</option>
-										<option value="2">D</option>
-										<option value="1">E</option>
+										<option value="100">A</option>
+										<option value="75">B</option>
+										<option value="50">C</option>
+										<option value="25">D</option>
+										<option value="0">E</option>
 									</select>
 									<br><br>
 									<select class="custom-select" id="attw" name="attw">
@@ -518,11 +518,11 @@
 									<label><b>Planning Skills</b></label>
 									<select class="custom-select" id="ps" name="ps">
 										<option value="" selected>Select Grade</option>
-										<option value="5">A</option>
-										<option value="4">B</option>
-										<option value="3">C</option>
-										<option value="2">D</option>
-										<option value="1">E</option>
+										<option value="100">A</option>
+										<option value="75">B</option>
+										<option value="50">C</option>
+										<option value="25">D</option>
+										<option value="0">E</option>
 									</select>
 									<br><br>
 									<select class="custom-select" id="psw" name="psw">    
@@ -547,11 +547,11 @@
 									<label><b>Communication</b></label>
 									<select class="custom-select" id="com" name="com">
 										<option value="" selected>Select Grade</option>
-										<option value="5">A</option>
-										<option value="4">B</option>
-										<option value="3">C</option>
-										<option value="2">D</option>
-										<option value="1">E</option>
+										<option value="100">A</option>
+										<option value="75">B</option>
+										<option value="50">C</option>
+										<option value="25">D</option>
+										<option value="0">E</option>
 									</select>
 									<br><br>
 									<select class="custom-select" id="comw" name="comw"> 
@@ -574,11 +574,11 @@
 									<label><b>Problem Solving</b></label>
 									<select class="custom-select" id="probs" name="probs">
 										<option value="" selected>Select Grade</option>
-										<option value="5">A</option>
-										<option value="4">B</option>
-										<option value="3">C</option>
-										<option value="2">D</option>
-										<option value="1">E</option>
+										<option value="100">A</option>
+										<option value="75">B</option>
+										<option value="50">C</option>
+										<option value="25">D</option>
+										<option value="0">E</option>
 									</select>
 									<br><br>
 									<select class="custom-select" id="probsw" name="probsw">
@@ -601,11 +601,11 @@
 									<label><b>Bearing</b></label>
 									<select class="custom-select" id="bear" name="bear">
 										<option value="" selected>Select Grade</option>
-										<option value="5">A</option>
-										<option value="4">B</option>
-										<option value="3">C</option>
-										<option value="2">D</option>
-										<option value="1">E</option>
+										<option value="100">A</option>
+										<option value="75">B</option>
+										<option value="50">C</option>
+										<option value="25">D</option>
+										<option value="0">E</option>
 									</select>
 									<br><br>
 									<select class="custom-select" id="bearw" name="bearw">

@@ -68,20 +68,20 @@ require "config.php";// Database connection
 
 $subdivi =(isset($_POST['division']) ? $_POST['division'] : '');
 
-if($stmt1 = $connection->query("SELECT SUM(los+swa+attend+dat+kow+loyalty+coop+effi+crtvt+ta+initia+wtr+att+ps+com+probs+bear )AS abc FROM superadminduty_list WHERE empcode='$subdivi'")){
+if($stmt1 = $connection->query("SELECT SUM((los*0.0375)+(swa*0.0375)+(attend*0.0375)+(dat*0.0375)+(kow*0.02)+(loyalty*0.02)+(coop*0.02)+(effi*0.02)+(crtvt*0.02)+(ta*0.35)+(initia*0.02)+(wtr*0.08)+(att*0.05)+(ps*0.05)+(com*0.05)+(probs*0.10)+(bear*0.05) )AS abc FROM superadminduty_list WHERE empcode='$subdivi'")){
 
   while ($row = $stmt1->fetch_row()) {
 
     $arow = $row[0]; 
-    $brow= ($arow/17)*20 ;
+    $brow= $arow ;
     $NumOfDecimals =2;
     $crow1 = number_format($brow, $NumOfDecimals);
     echo '<b> Baseline Performance : </b> ' .$crow1 .' % ';
-    echo "<div id='progressbar' style='width: 50%; height: 20px;border-radius: 10px;border: solid 1px #000000; overflow: hidden;'>";
-    echo "<div id='completed' style='width: ".$crow1."% !important; position: relative; height: 100%; background-color: #3358FF;'></div>";
+    echo "<div id='progressbar' style='width: 50%; height: 20px;border-radius: 10px;border: solid 1.5px #000000; overflow: hidden;'>";
+    echo "<div id='completed' style='width: ".$crow1."% !important; position: relative; height: 100%; background-color: #4040ff;'></div>";
     echo "</div>";
  
-    echo '<br><br>';
+    echo '<br>';
   }
 }
 
@@ -92,12 +92,12 @@ if($stmt2 = $connection->query("SELECT SUM((los*losw)+(swa*swaw)+(attend*attendw
   while ($row2 = $stmt2->fetch_row()) {
 
     $arow2 = $row2[0]; 
-    $brow2= ($arow2) ;
+    $brow2= ($arow2)/17;
     $NumOfDecimals =2;
     $crow2 = number_format($brow2, $NumOfDecimals);
     echo '<b>Weighted Performance : </b> ' .$crow2 .'%';
-    echo "<div id='progressbar' style='width: 50%; height: 20px;border-radius: 10px;border: solid 1px #000000; overflow: hidden;'>";
-    echo "<div id='completed' style='width: ".$crow2."% !important; position: relative; height: 100%; background-color: #3358FF;'></div>";
+    echo "<div id='progressbar' style='width: 50%; height: 20px;border-radius: 10px;border: solid 1.5px #000000; overflow: hidden;'>";
+    echo "<div id='completed' style='width: ".$crow2."% !important; position: relative; height: 100%; background-color: #fb9937;'></div>";
     echo "</div>";
     echo '<br>';
   }
