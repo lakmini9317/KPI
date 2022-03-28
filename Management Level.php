@@ -2,6 +2,7 @@
 <html>
 <head>
 <title></title>
+
 </head>
 <body >
 
@@ -60,7 +61,7 @@
 </div>
 
 
-<div id ='rslt'>
+<div id ='rslt' style="padding-left:20px;padding-top:20px;background-color:white;">
 
 <?php
 require "config.php";// Database connection
@@ -75,9 +76,11 @@ if($stmt1 = $connection->query("SELECT SUM(los+swa+attend+dat+kow+loyalty+coop+e
     $brow= ($arow/17)*20 ;
     $NumOfDecimals =2;
     $crow1 = number_format($brow, $NumOfDecimals);
-    echo '<b> Baseline Performance   : </b> ' .$crow1 .' %';
-     
-  
+    echo '<b> Baseline Performance : </b> ' .$crow1 .' % ';
+    echo "<div id='progressbar' style='width: 50%; height: 20px;border-radius: 10px;border: solid 1px #000000; overflow: hidden;'>";
+    echo "<div id='completed' style='width: ".$crow1."% !important; position: relative; height: 100%; background-color: #3358FF;'></div>";
+    echo "</div>";
+ 
     echo '<br><br>';
   }
 }
@@ -89,14 +92,16 @@ if($stmt2 = $connection->query("SELECT SUM((los*losw)+(swa*swaw)+(attend*attendw
   while ($row2 = $stmt2->fetch_row()) {
 
     $arow2 = $row2[0]; 
-    $brow= ($arow2) ;
+    $brow2= ($arow2) ;
     $NumOfDecimals =2;
-    $crow2 = number_format($brow, $NumOfDecimals);
+    $crow2 = number_format($brow2, $NumOfDecimals);
     echo '<b>Weighted Performance : </b> ' .$crow2 .'%';
      
     echo '<br>';
   }
 }
+
+
 
 
 if($stmt = $connection->query("SELECT noc,los,swa,attend,dat,kow,loyalty,coop,effi,crtvt,ta,initia,wtr,att,ps,com,probs,bear  FROM superadminduty_list WHERE empcode='$subdivi'")){
@@ -139,6 +144,7 @@ echo "<script>
 </script>";
 ?>
 </div>
+
 <br>
 <div id="chart_div"></div>
 <br><br>
