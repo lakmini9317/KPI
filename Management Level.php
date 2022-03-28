@@ -96,7 +96,9 @@ if($stmt2 = $connection->query("SELECT SUM((los*losw)+(swa*swaw)+(attend*attendw
     $NumOfDecimals =2;
     $crow2 = number_format($brow2, $NumOfDecimals);
     echo '<b>Weighted Performance : </b> ' .$crow2 .'%';
-     
+    echo "<div id='progressbar' style='width: 50%; height: 20px;border-radius: 10px;border: solid 1px #000000; overflow: hidden;'>";
+    echo "<div id='completed' style='width: ".$crow2."% !important; position: relative; height: 100%; background-color: #3358FF;'></div>";
+    echo "</div>";
     echo '<br>';
   }
 }
