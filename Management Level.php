@@ -68,6 +68,16 @@ require "config.php";// Database connection
 
 $subdivi =(isset($_POST['division']) ? $_POST['division'] : '');
 
+$sql = "SELECT noc FROM superadminduty_list WHERE empcode='$subdivi'";
+$result = $connection->query($sql);
+
+if ($result->num_rows > 0) {
+  while($namerow = $result->fetch_assoc()) {
+    echo "<b>Name : </b> " . $namerow["noc"]."<br><br>";
+  }
+}
+
+
 if($stmt1 = $connection->query("SELECT SUM((los*0.0375)+(swa*0.0375)+(attend*0.0375)+(dat*0.0375)+(kow*0.02)+(loyalty*0.02)+(coop*0.02)+(effi*0.02)+(crtvt*0.02)+(ta*0.35)+(initia*0.02)+(wtr*0.08)+(att*0.05)+(ps*0.05)+(com*0.05)+(probs*0.10)+(bear*0.05) )AS abc FROM superadminduty_list WHERE empcode='$subdivi'")){
 
   while ($row = $stmt1->fetch_row()) {
@@ -75,7 +85,8 @@ if($stmt1 = $connection->query("SELECT SUM((los*0.0375)+(swa*0.0375)+(attend*0.0
     $arow = $row[0]; 
     $brow= $arow ;
     $NumOfDecimals =2;
-    $crow1 = number_format($brow, $NumOfDecimals);
+    $crow1 = number_format($brow, $NumOfDecimals);      
+    
     echo '<b> Baseline Performance : </b> ' .$crow1 .' % ';
     echo "<div id='progressbar' style='width: 50%; height: 20px;border-radius: 10px;border: solid 1.5px #000000; overflow: hidden;'>";
     echo "<div id='completed' style='width: ".$crow1."% !important; position: relative; height: 100%; background-color: #4040ff;'></div>";
@@ -196,8 +207,7 @@ echo "<script>
         var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
         chart.draw(data, options);
        }
-	///////////////////////////////
-////////////////////////////////////	
+
 </script>
 </body></html>
 
