@@ -131,11 +131,12 @@
 					<div class="modal-body">
 
 						<h5><b>Human Resources Department</b></h5> <br>
-
-						<div class="row">
-							<div class="col-md-6">
-								<div class="form-group col-md-4">
-									<label><b>Length of Service</b></label>
+						<div style="border:1px solid lightgrey;padding:20px;margin:5px;border-radius: 25px;background-color: #dee9f0;">
+							<div class="row" >
+								
+								<div class="col-md-3"><label><b>Length of Service</b></label></div>
+								
+								<div class="form-group col-md-4">																
 									<select class="custom-select" id="los" name="los">
 										<option value="" selected>Select Grade</option>
 										<option value="100">A</option>
@@ -143,11 +144,13 @@
 										<option value="50">C</option>
 										<option value="25">D</option>
 										<option value="0">E</option>
-									</select>
-									<br><br>
+									</select>									
+								</div>
+
+								<div class="form-group col-md-4">
 									<select class="custom-select" id="losw" name="losw">
-									   <option value="" selected>Select Weight</option> 
-									    <option value="1.0">1.0</option>
+										<option value="" selected>Select Weight</option> 
+										<option value="1.0">1.0</option>
 										<option value="0.9">0.9</option>
 										<option value="0.8">0.8</option>
 										<option value="0.7">0.7</option>
@@ -160,11 +163,12 @@
 									</select>
 									<span class="error-msg" id="msg_1"></span>
 								</div>
-								
-								
+							</div>
 
-								<div class="form-group col-md-4">
-									<label><b>Special Work Appreciation</b></label>
+							<div class="row">
+								<div class="col-md-3"><label><b>Special Work Appreciation</b></label></div>
+
+								<div class="form-group col-md-4">									
 									<select class="custom-select" id="swa" name="swa">
 										<option value="" selected>Select Grade</option>
 										<option value="100">A</option>
@@ -172,10 +176,12 @@
 										<option value="50">C</option>
 										<option value="25">D</option>
 										<option value="0">E</option>
-									</select> 
-									<br><br>
+									</select> 									
+								</div>
+
+								<div class="form-group col-md-4">
 									<select class="custom-select" id="swaw" name="swaw">
-									<option value="" selected>Select Weight</option> 
+										<option value="" selected>Select Weight</option> 
 									    <option value="1.0">1.0</option>
 										<option value="0.9">0.9</option>
 										<option value="0.8">0.8</option>
@@ -186,28 +192,31 @@
 										<option value="0.3">0.3</option>
 										<option value="0.2">0.2</option>
 										<option value="0.1">0.1</option>
-									</select>
-
-									
-								<span class="error-msg" id="msg_2"></span>
+									</select>									
+									<span class="error-msg" id="msg_2"></span>
 								</div>
-							</div>
 							
+							</div>
 
-							<div class="col-md-6">
+							<div class="row">
+
+								<div class="col-md-3"><label><b>Attendance</b></label></div>
+							
 								<div class="form-group col-md-4">
-									<label><b>Attendance</b></label>
+									
 									<select class="custom-select" id="attend" name="attend">
-										<option value="" selected>Select</option>
+										<option value="" selected>Select Grade</option>
 										<option value="100">A</option>
 										<option value="75">B</option>
 										<option value="50">C</option>
 										<option value="25">D</option>
 										<option value="0">E</option>
 									</select>
-									<br><br>
+								</div>
+
+								<div class="form-group col-md-4">
 									<select class="custom-select" id="attendw" name="attendw">
-									<option value="" selected>Select Weight</option> 
+										<option value="" selected>Select Weight</option> 
 									    <option value="1.0">1.0</option>
 										<option value="0.9">0.9</option>
 										<option value="0.8">0.8</option>
@@ -221,20 +230,26 @@
 									</select> 
 									<span class="error-msg" id="msg_3"></span>
 								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-3"><label><b>Disciplinary Action Taken</b></label></div>
 
 								<div class="form-group col-md-4">
-									<label><b>Disciplinary Action Taken</b></label>
+									
 									<select class="custom-select" id="dat" name="dat">
-										<option value="" selected>Select</option>
+										<option value="" selected>Select Grade</option>
 										<option value="100">A</option>
 										<option value="75">B</option>
 										<option value="50">C</option>
 										<option value="25">D</option>
 										<option value="0">E</option>
 									</select>
-									<br><br>
+								</div>
+
+								<div class="form-group col-md-4">
 									<select class="custom-select" id="datw" name="datw">
-									<option value="" selected>Select Weight</option> 
+										<option value="" selected>Select Weight</option> 
 									    <option value="1.0">1.0</option>
 										<option value="0.9">0.9</option>
 										<option value="0.8">0.8</option>
@@ -249,19 +264,20 @@
 
 									<span class="error-msg" id="msg_4"></span>
 								</div>
-							</div>
-						</div> 
+							</div> 
 						
-						<br>
+						</div> <br>
 
-						<h5><b>Incharge of the Department</b></h5> 
-						
-						<br>
 
-						<div class="row">
-							<div class="col-md-6">
+
+						<h5><b>Incharge of the Department</b></h5> <br>
+
+						<div style="border:1px solid lightgrey;padding:20px;margin:5px;border-radius: 25px; background-color: #dee9f0; ">
+							<div class="row">
+								<div class="col-md-3"><label><b>Knowledge of Work</b></label></div>
+
 								<div class="form-group col-md-4">
-									<label><b>Knowledge of Work</b></label>
+
 									<select class="custom-select" id="kow" name="kow">
 										<option value="" selected>Select Grade</option>
 										<option value="100">A</option>
@@ -270,10 +286,12 @@
 										<option value="25">D</option>
 										<option value="0">E</option>
 									</select> 
-									<br><br>
+								</div>
+
+								<div class="form-group col-md-4">
 									<select class="custom-select" id="koww" name="koww">
-									<option value="" selected>Select Weight</option> 
-									    <option value="1.0">1.0</option>
+										<option value="" selected>Select Weight</option> 
+										<option value="1.0">1.0</option>
 										<option value="0.9">0.9</option>
 										<option value="0.8">0.8</option>
 										<option value="0.7">0.7</option>
@@ -286,9 +304,14 @@
 									</select>
 									<span class="error-msg" id="msg_5"></span>
 								</div>
+							</div>
+
+							<div class="row">
+
+								<div class="col-md-3"><label><b>Loyalty</b></label></div>
 
 								<div class="form-group col-md-4">
-									<label><b>Loyalty</b></label>
+
 									<select class="custom-select" id="loyalty" name="loyalty">
 										<option value="" selected>Select Grade</option>
 										<option value="100">A</option>
@@ -297,10 +320,12 @@
 										<option value="25">D</option>
 										<option value="0">E</option>
 									</select>
-									<br><br>
+								</div>
+
+								<div class="form-group col-md-4">
 									<select class="custom-select" id="loyaltyw" name="loyaltyw">
-									<option value="" selected>Select Weight</option> 
-									    <option value="1.0">1.0</option>
+										<option value="" selected>Select Weight</option> 
+										<option value="1.0">1.0</option>
 										<option value="0.9">0.9</option>
 										<option value="0.8">0.8</option>
 										<option value="0.7">0.7</option>
@@ -313,9 +338,14 @@
 									</select>
 									<span class="error-msg" id="msg_6"></span>
 								</div>
+							</div>
 
-								<div class="form-group  col-md-4">
-									<label><b>Cooperation</b></label>
+							<div class="row">
+
+								<div class="col-md-3"><label><b>Cooperation</b></label></div>
+
+								<div class="form-group col-md-4">
+									
 									<select class="custom-select" id="coop" name="coop">
 										<option value="" selected>Select Grade</option>
 										<option value="100">A</option>
@@ -324,10 +354,13 @@
 										<option value="25">D</option>
 										<option value="0">E</option>
 									</select>
-									<br><br>
+								</div>
+
+								<div class="form-group col-md-4">
+
 									<select class="custom-select" id="coopw" name="coopw">
-									<option value="" selected>Select Weight</option> 
-									    <option value="1.0">1.0</option>
+										<option value="" selected>Select Weight</option> 
+										<option value="1.0">1.0</option>
 										<option value="0.9">0.9</option>
 										<option value="0.8">0.8</option>
 										<option value="0.7">0.7</option>
@@ -340,14 +373,14 @@
 									</select>
 									<span class="error-msg" id="msg_7"></span>
 								</div>
-
-
 							</div>
 
-							<div class="col-md-6">
+							<div class="row">
+
+								<div class="col-md-3"><label><b>Efficiency</b></label></div>
 
 								<div class="form-group col-md-4">
-									<label><b>Efficiency</b></label>
+									
 									<select class="custom-select" id="effi" name="effi">
 										<option value="" selected>Select Grade</option>
 										<option value="100">A</option>
@@ -356,9 +389,11 @@
 										<option value="25">D</option>
 										<option value="0">E</option>
 									</select>
-									<br><br>
+								</div>
+
+								<div class="form-group col-md-4">
 									<select class="custom-select" id="effiw" name="effiw">
-									<option value="" selected>Select Weight</option> 
+										<option value="" selected>Select Weight</option> 
 									    <option value="1.0">1.0</option>
 										<option value="0.9">0.9</option>
 										<option value="0.8">0.8</option>
@@ -372,9 +407,13 @@
 									</select>
 									<span class="error-msg" id="msg_8"></span>
 								</div>
+							</div>
 
-								<div class="form-group col-md-4">
-									<label><b>Creativity</b></label>
+							<div class="row">
+
+								<div class="col-md-3"><label><b>Creativity</b></label></div>
+
+								<div class="form-group col-md-4">									
 									<select class="custom-select" id="crtvt" name="crtvt">
 										<option value="" selected>Select Grade</option>
 										<option value="100">A</option>
@@ -383,9 +422,11 @@
 										<option value="25">D</option>
 										<option value="0">E</option>
 									</select>
-									<br><br>
+								</div>
+
+								<div class="form-group col-md-4">	
 									<select class="custom-select" id="crtvtw" name="crtvtw">
-									<option value="" selected>Select Weight</option> 
+										<option value="" selected>Select Weight</option> 
 									    <option value="1.0">1.0</option>
 										<option value="0.9">0.9</option>
 										<option value="0.8">0.8</option>
@@ -399,9 +440,14 @@
 									</select>
 									<span class="error-msg" id="msg_9"></span>
 								</div>
+							</div>
+
+							<div class="row">
+
+								<div class="col-md-3"><label><b>Target Achievement</b></label></div>
 
 								<div class="form-group col-md-4">
-									<label><b>Target Achievement</b></label>
+									
 									<select class="custom-select" id="ta" name="ta">
 										<option value="" selected>Select Grade</option>
 										<option value="100">A</option>
@@ -410,9 +456,11 @@
 										<option value="25">D</option>
 										<option value="0">E</option>
 									</select>
-									<br><br>
+								</div>
+
+								<div class="form-group col-md-4">
 									<select class="custom-select" id="taw" name="taw">
-									<option value="" selected>Select Weight</option> 
+										<option value="" selected>Select Weight</option> 
 									    <option value="1.0">1.0</option>
 										<option value="0.9">0.9</option>
 										<option value="0.8">0.8</option>
@@ -434,10 +482,13 @@
 						<h5><b>Senior Incharge</b></h5> 
 						<br>
 
-						<div class="row">
-							<div class="col-md-6">
+						<div style="border:1px solid lightgrey;padding:20px;margin:5px;border-radius: 25px;background-color: #dee9f0 ;">
+							<div class="row">
+
+								<div class="col-md-3"><label><b>Initiative</b></label></div>
+								
 								<div class="form-group col-md-4">
-									<label><b>Initiative</b></label>
+									
 									<select class="custom-select" id="initia" name="initia">
 										<option value="" selected>Select Grade</option>
 										<option value="100">A</option>
@@ -446,10 +497,13 @@
 										<option value="25">D</option>
 										<option value="0">E</option>
 									</select> 
-									<br><br>
+								</div>
+
+								<div class="form-group col-md-4">
+
 									<select class="custom-select" id="initiaw" name="initiaw">
-									    <option value="" selected>Select Weight</option> 
-									    <option value="1.0">1.0</option>
+										<option value="" selected>Select Weight</option> 
+										<option value="1.0">1.0</option>
 										<option value="0.9">0.9</option>
 										<option value="0.8">0.8</option>
 										<option value="0.7">0.7</option>
@@ -462,8 +516,14 @@
 									</select>
 									<span class="error-msg" id="msg_11"></span>
 								</div>
+							</div>
+
+							<div class="row">
+
+								<div class="col-md-3"><label><b>Willing to Take Responsibility</b></label></div>
+
 								<div class="form-group col-md-4">
-									<label><b>Willing to Take Responsibility</b></label>
+									
 									<select class="custom-select" id="wtr" name="wtr">
 										<option value="" selected>Select Grade</option>
 										<option value="100">A</option>
@@ -472,10 +532,12 @@
 										<option value="25">D</option>
 										<option value="0">E</option>
 									</select>
-									<br><br>
+								</div>
+
+								<div class="form-group col-md-4">
 									<select class="custom-select" id="wtrw" name="wtrw">
-									<option value="" selected>Select Weight</option> 
-									    <option value="1.0">1.0</option>
+										<option value="" selected>Select Weight</option> 
+										<option value="1.0">1.0</option>
 										<option value="0.9">0.9</option>
 										<option value="0.8">0.8</option>
 										<option value="0.7">0.7</option>
@@ -487,9 +549,15 @@
 										<option value="0.1">0.1</option>
 									</select>
 									<span class="error-msg" id="msg_12"></span>
-								</div>
+								</div> 
+							</div>
+
+							<div class="row">
+
+								<div class="col-md-3"><label><b>Attitude</b></label></div> 
+
 								<div class="form-group col-md-4">
-									<label><b>Attitude</b></label>
+									
 									<select class="custom-select" id="att" name="att">
 										<option value="" selected>Select Grade</option>
 										<option value="100">A</option>
@@ -498,9 +566,11 @@
 										<option value="25">D</option>
 										<option value="0">E</option>
 									</select>
-									<br><br>
+								</div> 
+
+								<div class="form-group col-md-4">
 									<select class="custom-select" id="attw" name="attw">
-									  <option value="" selected>Select Weight</option> 
+										<option value="" selected>Select Weight</option> 
 										<option value="1.0">1.0</option>
 										<option value="0.9">0.9</option>
 										<option value="0.8">0.8</option>
@@ -514,8 +584,14 @@
 									</select>
 									<span class="error-msg" id="msg_13"></span>
 								</div>
+							</div>
+
+							<div class="row">
+
+								<div class="col-md-3"><label><b>Planning Skills</b></label></div>
+
 								<div class="form-group col-md-4">
-									<label><b>Planning Skills</b></label>
+									
 									<select class="custom-select" id="ps" name="ps">
 										<option value="" selected>Select Grade</option>
 										<option value="100">A</option>
@@ -524,9 +600,11 @@
 										<option value="25">D</option>
 										<option value="0">E</option>
 									</select>
-									<br><br>
+								</div>
+
+								<div class="form-group col-md-4">
 									<select class="custom-select" id="psw" name="psw">    
-									 <option value="" selected>Select Weight</option> 
+										<option value="" selected>Select Weight</option> 
 										<option value="1.0">1.0</option>
 										<option value="0.9">0.9</option>
 										<option value="0.8">0.8</option>
@@ -537,14 +615,17 @@
 										<option value="0.3">0.3</option>
 										<option value="0.2">0.2</option>
 										<option value="0.1">0.1</option>
-									 </select>
+									</select>
 									<span class="error-msg" id="msg_14"></span>
 								</div>
 							</div>
 
-							<div class="col-md-6">
+							<div class="row">
+
+								<div class="col-md-3"><label><b>Communication</b></label></div>
+
 								<div class="form-group col-md-4">
-									<label><b>Communication</b></label>
+									
 									<select class="custom-select" id="com" name="com">
 										<option value="" selected>Select Grade</option>
 										<option value="100">A</option>
@@ -553,10 +634,12 @@
 										<option value="25">D</option>
 										<option value="0">E</option>
 									</select>
-									<br><br>
+								</div>
+
+								<div class="form-group col-md-4">
 									<select class="custom-select" id="comw" name="comw"> 
-									   <option value="" selected>Select Weight</option>
-									    <option value="1.0">1.0</option>
+										<option value="" selected>Select Weight</option>
+										<option value="1.0">1.0</option>
 										<option value="0.9">0.9</option>
 										<option value="0.8">0.8</option>
 										<option value="0.7">0.7</option>
@@ -569,9 +652,14 @@
 									</select>
 									<span class="error-msg" id="msg_14"></span>
 								</div>
+							</div>
+
+							<div class="row">
+
+								<div class="col-md-3"><label><b>Problem Solving</b></label></div>
 
 								<div class="form-group col-md-4">
-									<label><b>Problem Solving</b></label>
+									
 									<select class="custom-select" id="probs" name="probs">
 										<option value="" selected>Select Grade</option>
 										<option value="100">A</option>
@@ -580,7 +668,9 @@
 										<option value="25">D</option>
 										<option value="0">E</option>
 									</select>
-									<br><br>
+								</div>
+
+								<div class="form-group col-md-4">
 									<select class="custom-select" id="probsw" name="probsw">
 										<option value="" selected>Select Weight</option>
 										<option value="1.0">1.0</option>
@@ -596,9 +686,14 @@
 									</select>
 									<span class="error-msg" id="msg_14"></span>
 								</div>
+							</div>
+
+							<div class="row">
+
+								<div class="col-md-3"><label><b>Bearing</b></label></div>
 
 								<div class="form-group col-md-4">
-									<label><b>Bearing</b></label>
+									
 									<select class="custom-select" id="bear" name="bear">
 										<option value="" selected>Select Grade</option>
 										<option value="100">A</option>
@@ -607,7 +702,9 @@
 										<option value="25">D</option>
 										<option value="0">E</option>
 									</select>
-									<br><br>
+								</div>
+
+								<div class="form-group col-md-4">
 									<select class="custom-select" id="bearw" name="bearw">
 										<option value="" selected>Select Weight</option>
 										<option value="1.0">1.0</option>
@@ -622,10 +719,10 @@
 										<option value="0.1">0.1</option>
 									</select>
 									<span class="error-msg" id="msg_14"></span>
-								</div>
+								</div>								
 							</div>
 						</div>
-				
+
 						<div class="form-group">
 							<input type="hidden" name="dataval" id="upd_7">
 							<span class="success-msg" id="umsg_6"></span>			
@@ -634,10 +731,10 @@
 			
     	
 					<div class="modal-footer">
-						<button type="button" class="btn btn-secondary" data-dismiss="modal" id="up_cancle">Cancle</button>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal" id="up_cancle">Cancel</button>
 						<button type="submit" class="btn btn-primary">Update Record</button>
 					</div>
-      		</form>	
+      			</form>	
 		</div>
   	</div>
 </div>	
