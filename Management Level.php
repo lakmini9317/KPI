@@ -98,6 +98,7 @@ if($stmt1 = $connection->query("SELECT SUM((los*0.0375)+(swa*0.0375)+(attend*0.0
 
 
 
+
 if($stmt2 = $connection->query("SELECT SUM((los*losw)+(swa*swaw)+(attend*attendw)+(dat*datw)+(kow*koww)+(loyalty*loyaltyw)+(coop*coopw)+(effi*effiw)+(crtvt*crtvtw)+(ta*taw)+(initia*initiaw)+(wtr*wtrw)+(att*attw)+(ps*psw)+(com*comw)+(probs*probsw)+(bear*bearw) )AS abc FROM superadminduty_list WHERE empcode='$subdivi'")){
 
   while ($row2 = $stmt2->fetch_row()) {
@@ -114,7 +115,14 @@ if($stmt2 = $connection->query("SELECT SUM((los*losw)+(swa*swaw)+(attend*attendw
   }
 }
 
+//insert calculated values to db
+if(isset($_POST['division'])) {
 
+  $noc = $_POST['division'];
+
+  $dbquery = "INSERT INTO dg_data (noc, basep, weip) VALUES ('$noc', '$crow1', '$crow2')";
+
+}
 
 
 if($stmt = $connection->query("SELECT noc,los,swa,attend,dat,kow,loyalty,coop,effi,crtvt,ta,initia,wtr,att,ps,com,probs,bear  FROM superadminduty_list WHERE empcode='$subdivi'")){
@@ -161,6 +169,9 @@ echo "<script>
 <br>
 <div id="chart_div"></div>
 <br><br>
+
+
+
 
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
