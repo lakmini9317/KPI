@@ -42,7 +42,7 @@ CREATE TABLE `adminduty_list` (
   `progq3p` tinytext,
   `tutq4` text,
   `progq4p` tinytext
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
 -- Dumping data for table `adminduty_list`
@@ -137,7 +137,7 @@ CREATE TABLE `allprojects` (
   `pt` int NOT NULL,
   `pp` int NOT NULL,
   `tc` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
 -- Dumping data for table `allprojects`
@@ -325,7 +325,7 @@ CREATE TABLE `designation_list` (
   `designation` varchar(1000) NOT NULL,
   `description` varchar(1000) NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
 -- Dumping data for table `designation_list`
@@ -546,21 +546,21 @@ INSERT INTO `designation_list` (`id`, `designation`, `description`, `date`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dg_data`
+-- Table structure for table `ddg_data`
 --
 
-CREATE TABLE `dg_data` (
+CREATE TABLE `ddg_data` (
   `id` int NOT NULL,
   `noc` varchar(100) NOT NULL,
   `basep` double NOT NULL,
   `weip` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
--- Dumping data for table `dg_data`
+-- Dumping data for table `ddg_data`
 --
 
-INSERT INTO `dg_data` (`id`, `noc`, `basep`, `weip`) VALUES
+INSERT INTO `ddg_data` (`id`, `noc`, `basep`, `weip`) VALUES
 (1, '6766', 49.06, 38.24);
 
 -- --------------------------------------------------------
@@ -584,7 +584,7 @@ CREATE TABLE `duty_list` (
   `progq3p` tinytext,
   `tutq4` text,
   `progq4p` tinytext
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
 -- Dumping data for table `duty_list`
@@ -2038,7 +2038,7 @@ CREATE TABLE `employee_list` (
   `evaluator_id` int NOT NULL,
   `avatar` text,
   `date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
 -- Dumping data for table `employee_list`
@@ -2066,7 +2066,7 @@ CREATE TABLE `evaluator_list` (
   `password` text NOT NULL,
   `avatar` text,
   `date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
 -- Dumping data for table `evaluator_list`
@@ -2088,7 +2088,7 @@ CREATE TABLE `projectstatus` (
   `noc` varchar(100) NOT NULL,
   `divisub` varchar(100) NOT NULL,
   `comprto` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
 -- Dumping data for table `projectstatus`
@@ -2128,7 +2128,7 @@ CREATE TABLE `projectstatus2` (
   `100City` int NOT NULL,
   `pfap` int NOT NULL,
   `AvrPf` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
 -- Dumping data for table `projectstatus2`
@@ -2162,7 +2162,7 @@ CREATE TABLE `ratings` (
   `accuracy` int NOT NULL,
   `remarks` text NOT NULL,
   `date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
 -- Dumping data for table `ratings`
@@ -2193,7 +2193,7 @@ CREATE TABLE `subadminduty_list` (
   `progq3p` tinytext,
   `tutq4` text,
   `progq4p` tinytext
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
 -- Dumping data for table `subadminduty_list`
@@ -2298,7 +2298,7 @@ CREATE TABLE `superadminduty_list` (
   `probsw` float DEFAULT NULL,
   `bearw` float DEFAULT NULL,
   `total` float DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
 -- Dumping data for table `superadminduty_list`
@@ -2358,7 +2358,7 @@ CREATE TABLE `system_settings` (
   `contact` varchar(20) NOT NULL,
   `address` text NOT NULL,
   `cover_img` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
 -- Dumping data for table `system_settings`
@@ -2382,7 +2382,7 @@ CREATE TABLE `task_list` (
   `completed` date NOT NULL,
   `status` int NOT NULL COMMENT '0=pending, 1=on-progress,3=Completed',
   `date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
 -- Dumping data for table `task_list`
@@ -2407,7 +2407,7 @@ CREATE TABLE `task_progress` (
   `progress` text NOT NULL,
   `is_complete` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0=no,1=Yes',
   `date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
 -- Dumping data for table `task_progress`
@@ -2436,7 +2436,7 @@ CREATE TABLE `users` (
   `password` text NOT NULL,
   `avatar` text,
   `date_created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  ;
 
 --
 -- Dumping data for table `users`
@@ -2475,9 +2475,9 @@ ALTER TABLE `designation_list`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `dg_data`
+-- Indexes for table `ddg_data`
 --
-ALTER TABLE `dg_data`
+ALTER TABLE `ddg_data`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -2563,9 +2563,9 @@ ALTER TABLE `department_list`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
--- AUTO_INCREMENT for table `dg_data`
+-- AUTO_INCREMENT for table `ddg_data`
 --
-ALTER TABLE `dg_data`
+ALTER TABLE `ddg_data`
   MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --

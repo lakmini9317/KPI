@@ -120,7 +120,7 @@ if(isset($_POST['division'])) {
 
   $noc = $_POST['division'];
 
-  $dbquery = "INSERT INTO dg_data (noc, basep, weip) VALUES ('$noc', '$crow1', '$crow2')";
+  $dbquery = "INSERT INTO ddg_data (noc,basep,weip) VALUES ('$noc', '$crow1', '$crow2')";
 
 }
 
