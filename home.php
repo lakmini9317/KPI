@@ -143,8 +143,8 @@ if($_SESSION['login_type'] != 1)
            <a href="./index.php?page=DutyList2022" target='_blank'> 
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
-                <h3><?php echo $conn->query("SELECT empcode FROM superadminduty_list")->num_rows; ?></h3>
-                <p>Duty List 2022</p>
+                <h3><?php echo $conn->query("SELECT DISTINCT empcode FROM dutiesho2022")->num_rows; ?></h3>
+                <p>Head Office Duty List 2022</p>
               </div>
                   <div class="icon">
                 <i class="fa fa-tasks" style="color:#FFAB45;"></i>
