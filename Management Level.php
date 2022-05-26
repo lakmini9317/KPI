@@ -123,10 +123,10 @@ if(isset($_POST['division'])) {
   $dbquery = "INSERT INTO ddg_data (noc,basep,weip) VALUES ('$noc', '$crow1', '$crow2')";
 
   if(mysqli_query($conn, $dbquery)){
-    echo "<h3>data stored in a database successfully.</h3>"; 
+    echo "<span > .</span>"; 
     
     } else{
-        echo "ERROR: Hush! Sorry $dbquery. " 
+        echo "ERROR:  $dbquery. " 
         . mysqli_error($conn);
     }
 

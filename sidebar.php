@@ -38,7 +38,7 @@
               <i class="nav-icon fas fa-user-friends"></i>
               <p>
                 Duty List
-                <i class="right fas fa-angle-left"></i>
+                <!-- <i class="right fas fa-angle-left"></i> -->
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -91,7 +91,7 @@
               <i class="nav-icon fas fa-user-friends"></i>
               <p>
                 Employees
-                <i class="right fas fa-angle-left"></i>
+                <!-- <i class="right fas fa-angle-left"></i> -->
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -115,7 +115,7 @@
               <i class="nav-icon fas fa-user-secret"></i>
               <p>
                 Evaluator
-                <i class="right fas fa-angle-left"></i>
+                <!-- <i class="right fas fa-angle-left"></i> -->
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -139,7 +139,7 @@
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Users
-                <i class="right fas fa-angle-left"></i>
+                <!-- <i class="right fas fa-angle-left"></i> -->
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -158,6 +158,94 @@
             </ul>
           </li>
 
+          <li class="nav-item">
+            <a href="#" class="nav-link nav-edit_user">
+            <i class="nav-icon fas fa-file-alt"></i>
+              <p >
+                2021
+                <i class="right fas fa-angle-down"></i>
+              </p>
+            </a>
+
+            <ul class="nav nav-treeview">
+
+              <li class="nav-item">
+                <a href="./index.php?page=Individual_Report" class="nav-link nav-new_user tree-item">
+                <i class="fas fa-angle-right nav-icon"></i>
+                  <p>Individual Reports </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="./index.php?page=Progress Check" class="nav-link nav-new_user tree-item">
+                <i class="fas fa-angle-right nav-icon"></i>
+                  <p>
+                    Progress Check
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="./index.php?page=report/AdminLevelProgress" class="nav-link nav-new_user tree-item">
+                <i class="fas fa-angle-right nav-icon"></i>
+                  <p>
+                    Administration Progress View
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="./index.php?page=Sub Office Progress" class="nav-link nav-new_user tree-item">
+                <i class="fas fa-angle-right nav-icon"></i>
+                  <p>
+                    Sub Office Progress Check View
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="./index.php?page=Management Level" class="nav-link nav-new_user tree-item">
+                <i class="fas fa-angle-right nav-icon"></i>
+                  <p>
+                    Administration Grading Data
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="./index.php?page=Project Progress" class="nav-link nav-new_user tree-item">
+                <i class="fas fa-angle-right nav-icon"></i>
+                  <p>
+                  Project Progress
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="./index.php?page=Targeted Projects Progress" class="nav-link nav-new_user tree-item">
+                  <i class="fas fa-angle-right nav-icon"></i>
+                  <p>
+                  Targeted Projects
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="./index.php?page=Projects Completion" class="nav-link nav-new_user tree-item">
+                <i class="fas fa-angle-right nav-icon"></i>
+                  <p>
+                  Projects Completion
+                  </p>
+                </a>
+              </li>
+
+             
+              
+            </ul>
+          </li>
+
+          
+
           <!-- <li class="nav-item">
             <a href="./index.php?page=view_division_reports" class="nav-link ">
               <i class="nav-icon fas fa-file-alt"></i>
@@ -168,75 +256,98 @@
             
           </li> -->
 
+         
           <li class="nav-item">
-            <a href="./index.php?page=Individual_Report" class="nav-link ">
-              <i class="nav-icon fas fa-file-alt"></i>
-              <p>
-                Individual Reports
+            <a href="#" class="nav-link nav-edit_user">
+            <i class="nav-icon fas fa-file-alt"></i>
+              <p >
+                2022
+                <i class="right fas fa-angle-down"></i>
               </p>
             </a>
-          </li>
 
-          <li class="nav-item">
-            <a href="./index.php?page=Progress Check" class="nav-link ">
-              <i class="nav-icon fas fa-file-alt"></i>
-              <p>
-                Progress Check
-              </p>
-            </a>
-          </li>
+            <ul class="nav nav-treeview">
 
-          <li class="nav-item">
-            <a href="./index.php?page=report/AdminLevelProgress" class="nav-link ">
-              <i class="nav-icon fas fa-file-alt"></i>
-              <p>
-                Administration Progress View
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="./index.php?page=Sub Office Progress" class="nav-link ">
-              <i class="nav-icon fas fa-file-alt"></i>
-              <p>
-                Sub Office Progress Check View
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="./index.php?page=Management Level" class="nav-link ">
-              <i class="nav-icon fas fa-file-alt"></i>
-              <p>
-                Administration Grading Data
-              </p>
-            </a>
-          </li>
+              <li class="nav-item">
+                <a href="./index.php?page=Individual_Report" class="nav-link nav-new_user tree-item">
+                <i class="fas fa-angle-right nav-icon"></i>
+                  <p>Individual Reports </p>
+                </a>
+              </li>
 
-          <li class="nav-item">
-            <a href="./index.php?page=Project Progress" class="nav-link ">
-              <i class="nav-icon fas fa-file-alt"></i>
-              <p>
-              Project Progress
-              </p>
-            </a>
-          </li>
+              <li class="nav-item">
+                <a href="./index.php?page=Progress Check" class="nav-link nav-new_user tree-item">
+                <i class="fas fa-angle-right nav-icon"></i>
+                  <p>
+                    Progress Check
+                  </p>
+                </a>
+              </li>
 
-          <li class="nav-item">
-            <a href="./index.php?page=Targeted Projects Progress" class="nav-link ">
-              <i class="nav-icon fas fa-file-alt"></i>
-              <p>
-              Targeted Projects
-              </p>
-            </a>
-          </li>
+              <li class="nav-item">
+                <a href="./index.php?page=report/AdminLevelProgress" class="nav-link nav-new_user tree-item">
+                <i class="fas fa-angle-right nav-icon"></i>
+                  <p>
+                    Administration Progress View
+                  </p>
+                </a>
+              </li>
 
-          <li class="nav-item">
-            <a href="./index.php?page=Projects Completion" class="nav-link ">
-              <i class="nav-icon fas fa-file-alt"></i>
-              <p>
-              Projects Completion
-              </p>
-            </a>
+              <li class="nav-item">
+                <a href="./index.php?page=Sub Office Progress 2022" class="nav-link nav-new_user tree-item">
+                <i class="fas fa-angle-right nav-icon"></i>
+                  <p>
+                    Sub Office Progress Check View
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="./index.php?page=Management Level" class="nav-link nav-new_user tree-item">
+                <i class="fas fa-angle-right nav-icon"></i>
+                  <p>
+                    Administration Grading Data
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="./index.php?page=Project Progress" class="nav-link nav-new_user tree-item">
+                <i class="fas fa-angle-right nav-icon"></i>
+                  <p>
+                  Project Progress
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="./index.php?page=Targeted Projects Progress" class="nav-link nav-new_user tree-item">
+                  <i class="fas fa-angle-right nav-icon"></i>
+                  <p>
+                  Targeted Projects
+                  </p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="./index.php?page=Projects Completion" class="nav-link nav-new_user tree-item">
+                <i class="fas fa-angle-right nav-icon"></i>
+                  <p>
+                  Projects Completion
+                  </p>
+                </a>
+              </li>
+
+             
+              
+            </ul>
           </li>
+          
+          
+
+         
+
+          
           
         <?php endif; ?>
         </ul>
