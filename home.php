@@ -151,6 +151,56 @@ if($_SESSION['login_type'] != 1)
               </div>
             </div>
           </div></a>
+          <div class="col-12 col-sm-6 col-md-4" >
+           <a href="./index.php?page=DutyList2022" target='_blank'> 
+            <div class="small-box bg-light shadow-sm border">
+              <div class="inner">
+                <h3><?php echo $conn->query("SELECT DISTINCT empcode FROM suboffice_2022")->num_rows; ?></h3>
+                <p>Sub Office Duty List 2022</p>
+              </div>
+                  <div class="icon">
+                <i class="fa fa-tasks" style="color:#FFAB45;"></i>
+              </div>
+            </div>
+          </div></a>
+          <div class="col-12 col-sm-6 col-md-4" >
+           <a href="./index.php?page=Report Head Office" target='_blank'> 
+            <div class="small-box bg-light shadow-sm border">
+              <div class="inner">
+                <h3><?php echo $conn->query("SELECT DISTINCT empcode FROM dutiesho2022")->num_rows; ?></h3>
+                <p>Head Office Reports 2022</p>
+              </div>
+                  <div class="icon">
+                <i class="fa fa-tasks" style="color:#FFAB45;"></i>
+              </div>
+            </div>
+          </div></a>
+
+          <div class="col-12 col-sm-6 col-md-4" >
+           <a href="./index.php?page=Report Sub Office" target='_blank'> 
+            <div class="small-box bg-light shadow-sm border">
+              <div class="inner">
+                <h3><?php echo $conn->query("SELECT DISTINCT empcode FROM suboffice_2022")->num_rows; ?></h3>
+                <p>Sub Office Reports 2022</p>
+              </div>
+                  <div class="icon">
+                <i class="fa fa-tasks" style="color:#FFAB45;"></i>
+              </div>
+            </div>
+          </div></a>
+
+          <div class="col-12 col-sm-6 col-md-4" >
+           <a href="./index.php?page=Moris" target='_blank'> 
+            <div class="small-box bg-light shadow-sm border">
+              <div class="inner">
+                <h3><?php echo $conn->query("SELECT DISTINCT empcode FROM suboffice_2022")->num_rows; ?></h3>
+                <p>Moris charts test </p>
+              </div>
+                  <div class="icon">
+                <i class="fa fa-tasks" style="color:#FFAB45;"></i>
+              </div>
+            </div>
+          </div></a>
 
 
           
