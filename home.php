@@ -140,7 +140,7 @@ if($_SESSION['login_type'] != 1)
           </div></a>
 
           <div class="col-12 col-sm-6 col-md-4" >
-           <a href="./index.php?page=DutyList2022" target='_blank'> 
+           <a href="./index.php?page=Duty List Head Office" target='_blank'> 
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT DISTINCT empcode FROM dutiesho2022")->num_rows; ?></h3>
@@ -152,7 +152,7 @@ if($_SESSION['login_type'] != 1)
             </div>
           </div></a>
           <div class="col-12 col-sm-6 col-md-4" >
-           <a href="./index.php?page=DutyList2022" target='_blank'> 
+           <a href="./index.php?page=Duty List Sub Office" target='_blank'> 
             <div class="small-box bg-light shadow-sm border">
               <div class="inner">
                 <h3><?php echo $conn->query("SELECT DISTINCT empcode FROM suboffice_2022")->num_rows; ?></h3>
