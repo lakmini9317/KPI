@@ -18,16 +18,33 @@ if(isset($_SESSION['login_id']))
 header("location:index.php?page=home");
 
 ?>
+
+<head>
+  <style>
+    .topic{
+      font-size: 50px;
+      font-weight: 750;
+      text-align: left;
+      position: relative;
+      line-height: 90px;
+      color: transparent;
+      -webkit-text-stroke: 2px #fff;   
+     
+    }
+  </style>
+    
+</head>
+
 <?php include 'header.php' ?>
-<body class="hold-transition login-page bg-black">
-  <h2><b><?php echo $_SESSION['system']['name'] ?> - Admin</b></h2>
+<body class="hold-transition login-page bg-black" style="background-image:url('assets/bg.jpg');background-position: center; background-repeat: no-repeat;background-size: cover;  position: relative;">
+  <h1 class="topic"><b><?php echo $_SESSION['system']['name'] ?> - Admin</b></h1>
 <div class="login-box">
   <div class="login-logo">
     <a href="#" class="text-white"></a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
-    <div class="card-body login-card-body">
+    <div class="card-body login-card-body " style="border-radius: 40%;">
       <form action="" id="login-form">
         <div class="input-group mb-3">
           <input type="email" class="form-control" name="email" required placeholder="Email">
@@ -64,7 +81,7 @@ header("location:index.php?page=home");
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            <button type="submit" class="btn btn-primary  btn-block">Sign In</button>
           </div>
           <!-- /.col -->
         </div>
