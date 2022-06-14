@@ -3,7 +3,7 @@
     include'db_connect2.php';
 
     // Get the total number of records from our table "students".
-    $total_pages = $conn->query('SELECT * FROM dutiesho2022 ')->num_rows;
+    $total_pages = $conn->query('SELECT * FROM dutiesho2022 where j_total not in(null)')->num_rows;
 
     // Check if the page number is specified and check if it's a number, if not return the default page number which is 1.
     $page = isset($_GET['page']) && is_numeric($_GET['page']) ? $_GET['page'] : 1;
