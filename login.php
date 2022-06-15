@@ -31,6 +31,8 @@ header("location:index.php?page=home");
       -webkit-text-stroke: 2px #fff;   
      
     }
+
+    
   </style>
     
 </head>
@@ -43,8 +45,8 @@ header("location:index.php?page=home");
     <a href="#" class="text-white"></a>
   </div>
   <!-- /.login-logo -->
-  <div class="card">
-    <div class="card-body login-card-body " style="border-radius: 40%;">
+  <div class="card " style="border-radius:50px 1px 50px 1px;padding:20px;">
+    <div class="card-body login-card-body " >
       <form action="" id="login-form">
         <div class="input-group mb-3">
           <input type="email" class="form-control" name="email" required placeholder="Email">
