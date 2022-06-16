@@ -53,7 +53,7 @@
 					<?php
 					$i = 1;
 					
-					$qry = $conn->query("SELECT  * FROM suboffice_2022 ");
+					$qry = $conn->query("SELECT  * FROM suboffice_2022 where j_total not in (0) ");
 					while($row= $qry->fetch_assoc()):
 					?>
 					<tr>
